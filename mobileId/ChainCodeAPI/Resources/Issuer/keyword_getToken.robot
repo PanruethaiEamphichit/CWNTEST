@@ -5,7 +5,7 @@ Library     String
 Library     RequestsLibrary
 Library     JSONLibrary
 Library     HttpLibrary.HTTP
-Resource    ../Resources/variables.robot
+Resource    ../../Resources/variables.robot
 
 *** Keywords ***
 
@@ -33,11 +33,14 @@ Response Should Contain Keys
 Send Request getToken
     Create Session   getTokenSS  ${base_url}
     ${body}=  create dictionary  username=${username}  password=${password}
-    ${header}=  create dictionary  Content-Type=application/json  Content-Type=application/json
-    ${response}=  post request  getTokenSS  /token  data=${body}  headers=${header}
+    ${header}=  create dictionary  Content-Type=application/json
+    ${response}=  post request  getTokenSS  ${url_getToken_issuer_MDW}  data=${body}  headers=${header}
+
+###Response Code###
     #${status_code}=  convert to string  ${response.status_code}
     should be equal as strings  ${response.status_code}     200
 
+###Response Body###
     ${res_body}=    convert to string  ${response.content}
     should contain  ${res_body}     access_token
     should contain  ${res_body}     "expires_in":3600
