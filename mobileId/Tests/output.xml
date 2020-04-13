@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.0 on win32)" generated="20200413 16:09:13.463" rpa="false">
+<suite id="s1" name="RegisterMobileId" source="C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId\Tests\RegisterMobileId.robot">
+<test id="s1-t1" name="Register 1 mobileId Successfully">
+<kw name="Send Request getToken" library="keyword_getToken">
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>getTokenSS</arg>
+<arg>${base_url_issuer_mw}</arg>
+</arguments>
+<msg timestamp="20200413 16:09:14.109" level="INFO">Creating Session using : alias=getTokenSS, url=http://172.16.24.55:3216, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20200413 16:09:14.109" endtime="20200413 16:09:14.110"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>username=${username}</arg>
+<arg>password=${password}</arg>
+</arguments>
+<assign>
+<var>${body}</var>
+</assign>
+<msg timestamp="20200413 16:09:14.112" level="INFO">${body} = {'username': '001', 'password': 'secret'}</msg>
+<status status="PASS" starttime="20200413 16:09:14.110" endtime="20200413 16:09:14.112"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Content-Type=application/json</arg>
+</arguments>
+<assign>
+<var>${header}</var>
+</assign>
+<msg timestamp="20200413 16:09:14.113" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20200413 16:09:14.112" endtime="20200413 16:09:14.113"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>Send a POST request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>getTokenSS</arg>
+<arg>${url_getToken_issuer_MDW}</arg>
+<arg>data=${body}</arg>
+<arg>headers=${header}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20200413 16:09:14.114" level="INFO">POST Request using : uri=/token, params=None, files=None, allow_redirects=True, timeout=None
+headers={'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
+data={"username": "001", "password": "secret"} 
+json=None</msg>
+<msg timestamp="20200413 16:09:14.214" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200413 16:09:14.113" endtime="20200413 16:09:14.215"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${response}</arg>
+</arguments>
+<msg timestamp="20200413 16:09:14.215" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200413 16:09:14.215" endtime="20200413 16:09:14.215"></status>
+</kw>
+<status status="PASS" starttime="20200413 16:09:14.108" endtime="20200413 16:09:14.216"></status>
+</kw>
+<kw name="Response Status should be Success" library="keyword_getToken">
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+</arguments>
+<msg timestamp="20200413 16:09:14.217" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20200413 16:09:14.217" endtime="20200413 16:09:14.217"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${response.content}</arg>
+</arguments>
+<assign>
+<var>${res_body}</var>
+</assign>
+<msg timestamp="20200413 16:09:14.218" level="INFO">${res_body} = {"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA0LTEzVDA5OjA5OjE0LjIxOCIsImV4cGlyZWRhdGUiOiIyMDIwLTA0LTEzVDEwOjA5OjE0LjIxOCIsInBoYXNlIjoiMzAxYTFlYWY3ZTNhZWQ4Mm...</msg>
+<status status="PASS" starttime="20200413 16:09:14.218" endtime="20200413 16:09:14.218"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${res_body}</arg>
+<arg>access_token</arg>
+</arguments>
+<status status="PASS" starttime="20200413 16:09:14.219" endtime="20200413 16:09:14.219"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${res_body}</arg>
+<arg>"expires_in":3600</arg>
+</arguments>
+<status status="PASS" starttime="20200413 16:09:14.219" endtime="20200413 16:09:14.220"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${res_body}</arg>
+<arg>Bearer</arg>
+</arguments>
+<status status="PASS" starttime="20200413 16:09:14.220" endtime="20200413 16:09:14.220"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${response.json()}</arg>
+<arg>access_token</arg>
+</arguments>
+<assign>
+<var>${AuthToken}</var>
+</assign>
+<msg timestamp="20200413 16:09:14.221" level="INFO">${AuthToken} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA0LTEzVDA5OjA5OjE0LjIxOCIsImV4cGlyZWRhdGUiOiIyMDIwLTA0LTEzVDEwOjA5OjE0LjIxOCIsInBoYXNlIjoiMzAxYTFlYWY3ZTNhZWQ4MmFhNGNmZjMxYTU2NGI...</msg>
+<status status="PASS" starttime="20200413 16:09:14.220" endtime="20200413 16:09:14.221"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${AuthToken}</arg>
+</arguments>
+<msg timestamp="20200413 16:09:14.222" level="INFO">${AuthToken} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA0LTEzVDA5OjA5OjE0LjIxOCIsImV4cGlyZWRhdGUiOiIyMDIwLTA0LTEzVDEwOjA5OjE0LjIxOCIsInBoYXNlIjoiMzAxYTFlYWY3ZTNhZWQ4MmFhNGNmZjMxYTU2NGI...</msg>
+<status status="PASS" starttime="20200413 16:09:14.222" endtime="20200413 16:09:14.222"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${response.status_code}</arg>
+</arguments>
+<status status="PASS" starttime="20200413 16:09:14.222" endtime="20200413 16:09:14.223"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${response.content}</arg>
+</arguments>
+<status status="PASS" starttime="20200413 16:09:14.223" endtime="20200413 16:09:14.224"></status>
+</kw>
+<status status="PASS" starttime="20200413 16:09:14.216" endtime="20200413 16:09:14.224"></status>
+</kw>
+<kw name="Send Request enrollMobileId" library="keyword_enrollMobileId">
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>enrollMobileIdSS</arg>
+<arg>${base_url_issuer_mw}</arg>
+</arguments>
+<msg timestamp="20200413 16:09:14.226" level="INFO">Creating Session using : alias=enrollMobileIdSS, url=http://172.16.24.55:3216, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20200413 16:09:14.225" endtime="20200413 16:09:14.227"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>username=${username}</arg>
+<arg>password=${password}</arg>
+</arguments>
+<assign>
+<var>${body}</var>
+</assign>
+<msg timestamp="20200413 16:09:14.228" level="INFO">${body} = {'username': '001', 'password': 'secret'}</msg>
+<status status="PASS" starttime="20200413 16:09:14.227" endtime="20200413 16:09:14.228"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>network-user=${network-user}</arg>
+<arg>Content-Type=application/json</arg>
+<arg>Authorization=Bearer ${AuthToken}</arg>
+</arguments>
+<assign>
+<var>${header}</var>
+</assign>
+<msg timestamp="20200413 16:09:14.229" level="INFO">${header} = {'network-user': 'user1', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA0LTEzVDA5OjA5OjE0LjIxOCIsImV4cGlyZWRhdGUi...</msg>
+<status status="PASS" starttime="20200413 16:09:14.229" endtime="20200413 16:09:14.229"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>Send a POST request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>enrollMobileIdSS</arg>
+<arg>${url_enrollMobileId}</arg>
+<arg>data=${body}</arg>
+<arg>headers=${header}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20200413 16:09:14.231" level="INFO">POST Request using : uri=/enroll-mobileid, params=None, files=None, allow_redirects=True, timeout=None
+headers={'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'network-user': 'user1', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA0LTEzVDA5OjA5OjE0LjIxOCIsImV4cGlyZWRhdGUiOiIyMDIwLTA0LTEzVDEwOjA5OjE0LjIxOCIsInBoYXNlIjoiMzAxYTFlYWY3ZTNhZWQ4MmFhNGNmZjMxYTU2NGI0ZmE5MjRhMGE2ZCJ9.kt8mXEUpgdDMNAEawXifFgcGTiGQwG7DHjVLZLm_rus'} 
+data={"username": "001", "password": "secret"} 
+json=None</msg>
+<msg timestamp="20200413 16:09:14.454" level="INFO">${response} = &lt;Response [400]&gt;</msg>
+<status status="PASS" starttime="20200413 16:09:14.230" endtime="20200413 16:09:14.454"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${response.status_code}</arg>
+</arguments>
+<status status="PASS" starttime="20200413 16:09:14.454" endtime="20200413 16:09:14.456"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${response.content}</arg>
+</arguments>
+<status status="PASS" starttime="20200413 16:09:14.456" endtime="20200413 16:09:14.457"></status>
+</kw>
+<status status="PASS" starttime="20200413 16:09:14.225" endtime="20200413 16:09:14.457"></status>
+</kw>
+<status status="PASS" starttime="20200413 16:09:14.107" endtime="20200413 16:09:14.458" critical="yes"></status>
+</test>
+<doc>Suite description</doc>
+<status status="PASS" starttime="20200413 16:09:13.468" endtime="20200413 16:09:14.459"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="RegisterMobileId">RegisterMobileId</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200413 16:09:14.089" level="ERROR">Error in file 'C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources\Issuer\keyword_getToken.robot': Importing test library 'HttpLibrary.HTTP' failed: SyntaxError: invalid syntax (__init__.py, line 16)
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\panruethai.e\AppData\Local\Programs\Python\Python38-32\Scripts\robot.exe
+  c:\users\panruethai.e\appdata\local\programs\python\python38-32\python38.zip
+  c:\users\panruethai.e\appdata\local\programs\python\python38-32\DLLs
+  c:\users\panruethai.e\appdata\local\programs\python\python38-32\lib
+  c:\users\panruethai.e\appdata\local\programs\python\python38-32
+  C:\Users\panruethai.e\AppData\Roaming\Python\Python38\site-packages
+  c:\users\panruethai.e\appdata\local\programs\python\python38-32\lib\site-packages
+  c:\users\panruethai.e\appdata\local\programs\python\python38-32\lib\site-packages\win32
+  c:\users\panruethai.e\appdata\local\programs\python\python38-32\lib\site-packages\win32\lib
+  c:\users\panruethai.e\appdata\local\programs\python\python38-32\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20200413 16:09:14.103" level="ERROR">Error in file 'C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources\Issuer\keyword_enrollMobileId.robot': Importing test library 'HttpLibrary.HTTP' failed: SyntaxError: invalid syntax (__init__.py, line 16)
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\panruethai.e\AppData\Local\Programs\Python\Python38-32\Scripts\robot.exe
+  c:\users\panruethai.e\appdata\local\programs\python\python38-32\python38.zip
+  c:\users\panruethai.e\appdata\local\programs\python\python38-32\DLLs
+  c:\users\panruethai.e\appdata\local\programs\python\python38-32\lib
+  c:\users\panruethai.e\appdata\local\programs\python\python38-32
+  C:\Users\panruethai.e\AppData\Roaming\Python\Python38\site-packages
+  c:\users\panruethai.e\appdata\local\programs\python\python38-32\lib\site-packages
+  c:\users\panruethai.e\appdata\local\programs\python\python38-32\lib\site-packages\win32
+  c:\users\panruethai.e\appdata\local\programs\python\python38-32\lib\site-packages\win32\lib
+  c:\users\panruethai.e\appdata\local\programs\python\python38-32\lib\site-packages\Pythonwin</msg>
+</errors>
+</robot>

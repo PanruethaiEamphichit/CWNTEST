@@ -8,10 +8,10 @@ Resource    ../../Resources/variables.robot
 *** Keywords ***
 
 Send Request enrollMobileId
-    Create Session   enrollMobileIdSS  ${base_url}
-    ${body}=  create dictionary  username=${username}  password=${password}
-    ${header}=  create dictionary  network-user=${username} Content-Type=application/json Authorization=Bearer${AuthToken}
-    ${response}=  post request  enrollMobileIdSS  ${url_enrollMobileId}  data=${body}  headers=${header}
+    Create Session   enrollMobileIdSS  ${base_url_issuer_mw}
+    ${body}=        create dictionary   username=${username}    password=${password}
+    ${header}=      create dictionary   network-user=${network-user}    Content-Type=application/json   Authorization=Bearer ${AuthToken}
+    ${response}=    post request        enrollMobileIdSS  ${url_enrollMobileId}  data=${body}   headers=${header}
 
 ###Response Code###
     #should be equal as strings  ${response.status_code}     200
