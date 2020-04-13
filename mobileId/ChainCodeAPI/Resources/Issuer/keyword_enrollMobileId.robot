@@ -9,7 +9,7 @@ Resource    ../../Resources/variables.robot
 
 Send Request enrollMobileId
     Create Session   enrollMobileIdSS  ${base_url_issuer_mw}
-    ${body}=        create dictionary   username=${username}    password=${password}
+    ${body}=        evaluate    json.load(open('mobileId/ChainCodeAPI/Resources/OnchainFile', 'r'))   json
     ${header}=      create dictionary   network-user=${network-user}    Content-Type=application/json   Authorization=Bearer ${AuthToken}
     ${response}=    post request        enrollMobileIdSS  ${url_enrollMobileId}  data=${body}   headers=${header}
 

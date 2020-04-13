@@ -19,17 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0e775fd-6fa7-4b22-b6c7-3546fd1ee185" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CWNTEST.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CWNTEST.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a0e775fd-6fa7-4b22-b6c7-3546fd1ee185" name="Default Changelist" comment="Stored AuthToken from getToken V1.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/Issuer/keyword_enrollMobileId.robot" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/Issuer/keyword_enrollMobileId.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/Issuer/keyword_getToken.robot" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/Issuer/keyword_getToken.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/variables.robot" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/variables.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobileId/Tests/RegisterMobileId.robot" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/Tests/RegisterMobileId.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobileId/Tests/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/Tests/log.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobileId/Tests/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/Tests/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobileId/Tests/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/Tests/report.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,16 +53,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/Programs/Python/Python38-32/python.exe" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources\Issuer" />
+      <recent name="C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources" />
+      <recent name="C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\panruethai.e\PycharmProjects\CWNTEST" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources" />
-      <recent name="C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources\Issuer" />
-      <recent name="C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -97,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586426805085</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Stored AuthToken from getToken V1.0">
+      <created>1586753837173</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1586753837173</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -117,14 +117,16 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Test up Script from Pycharm" />
     <MESSAGE value="Send getToken Success" />
-    <option name="LAST_COMMIT_MESSAGE" value="Send getToken Success" />
+    <MESSAGE value="Stored AuthToken from getToken V1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Stored AuthToken from getToken V1.0" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="309" y="42" key="#Inspections" timestamp="1586768928713">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="434" y="60" key="#Inspections" timestamp="1586755687437">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="309" y="42" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1586768928713" />
+    <state x="309" y="42" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1586416177483" />
+    <state x="434" y="60" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1586755687437" />
     <state x="275" y="22" width="582" height="274" key="#Notifications" timestamp="1586412402876">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -154,10 +156,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="255" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586753258153" />
-    <state x="184" y="9" key="SettingsEditor" timestamp="1586768876818">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="22" y="81" key="SettingsEditor" timestamp="1586753278292">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586768876818" />
+    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586418092203" />
     <state x="22" y="81" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586753278292" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1586428723115">
       <screen x="0" y="0" width="1366" height="728" />
