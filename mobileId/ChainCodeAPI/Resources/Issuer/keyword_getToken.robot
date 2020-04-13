@@ -34,7 +34,7 @@ Send Request getToken
     Create Session   getTokenSS  ${base_url}
     ${body}=  create dictionary  username=${username}  password=${password}
     ${header}=  create dictionary  Content-Type=application/json
-    ${response}=  post request  getTokenSS  ${url_getToken_issuer_MDW}  data=${body}  headers=${header}
+    ${response}=  post request  getTokenSS  ${url_getToken_issuer_MDW}  data=${json_string}  headers=${header}
 
 ###Response Code###
     #${status_code}=  convert to string  ${response.status_code}
@@ -45,6 +45,8 @@ Send Request getToken
     should contain  ${res_body}     access_token
     should contain  ${res_body}     "expires_in":3600
     should contain  ${res_body}     Bearer
+    ${AuthToken}=    Collections.Get From Dictionary    ${response.json()}    access_token
+    set global variable  ${AuthToken}
     log to console  ${response.status_code}
     log to console  ${response.content}
     #log to console  ${response.text}

@@ -2,6 +2,7 @@
 Library     Collections
 Library     RequestsLibrary
 Library     JSONLibrary
+Library     HttpLibrary.HTTP
 Resource    ../../Resources/variables.robot
 
 *** Keywords ***
@@ -9,7 +10,7 @@ Resource    ../../Resources/variables.robot
 Send Request enrollMobileId
     Create Session   enrollMobileIdSS  ${base_url}
     ${body}=  create dictionary  username=${username}  password=${password}
-    ${header}=  create dictionary  network-user=${username} Content-Type=application/json Authorization=
+    ${header}=  create dictionary  network-user=${username} Content-Type=application/json Authorization=Bearer${AuthToken}
     ${response}=  post request  enrollMobileIdSS  ${url_enrollMobileId}  data=${body}  headers=${header}
 
 ###Response Code###
