@@ -3,13 +3,15 @@ Library     Collections
 Library     RequestsLibrary
 Library     JSONLibrary
 Library     HttpLibrary.HTTP
+Library     OperatingSystem
 Resource    ../../Resources/variables.robot
 
 *** Keywords ***
 
 Send Request enrollMobileId
     Create Session   enrollMobileIdSS  ${base_url_issuer_mw}
-    ${body}=        evaluate    json.load(open('mobileId/ChainCodeAPI/Resources/OnchainFile', 'r'))   json
+    #${body}=        evaluate    json.load(open('mobileId/ChainCodeAPI/Resources/OnchainFile', 'r'))   json
+    ${body}=        get binary file  /mobileId/ChainCodeAPI/Resources/OnchainFile
     ${header}=      create dictionary   network-user=${network-user}    Content-Type=application/json   Authorization=Bearer ${AuthToken}
     ${response}=    post request        enrollMobileIdSS  ${url_enrollMobileId}  data=${body}   headers=${header}
 
