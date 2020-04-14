@@ -1,98 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.8.2 on win32)" generated="20200413 12:31:18.558" rpa="false">
-<suite id="s1" name="RegisterMobileId" source="C:\Users\Strezzo06-PC\PycharmProjects\CWNTEST\mobileId\Tests\RegisterMobileId.robot">
-<test id="s1-t1" name="Register 1 mobileId Successfully">
-<kw name="Send Request getToken" library="keyword_getToken">
-<kw name="Create Session" library="RequestsLibrary">
-<doc>Create Session: create a HTTP session to a server</doc>
-<arguments>
-<arg>getTokenSS</arg>
-<arg>${base_url}</arg>
-</arguments>
-<msg timestamp="20200413 12:31:18.851" level="INFO">Creating Session using : alias=getTokenSS, url=http://172.16.24.55:3216, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20200413 12:31:18.851" endtime="20200413 12:31:18.852"></status>
-</kw>
-<kw name="Create Dictionary" library="BuiltIn">
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<arguments>
-<arg>username=${username}</arg>
-<arg>password=${password}</arg>
-</arguments>
-<assign>
-<var>${body}</var>
-</assign>
-<msg timestamp="20200413 12:31:18.852" level="INFO">${body} = {'username': '001', 'password': 'secret'}</msg>
-<status status="PASS" starttime="20200413 12:31:18.852" endtime="20200413 12:31:18.852"></status>
-</kw>
-<kw name="Create Dictionary" library="BuiltIn">
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<arguments>
-<arg>Content-Type=application/json</arg>
-</arguments>
-<assign>
-<var>${header}</var>
-</assign>
-<msg timestamp="20200413 12:31:18.853" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
-<status status="PASS" starttime="20200413 12:31:18.852" endtime="20200413 12:31:18.853"></status>
-</kw>
-<kw name="Post Request" library="RequestsLibrary">
-<doc>Send a POST request on the session object found using the
-given `alias`</doc>
-<arguments>
-<arg>getTokenSS</arg>
-<arg>${url_getToken_issuer_MDW}</arg>
-<arg>data=${body}</arg>
-<arg>headers=${header}</arg>
-</arguments>
-<assign>
-<var>${response}</var>
-</assign>
-<msg timestamp="20200413 12:31:18.853" level="INFO">POST Request using : uri=/token, params=None, files=None, allow_redirects=True, timeout=None
-headers={'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
-data={"username": "001", "password": "secret"} 
-json=None</msg>
-<msg timestamp="20200413 12:31:39.857" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x03F46688&gt;: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond')': /token</msg>
-<msg timestamp="20200413 12:32:01.062" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x03F46CD0&gt;: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond')': /token</msg>
-<msg timestamp="20200413 12:32:22.468" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x03F46DA8&gt;: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond')': /token</msg>
-<msg timestamp="20200413 12:32:43.519" level="FAIL">ConnectionError: HTTPConnectionPool(host='172.16.24.55', port=3216): Max retries exceeded with url: /token (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x03F46E98&gt;: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond'))</msg>
-<status status="FAIL" starttime="20200413 12:31:18.853" endtime="20200413 12:32:43.519"></status>
-</kw>
-<status status="FAIL" starttime="20200413 12:31:18.851" endtime="20200413 12:32:43.519"></status>
-</kw>
-<status status="FAIL" starttime="20200413 12:31:18.850" endtime="20200413 12:32:43.520" critical="yes">ConnectionError: HTTPConnectionPool(host='172.16.24.55', port=3216): Max retries exceeded with url: /token (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x03F46E98&gt;: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond'))</status>
-</test>
-<doc>Suite description</doc>
-<status status="FAIL" starttime="20200413 12:31:18.560" endtime="20200413 12:32:43.524"></status>
-</suite>
-<statistics>
-<total>
-<stat pass="0" fail="1">Critical Tests</stat>
-<stat pass="0" fail="1">All Tests</stat>
-</total>
-<tag>
-</tag>
-<suite>
-<stat pass="0" fail="1" id="s1" name="RegisterMobileId">RegisterMobileId</stat>
-</suite>
-</statistics>
-<errors>
-<msg timestamp="20200413 12:31:18.845" level="ERROR">Error in file 'C:\Users\Strezzo06-PC\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources\Issuer\keyword_getToken.robot': Importing test library 'HttpLibrary.HTTP' failed: SyntaxError: invalid syntax (__init__.py, line 16)
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Users\Strezzo06-PC\AppData\Local\Programs\Python\Python38-32\Scripts\robot.exe
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32\python38.zip
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32\DLLs
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32\lib
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32\lib\site-packages</msg>
-<msg timestamp="20200413 12:31:39.857" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x03F46688&gt;: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond')': /token</msg>
-<msg timestamp="20200413 12:32:01.062" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x03F46CD0&gt;: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond')': /token</msg>
-<msg timestamp="20200413 12:32:22.468" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x03F46DA8&gt;: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond')': /token</msg>
-</errors>
-</robot>
-<?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.8.0 on win32)" generated="20200413 16:09:13.463" rpa="false">
+<robot generator="Robot 3.1.2 (Python 3.8.0 on win32)" generated="20200414 13:00:44.577" rpa="false">
 <suite id="s1" name="RegisterMobileId" source="C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId\Tests\RegisterMobileId.robot">
 <test id="s1-t1" name="Register 1 mobileId Successfully">
 <kw name="Send Request getToken" library="keyword_getToken">
@@ -102,8 +9,8 @@ PYTHONPATH:
 <arg>getTokenSS</arg>
 <arg>${base_url_issuer_mw}</arg>
 </arguments>
-<msg timestamp="20200413 16:09:14.109" level="INFO">Creating Session using : alias=getTokenSS, url=http://172.16.24.55:3216, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20200413 16:09:14.109" endtime="20200413 16:09:14.110"></status>
+<msg timestamp="20200414 13:00:45.271" level="INFO">Creating Session using : alias=getTokenSS, url=http://172.16.24.55:3216, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20200414 13:00:45.271" endtime="20200414 13:00:45.272"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -114,8 +21,8 @@ PYTHONPATH:
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200413 16:09:14.112" level="INFO">${body} = {'username': '001', 'password': 'secret'}</msg>
-<status status="PASS" starttime="20200413 16:09:14.110" endtime="20200413 16:09:14.112"></status>
+<msg timestamp="20200414 13:00:45.273" level="INFO">${body} = {'username': '001', 'password': 'secret'}</msg>
+<status status="PASS" starttime="20200414 13:00:45.272" endtime="20200414 13:00:45.273"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -125,8 +32,8 @@ PYTHONPATH:
 <assign>
 <var>${header}</var>
 </assign>
-<msg timestamp="20200413 16:09:14.113" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
-<status status="PASS" starttime="20200413 16:09:14.112" endtime="20200413 16:09:14.113"></status>
+<msg timestamp="20200414 13:00:45.274" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20200414 13:00:45.273" endtime="20200414 13:00:45.274"></status>
 </kw>
 <kw name="Post Request" library="RequestsLibrary">
 <doc>Send a POST request on the session object found using the
@@ -140,22 +47,22 @@ given `alias`</doc>
 <assign>
 <var>${response}</var>
 </assign>
-<msg timestamp="20200413 16:09:14.114" level="INFO">POST Request using : uri=/token, params=None, files=None, allow_redirects=True, timeout=None
+<msg timestamp="20200414 13:00:45.275" level="INFO">POST Request using : uri=/token, params=None, files=None, allow_redirects=True, timeout=None
 headers={'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
 data={"username": "001", "password": "secret"} 
 json=None</msg>
-<msg timestamp="20200413 16:09:14.214" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200413 16:09:14.113" endtime="20200413 16:09:14.215"></status>
+<msg timestamp="20200414 13:00:45.386" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200414 13:00:45.274" endtime="20200414 13:00:45.386"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${response}</arg>
 </arguments>
-<msg timestamp="20200413 16:09:14.215" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200413 16:09:14.215" endtime="20200413 16:09:14.215"></status>
+<msg timestamp="20200414 13:00:45.388" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200414 13:00:45.387" endtime="20200414 13:00:45.388"></status>
 </kw>
-<status status="PASS" starttime="20200413 16:09:14.108" endtime="20200413 16:09:14.216"></status>
+<status status="PASS" starttime="20200414 13:00:45.270" endtime="20200414 13:00:45.388"></status>
 </kw>
 <kw name="Response Status should be Success" library="keyword_getToken">
 <kw name="Should Be Equal As Strings" library="BuiltIn">
@@ -164,10 +71,10 @@ json=None</msg>
 <arg>${response.status_code}</arg>
 <arg>200</arg>
 </arguments>
-<msg timestamp="20200413 16:09:14.217" level="INFO">Argument types are:
+<msg timestamp="20200414 13:00:45.390" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" starttime="20200413 16:09:14.217" endtime="20200413 16:09:14.217"></status>
+<status status="PASS" starttime="20200414 13:00:45.390" endtime="20200414 13:00:45.391"></status>
 </kw>
 <kw name="Convert To String" library="BuiltIn">
 <doc>Converts the given item to a Unicode string.</doc>
@@ -177,8 +84,8 @@ json=None</msg>
 <assign>
 <var>${res_body}</var>
 </assign>
-<msg timestamp="20200413 16:09:14.218" level="INFO">${res_body} = {"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA0LTEzVDA5OjA5OjE0LjIxOCIsImV4cGlyZWRhdGUiOiIyMDIwLTA0LTEzVDEwOjA5OjE0LjIxOCIsInBoYXNlIjoiMzAxYTFlYWY3ZTNhZWQ4Mm...</msg>
-<status status="PASS" starttime="20200413 16:09:14.218" endtime="20200413 16:09:14.218"></status>
+<msg timestamp="20200414 13:00:45.392" level="INFO">${res_body} = {"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA0LTE0VDA2OjAwOjQ1LjQwOSIsImV4cGlyZWRhdGUiOiIyMDIwLTA0LTE0VDA3OjAwOjQ1LjQwOSIsInBoYXNlIjoiYTk4Y2UyMTgxYzNlMWRlYj...</msg>
+<status status="PASS" starttime="20200414 13:00:45.391" endtime="20200414 13:00:45.392"></status>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
@@ -186,7 +93,7 @@ json=None</msg>
 <arg>${res_body}</arg>
 <arg>access_token</arg>
 </arguments>
-<status status="PASS" starttime="20200413 16:09:14.219" endtime="20200413 16:09:14.219"></status>
+<status status="PASS" starttime="20200414 13:00:45.392" endtime="20200414 13:00:45.393"></status>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
@@ -194,7 +101,7 @@ json=None</msg>
 <arg>${res_body}</arg>
 <arg>"expires_in":3600</arg>
 </arguments>
-<status status="PASS" starttime="20200413 16:09:14.219" endtime="20200413 16:09:14.220"></status>
+<status status="PASS" starttime="20200414 13:00:45.393" endtime="20200414 13:00:45.394"></status>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
@@ -202,7 +109,7 @@ json=None</msg>
 <arg>${res_body}</arg>
 <arg>Bearer</arg>
 </arguments>
-<status status="PASS" starttime="20200413 16:09:14.220" endtime="20200413 16:09:14.220"></status>
+<status status="PASS" starttime="20200414 13:00:45.394" endtime="20200414 13:00:45.394"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -213,54 +120,65 @@ json=None</msg>
 <assign>
 <var>${AuthToken}</var>
 </assign>
-<msg timestamp="20200413 16:09:14.221" level="INFO">${AuthToken} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA0LTEzVDA5OjA5OjE0LjIxOCIsImV4cGlyZWRhdGUiOiIyMDIwLTA0LTEzVDEwOjA5OjE0LjIxOCIsInBoYXNlIjoiMzAxYTFlYWY3ZTNhZWQ4MmFhNGNmZjMxYTU2NGI...</msg>
-<status status="PASS" starttime="20200413 16:09:14.220" endtime="20200413 16:09:14.221"></status>
+<msg timestamp="20200414 13:00:45.395" level="INFO">${AuthToken} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA0LTE0VDA2OjAwOjQ1LjQwOSIsImV4cGlyZWRhdGUiOiIyMDIwLTA0LTE0VDA3OjAwOjQ1LjQwOSIsInBoYXNlIjoiYTk4Y2UyMTgxYzNlMWRlYjNlMmM1MGUzOTI0MTZ...</msg>
+<status status="PASS" starttime="20200414 13:00:45.395" endtime="20200414 13:00:45.396"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
 <arg>${AuthToken}</arg>
 </arguments>
-<msg timestamp="20200413 16:09:14.222" level="INFO">${AuthToken} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA0LTEzVDA5OjA5OjE0LjIxOCIsImV4cGlyZWRhdGUiOiIyMDIwLTA0LTEzVDEwOjA5OjE0LjIxOCIsInBoYXNlIjoiMzAxYTFlYWY3ZTNhZWQ4MmFhNGNmZjMxYTU2NGI...</msg>
-<status status="PASS" starttime="20200413 16:09:14.222" endtime="20200413 16:09:14.222"></status>
+<msg timestamp="20200414 13:00:45.397" level="INFO">${AuthToken} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA0LTE0VDA2OjAwOjQ1LjQwOSIsImV4cGlyZWRhdGUiOiIyMDIwLTA0LTE0VDA3OjAwOjQ1LjQwOSIsInBoYXNlIjoiYTk4Y2UyMTgxYzNlMWRlYjNlMmM1MGUzOTI0MTZ...</msg>
+<status status="PASS" starttime="20200414 13:00:45.396" endtime="20200414 13:00:45.397"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${response.status_code}</arg>
 </arguments>
-<status status="PASS" starttime="20200413 16:09:14.222" endtime="20200413 16:09:14.223"></status>
+<status status="PASS" starttime="20200414 13:00:45.397" endtime="20200414 13:00:45.398"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${response.content}</arg>
 </arguments>
-<status status="PASS" starttime="20200413 16:09:14.223" endtime="20200413 16:09:14.224"></status>
+<status status="PASS" starttime="20200414 13:00:45.399" endtime="20200414 13:00:45.400"></status>
 </kw>
-<status status="PASS" starttime="20200413 16:09:14.216" endtime="20200413 16:09:14.224"></status>
+<status status="PASS" starttime="20200414 13:00:45.389" endtime="20200414 13:00:45.400"></status>
 </kw>
 <kw name="Send Request enrollMobileId" library="keyword_enrollMobileId">
+<arguments>
+<arg>E2E_Regist MobileID_001</arg>
+</arguments>
 <kw name="Create Session" library="RequestsLibrary">
 <doc>Create Session: create a HTTP session to a server</doc>
 <arguments>
 <arg>enrollMobileIdSS</arg>
 <arg>${base_url_issuer_mw}</arg>
 </arguments>
-<msg timestamp="20200413 16:09:14.226" level="INFO">Creating Session using : alias=enrollMobileIdSS, url=http://172.16.24.55:3216, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20200413 16:09:14.225" endtime="20200413 16:09:14.227"></status>
+<msg timestamp="20200414 13:00:45.402" level="INFO">Creating Session using : alias=enrollMobileIdSS, url=http://172.16.24.55:3216, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20200414 13:00:45.401" endtime="20200414 13:00:45.403"></status>
 </kw>
-<kw name="Create Dictionary" library="BuiltIn">
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<kw name="Get Binary File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
 <arguments>
-<arg>username=${username}</arg>
-<arg>password=${password}</arg>
+<arg>${onchainJson_Path}${TC_No}.onchain</arg>
 </arguments>
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200413 16:09:14.228" level="INFO">${body} = {'username': '001', 'password': 'secret'}</msg>
-<status status="PASS" starttime="20200413 16:09:14.227" endtime="20200413 16:09:14.228"></status>
+<msg timestamp="20200414 13:00:45.404" level="INFO" html="yes">Getting file '&lt;a href="file://C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources\OnchainFIle\E2E_Regist MobileID_001.onchain"&gt;C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources\OnchainFIle\E2E_Regist MobileID_001.onchain&lt;/a&gt;'.</msg>
+<msg timestamp="20200414 13:00:45.405" level="INFO">${body} = {
+  "dg1": {
+    "mobile_no": "0810090001",
+    "issuer": "AIS",
+    "mobile_id_sn": "030810090001",
+    "ial": "2.1",
+    "status": "A",
+    "face_engine_id": "YIT01234",
+    "timestamp": "20...</msg>
+<status status="PASS" starttime="20200414 13:00:45.403" endtime="20200414 13:00:45.405"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -272,8 +190,8 @@ json=None</msg>
 <assign>
 <var>${header}</var>
 </assign>
-<msg timestamp="20200413 16:09:14.229" level="INFO">${header} = {'network-user': 'user1', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA0LTEzVDA5OjA5OjE0LjIxOCIsImV4cGlyZWRhdGUi...</msg>
-<status status="PASS" starttime="20200413 16:09:14.229" endtime="20200413 16:09:14.229"></status>
+<msg timestamp="20200414 13:00:45.407" level="INFO">${header} = {'network-user': 'user1', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA0LTE0VDA2OjAwOjQ1LjQwOSIsImV4cGlyZWRhdGUi...</msg>
+<status status="PASS" starttime="20200414 13:00:45.405" endtime="20200414 13:00:45.407"></status>
 </kw>
 <kw name="Post Request" library="RequestsLibrary">
 <doc>Send a POST request on the session object found using the
@@ -287,33 +205,52 @@ given `alias`</doc>
 <assign>
 <var>${response}</var>
 </assign>
-<msg timestamp="20200413 16:09:14.231" level="INFO">POST Request using : uri=/enroll-mobileid, params=None, files=None, allow_redirects=True, timeout=None
-headers={'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'network-user': 'user1', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA0LTEzVDA5OjA5OjE0LjIxOCIsImV4cGlyZWRhdGUiOiIyMDIwLTA0LTEzVDEwOjA5OjE0LjIxOCIsInBoYXNlIjoiMzAxYTFlYWY3ZTNhZWQ4MmFhNGNmZjMxYTU2NGI0ZmE5MjRhMGE2ZCJ9.kt8mXEUpgdDMNAEawXifFgcGTiGQwG7DHjVLZLm_rus'} 
-data={"username": "001", "password": "secret"} 
+<msg timestamp="20200414 13:00:45.408" level="INFO">POST Request using : uri=/enroll-mobileid, params=None, files=None, allow_redirects=True, timeout=None
+headers={'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'network-user': 'user1', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA0LTE0VDA2OjAwOjQ1LjQwOSIsImV4cGlyZWRhdGUiOiIyMDIwLTA0LTE0VDA3OjAwOjQ1LjQwOSIsInBoYXNlIjoiYTk4Y2UyMTgxYzNlMWRlYjNlMmM1MGUzOTI0MTZmZWU0YzhiNzdkZSJ9.oWy_gC7JY_jcdj2ngkvU2wM0MI-qo_6XYKZuVPGe9FM'} 
+data={
+  "dg1": {
+    "mobile_no": "0810090001",
+    "issuer": "AIS",
+    "mobile_id_sn": "030810090001",
+    "ial": "2.1",
+    "status": "A",
+    "face_engine_id": "YIT01234",
+    "timestamp": "2020-04-14T05:21:48"
+  },
+  "dg2": "dIFoYY9aKNeopGyKtICQwl1cGn1lhq+FklFOY1w4bIGmgmN7dG1zWoGjYZW1ZJFnl1ZXs11ydKB8joZd1ndlonBPamZvmoCNj5+KY3KNicZFdGlyaSqBGmBMrLl9foJ+bK10cXCRkEc/hoGTZFl6iFxRikR8fX2blWpklIljaWZ2haNbZFKsiZiLLXql0zx/Z4tycZWBd2p6hIGHXadeT1NxcWR2c3V4h5Bm0Ip4anRFVFNoaGFkiE6ISIeaWIxdY6F5jaRhjrxff2eCgU9oV5GAcmJmq35YaoGBgIqNf4OKamiEiqGJjnSjcJpvZGiYVW5rin6Minl5cWVrnKyQlH9KjnBdXod0aqxyTHB+f3Z3bYh7h2Z4jWJ6eWhigF5gepF9h2mXh4ZwaYR/V4+Kg5xoanKYWpI/loGHcWZlj4J1lJBXdH5tg4RSnFJnbH1Bcn92bF9mcYdcXG9qaoaPf2ZPe2uKdJGdql+OcXKHfbWVc4x2koRpaGl6d1JBa3FjYo+LkGtoeHVjameGYHmBUGd2cWxtdXxjf1ifWnZPbnZsYomDcldje0l7fmZqZVxyj46DjG9xhHRwdH1hbXxvmX+AZ3iGaGBrT4BzcX59bXhsgn9uWHWKg4SLiYpbcXV+XHCdcnJwkXJpdpNsfVJrVnp/eY13kI5YgltshoVzlYGDcW5aemmFhkGGhHZad39ai3qOhYB9cGqhhW52enltenaFZHONU4lnfaFyc2hkeWtyXFZwfpZ7nWd0dotwenJ9hmt0aGuLhGdaemZ6iIhramuAhGyDgmtcdpB0amx/f4h4g29ngXZTjIp1R21hY3Nqc45ufYRsaIqMdp1vlHVodHZzaXNwkWFsalqBfVx1iIJ7g4SMZWGFW3xbaIeDdFqDi3t5eIVeX3VUlXZbb3lfhHd4c3pwgF13gHpqi3ZveoJ3fnpifGN+b3t+hXBuZmuGXIV4iGRuZ2mCd2pzh2WIb4iNZZ9zfYdzfIpucZplaGd8ZIqNa354X2F9f1uKY4JreXVpdmBsgop7Y294cVVvaH1xfWh/fUtxZH9deWGVfmyOen93bIB5jGd+doJud513g419ZHBddHKPd2p5dWZ/Zo52coZ4aJd0gYaGgW6TeW51YXZ1i4J8emh4W3Fpg2OGfnSCfmiLdo9xfmp5mHN/gmhofX9yWnSLeml+end9i4l6h35sdXNbYZl4fYWOgGhwbFlkkWeRiZFva515bGx1endmdXJmYYRshIl/cJR6iXWHjWaNhGKYhHRye3d9dpp4WW11em15bYJ8dHR4bl6Di3eDcmZoc1p+ZnWNbnyJcICJZHN3aWB0XGtsfW+Di2lgcIt1coR8mWV1em1lgnaFdX6Gd2mAZG1xcoN6WIl8b3xYem14aXR4ZoRycmJ+YolkgndacoJZbnZ/jnGAhYFrbm+BfHZ1fXJ0eI2Ajn9scH55XmRyeItlhHtzbIBldWV7an51bn14enR4aXeMaHd2Z4Vud3VfenJ/hn5eiIiDc3Zub3x2gHpncHpdY3ptf4VueH9uimtuaWlwZmyBY12BkHVveH6LeHhkb32CgW9taoxsbnFydWp/e3p9YHVzf4dqdIWDk3l3hWV9aYRycXFrgnB3a29mW4pwdHaFc4J9eXd/hYhghoNqdXV/coZxcXZ8ZnKCb36Ac3F7eIJ8gX1shWhaamiDfHB7hHeAe3J/eXl3goF8cGF6h2NweYN9fH14c3lme3SHd2p2ZW9+fYWEboZyhId0doh7gWx4d25ne3pyaoRndoNygIlzdGt+eHNkf3tyd3Btd2iIcFaBZoN6bnyCcWRxenF8cWhyXnJ8d2qQbIJ9hYOFcXl3cohmcGiPh1Z3coWCfn16c4NwYW9rfol3Z2t7gnGQbXFweX1zeXGRfYBmdoB/dGp9dnd4eGOChXuAdXxtfoR9aG6IbnByc3NzWW9ziGdzboKIcXxke3V2aIJtgXJxdYF8f4SAbXBzc3eKcXh2aXZpdJlse1l8hWZtd4aMcXtxfXh4c3qBi2F0f5KBcHOCe2ptfXl5eW16aYB8e26Cb3R4Z3plcnGGiHx/hmlxdn1lZ3NvcoBre2+Df2uGcHZueXyIcXRhiHN6b35oa4J8dGt4hn53cIRmen5wenJzgX5mbXV3eH51enBshJRpbYduandoiXZydIV6bnVwdmp4end1cHV3cHpjdHJ1cZh5jHB+hXpleV91fIR0bHZ8dXh8cmh9hHxlfXqBdIdxin5pjW98a4NrfnGVf3R2cZJlfXx7eIZ7f298hXhnZ3x+eXFyeHlzgIBxY2acc4F/Y3VthXqDdHuCgXpvb4p7aWx0eXN+cXeHf3NvbWdzdHZxaWSGeXFshYJ8hm99fXF7inOKhoSGcX1yX3aCdXl7fYBoZmt9e3B4fomDiX9qhnJ9fHt6cXmCcoN1h3prbGtpe3J+e3Brd3CCiX2FhHWGdHB+YnxufIGAdIZtaW+Fb3yNdmxyeXpudotxfId/gXdwZ3J2jHiLb3h1cnuCend3gn2DdGJuZ3d6anx9jG5xe3BrbnV3cG5mfnZ2hnd9iGyHbYRten57VWeReXiCfIZxgYCRZ26Cc2d7eIh2bG59fHeAb354fXV8dHh5dV5/cnB3hHp/gnF0eF2Ac3+GhIp9hoZ6cXBseXVTfYF3f25egXh1gntybYpqenVxf3B+d2xzeGVpe357em58jYN8gXNweGt1eIBuin16iHiCbF51hHVye3hzYIF7cHlxfm9zcHZyaIZhf3ZxdIqHaXd8cnuGeIlrfnx1Z2d2gWCDc293fXJofW58cYSDlHiLbmp4jGR8Xohzb3l1fGtpZXJ2g3Z9fIRrfYCEc2VzZWhuf3NskH9scXSHcH12c319aIl3enpwdH2CcGp+amRzfHR2eH57fnRzf3F/eoRzdn+Iem57U4GRb35+a4Zue3JuhXJ7dHp1dXptcG1ie3FygmRpdGd2f4Fzcnl5cn17f195fX1jdoV1d4Nocnd0cX6Kh399aXxvc3CReHhudnJxdHh+enlxjIFqcnZ/dGhxdmp/d4VqiYuJd3OFc3iHdGWAcXBseYFjd3d5Z4V8en55cHV9Z3Z/fm9+dGVpjXBtdW52gXZ+dXRnd4J2ZW19cXZ0aIJ8c4SDdnWAbHJ/a3d2Y31zenJren55bnR4bnZwaHd1YnJkfGxqe3Rtcm93dHV0ZHN8fmp+em94fIeEd210bXZ8mrWwiH9x/pt1i7akw+qixL1OLAFwe2lcTkY90U1dlZ1kewhklTxvV5q1N4y6sG+hblYqfVdJnrWASaOBrVePom2MWYxUDdB33oLTmrSUWdKSm2RnR51Vi33V4a97lb2TgFlBxYZ0p8RXpNddg02wq6yqwIOXnZymaZyFj1iK3mp8aNRkqFjDll5dnWa4RXOEfJ1kj5Ziw3t9zGCdrshhcGSMSo5zmpx2grLSUmhhVmU9h4Cmok1mIFifnGuAf5tzpH2DqL61kX9qZV+zkJ9WknOlk4B7ntdzP31yqGy2d3WforBje2eGabRTbIdxg4+BhZG8d659iIqlxoGpqZxhgL2PkFFgkJ5cooeFcoZwj213qaVseEmOYYBunZiggFqSgIuufJaJqIqZoI9nn6qVf5iReWyDQ4GItG6RoY2lZnxynXyLgEqZnoNQsHeFbpNOi4tee5ZbeIyBe4t2tW2LroeJnpqXmqayi5N9k6R9QoqLn619jIp7loOObX16coZPbGyjkYWckp+Se3yXoapyi32bbKScfIJ/m5B0gaWkaYell56Me5B9bJWSk4KTgZ2BgIOBi6ecmoDHko1+lZVniIOJeoiMZJqVdXCAg5FrfLjT1Ht3ur2tmI6MhmKXh7HInZ6danJvfJ5+jo2FlYidjIdyma2Fp46YdJGCinFwe6dwcJSZhYaNe5JveJeZroqQmXSPnYKblISHsqWng6ecrYCNtpCbnpScmqKRd4Oab5qDdJ2Gs2KHn514oG5tgIGFi4+pkne1k3aHncN+iaqSj467mX+QfXCkl5iVcJqQdpOljHqKcJtven1uc6JxjoyZkJyIh5uPp4NzjpCbn6mGg42leo5soJ6Ro3yDnXKDfKG3jIyOmmWRZpGHonWagYaJinhpenJ7iouAZ3p+iXa+jJx5s5SAlYmNjoeZqWSZbYOHpmejcZp3gX+Wg3SLdolmpoKSnHKDpYSAjJ+Bj2mBkJGTgpGWf5aBmIl/hpilcnqFmoeTd45+tYKdg2t5kZCOenCLnp2JgKh3iY6aoIiHjYRulZaZj5iYiZRxnZlrfJyCoIebi6OSnIZsn6OCoWyYjZuFg6mYmZaEpnWClJWXjol1hKSefIVejayUc4SApJuKho+KhoaKiXxoeoqMd3WIfoiOin6Bha6ei5SSknV4gqOYhHyAhXmTu6R3m5yqmpKQjJuVfoSik6WNgoegioGXgX94npqPh3qRf5eVoKiQanSPh4mWnnqKl5l6jJiVjn6NjZCPmIWBcpeajpKJcp19kp1/p4aSfaOrh4WDgoeTg4dzmJeFf5KXmX12iK6UgLeWjIKCjH6MgoqHcJCBiYSOYJdwhX6HfG6Dfp6orZ2eiY6Kho19kIV3fo+BiYCaiIWgmJCCiKKJjn6PjXmChH2ThpCRf4qUg4qKh3B4j42Sf4OgoG6CiIWRl56Mgo2Tj3eRg4mgpXuWkXqTjpB/c5ixjoSWk3+GgZOIhZqpe5Z4j4x6fZONiZmPeX+Je3uAh46ImYKoeH2Ph4+EiomMgYyGhpCCnad/i5hxg4uDjYWOhoGMkHGQhYaFjY2Mm3uWkpKJl3ORj4+UlYVtjY6PlZ+gj4SHgYyDdIpyf4mSeJaMipGknmaPiJSPmZ6YlJV3eJyYdYCKioaEkH52jIGghZWOnXp7h4mLdJaSiZaPfYWEkoeHdZl9jHWZepF/hZKAjIqTkI+YfoGLnZd+i3uDl5OflJKWjJCgf3WVk5p+jJCBmZSFlYqqoKSNm4J0nJCVpZiZc5aHgo2Ej4SajoR6kICWkoqNhIyHm3uMipaFe46IkJ+XjZCGlKaJe5GEgJV6iJCGfYCHnXmThZaMgpSOjJ+JhY6bhWuPl5Kai4eAloVyh3qPiY2AjYl7lJdvhZOHgY+RmpCDgop9mHqPkpCDfoCFkYuWiHaniJyej4OUc3mFkoWVgXuGho6Mi497joSIe46NgJucfYR7hHqKioqUjIl3fnyBmnt2gouBbIydio6Cf3uOeJmYj32fm4SEjayIhICak4aXkoyCg4GNf6N/gZafc4R9d416hIadkYxsfZ+fhZV7j3aRko2bgJaHeZGXm4t/gYCNgpSce4iKjpCbhIqOmYpzj56JfY+GkHCPoIGZf31ymJ5/hn5viY+WiZWDmZWHjYtzoY2CcoR8fo6KjGt4lI95lnWBloSYgYCMioN2lYWAbo2Qh4WXiYyUfo+dhoNxgZKNe5CegYuWioSOhmuDl6F4gXuRjoKSlo6lgoegfImRgH+Jhn2FlJSWjZCRm7WGgYyEnYx/jZCllZSLf4t3kpmGjqOckJiGfoZ6lH2Sh4iIf4+UiI6VonV/lIqXmYKPi66pgY6XeIaLhYOWcYShnnmKiZJ8gJGNcp6ce4mDf4xsi4agh4KRh4WIkomGiIF2foeRe4GogX53jYOJb5yFkoOGfIqbi4+BgG+AeIKXepp4kJmAh5WTjX6Lg46ViYKYfo6AiIqWi3aAioWKlpqpjYqHnpl2ioqDo4qUgI6Mg5iXgJeGmoabfomKgIWRgYmEjpyIf4+UhIuCnIiRg4uKkIGBkYaFhoCchX17jKeDkKh7jpF8k4eOkaSHkZJ9noqBlXZ3kId7kYaUgpOThomHhYSGjpaHi5KMlX2LhJGGkJOGnIqHipCAg42Qi5GAiH2Rm2+OnniFioiDmImhi357fYFvl4+Si5l4jJGQlYR/mJmPiICSiJyXiYJ8eaqPlo9xkYiFh5KLjIyDfIN3fHeLhYaQhIuChJGJnXt/kZV/d5GJgI+ajYGVh5KLg4V9gpWImZKcnn6RlYaUiYuNk4x5hpaYkoiTjYeKjY2Hj4OOgICSlpGAnm+Rl4qQj5GTi5qBlYKMgpaHg4R6i4J8loh4hZiJj4GRmpSBhJGmjZCJgYeWhZeSjomFh5CJepiSfKiNlZaBkX2QgoikjYSOdZGLlIyEjJSLk4OMhJKXl52VoYqSj4aPiYSgmn+Mf6WEno19c4Vxe4F4e4aOhpF6kpCJiYqMeYWImYaIi4KHlI6GiImFhY+YnJWMkIKRgYiGloqafo14gI+Slpx+ioCkg5Z6gol/ioeDnY2WhZmVio+GjpSHfoSBfH+ViouRkXaHgZGOgIeOeZGjlY6Qf4CAkImEm4uTjoyWnH6Af4qImY6HnYOMjY2Ak4x5hpWJloyYeZGCh4OGkn+Onol0i5uUjXl5mImUio+AipKGgp2SfYGRhX5+h350m4l5jn+Ng46TfJOnhZCIf49+kp+TeoWOjYyTg5SCeXx0k46LjYuLg4qNh4OKgn6Bm5x7goGVeoOUiYOMj4l5loh/jouWjYyKjYmQjYWMf3NrHUeRle7CoDWRSLFlLEd04QrDgJGoSF9cATqtYAQ6",
+  "sod": {
+    "hdg1": "+0a83/5AXGx4GoMs2DPSX0vcK/RnLLIPidjqd7HWkLQ=",
+    "hdg2": "VWkt4K3naAHkp6XfqA17grszxmM0TK1SRn3YdsqDw/E=",
+    "hface_template": "5iEqLto9P1zxyBBtMGahPDtkfQW0nCeRGt4xMFKw0CA=",
+    "dig": "d7WWiDTyQNXUkeMYLNOcF2ru27YHz9pYoNpCveekYpI=",
+    "sig": "zMOYeDRFF9Sp6ruGv6+XP2YZK//XdHNkFlCNCjOjggCrK8OYUgPU+CXhYqmp3ao5IfCn2+J1lYVrKOYtFzz1eOoYLIGCtMf8MaCNaSzk2wPHDUROjwMl0w33cnKj8u/QvwzR5EKzRMuakJ3b7x9bD5T6htbOW0DK6mzN+1ZW4ojm8Tmib5wsqimT4LYmvW++XGiY3AH5aoj/HFr2hhyHODqMBED+EI9mv68iOsMPheeIYv3tlqaQawqJAefq1U8rJL+Km7ykEb2CBFZDwVGy6icMu/rWphQXBdmjq+obNz2peSd9a+ZwWVIcaNOighfXmazbEUGP6OA0RiqxvBFGtg==",
+    "cert": "MIIEOTCCAyGgAwIBAgIRAPX2oKvmoIPVDQnAKU7LjlUwDQYJKoZIhvcNAQELBQAwVjELMAkGA1UEBhMCVEgxEzARBgNVBAgMClNvbWUtU3RhdGUxDTALBgNVBAoMBE5CQ1QxDDAKBgNVBAsMA0FJUzEVMBMGA1UEAwwMQUlTIE1PQklMRUlEMB4XDTE5MDUyNzExMTk1N1oXDTIwMDUyMTExMTk1N1owUDELMAkGA1UEBhMCVEgxEzARBgNVBAgMClNvbWUtU3RhdGUxDDAKBgNVBAoMA0FJUzEMMAoGA1UECwwDQUlTMRAwDgYDVQQDDAdBSVMgRFNDMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0X6yWx9t6bmmE0HFAX2WkQh/J+Oj9UaihIQpuusEFnXSAHSkosH1Ag7iwq0+qK4NqS7mmm+X2IcKSP/slJ9q28PDOtFxFyA8Yu7+70HXqGkMKW1a65+oUGUm8qRgeQSrCiTbwMFRmNRQh8H4/Nb0wxn5UMAq450ouy5igYd+lM+qKKcKA34QRop8Y99Oc0W8jeKeRL/WM+MaxgMhIRzY42Ty3nflZcYXPQ3qM0TSgsUqQLKUIwhDWqQpdkX5GJXeOG1MckwkOARfeKZSJn3WBL5tGToih9ri9w6rIAZYwFqAC1I+r2OIONhqWwJkriM2Q2iPXz9FWSJ1sHcR3I2lYQIDAQABo4IBBjCCAQIwCQYDVR0TBAIwADARBglghkgBhvhCAQEEBAMCBkAwJAYJYIZIAYb4QgENBBcWFU9wZW5TU0wgR2VuZXJhdGVkIERTQzAdBgNVHQ4EFgQUjxsu2ehFabH4swKQFNQpWkxAfHoweAYDVR0jBHEwb4AUgi+efoPj94uwjRmmHc0zpO8dKHehRKRCMEAxCzAJBgNVBAYTAlRIMRMwEQYDVQQIDApTb21lLVN0YXRlMQ0wCwYDVQQKDAROQkNUMQ0wCwYDVQQLDAROQkNUghEA9fagq+agg9UNCcApTsuOVDAOBgNVHQ8BAf8EBAMCBaAwEwYDVR0lBAwwCgYIKwYBBQUHAwEwDQYJKoZIhvcNAQELBQADggEBAJmJwFykhmKJBscwdQ4dTJA7VDeKk0m8rNCaZDJSlV3889Ck0cRyOwFEQPteU9YyGLY8P2ZfKsz4Jm+5GTdbhViEox5pG8s1pSxolM847auWtAIJmdC8YrvAFpLnup2KGHqdyGbxTX9Nhd4FLEH0eMEKWbrDVD8Dm/tOqwFkqEHFhD2QJzKx/M0ljPJUFoIRiqIpqp+Y2JmKKGtJllALxHQbf678+krNiLZdhNTBMfYzQqHzwxQ5GbVkBpX2flAeUcBpOWbZgDymcEKPsb73lUgeZLKw46fNlnFsvUyncSt/AOYsTIogyC7cxoXQNo8fosj7Gp8a59k//ELi43JkT1g="
+  }
+} 
 json=None</msg>
-<msg timestamp="20200413 16:09:14.454" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<status status="PASS" starttime="20200413 16:09:14.230" endtime="20200413 16:09:14.454"></status>
+<msg timestamp="20200414 13:00:45.696" level="INFO">${response} = &lt;Response [412]&gt;</msg>
+<status status="PASS" starttime="20200414 13:00:45.407" endtime="20200414 13:00:45.696"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${response.status_code}</arg>
 </arguments>
-<status status="PASS" starttime="20200413 16:09:14.454" endtime="20200413 16:09:14.456"></status>
+<status status="PASS" starttime="20200414 13:00:45.697" endtime="20200414 13:00:45.698"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${response.content}</arg>
 </arguments>
-<status status="PASS" starttime="20200413 16:09:14.456" endtime="20200413 16:09:14.457"></status>
+<status status="PASS" starttime="20200414 13:00:45.698" endtime="20200414 13:00:45.699"></status>
 </kw>
-<status status="PASS" starttime="20200413 16:09:14.225" endtime="20200413 16:09:14.457"></status>
+<status status="PASS" starttime="20200414 13:00:45.400" endtime="20200414 13:00:45.700"></status>
 </kw>
-<status status="PASS" starttime="20200413 16:09:14.107" endtime="20200413 16:09:14.458" critical="yes"></status>
+<status status="PASS" starttime="20200414 13:00:45.270" endtime="20200414 13:00:45.700" critical="yes"></status>
 </test>
 <doc>Suite description</doc>
-<status status="PASS" starttime="20200413 16:09:13.468" endtime="20200413 16:09:14.459"></status>
+<status status="PASS" starttime="20200414 13:00:44.579" endtime="20200414 13:00:45.702"></status>
 </suite>
 <statistics>
 <total>
@@ -327,7 +264,7 @@ json=None</msg>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20200413 16:09:14.089" level="ERROR">Error in file 'C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources\Issuer\keyword_getToken.robot': Importing test library 'HttpLibrary.HTTP' failed: SyntaxError: invalid syntax (__init__.py, line 16)
+<msg timestamp="20200414 13:00:45.233" level="ERROR">Error in file 'C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources\Issuer\keyword_getToken.robot': Importing test library 'HttpLibrary.HTTP' failed: SyntaxError: invalid syntax (__init__.py, line 16)
 Traceback (most recent call last):
   None
 PYTHONPATH:
@@ -341,7 +278,7 @@ PYTHONPATH:
   c:\users\panruethai.e\appdata\local\programs\python\python38-32\lib\site-packages\win32
   c:\users\panruethai.e\appdata\local\programs\python\python38-32\lib\site-packages\win32\lib
   c:\users\panruethai.e\appdata\local\programs\python\python38-32\lib\site-packages\Pythonwin</msg>
-<msg timestamp="20200413 16:09:14.103" level="ERROR">Error in file 'C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources\Issuer\keyword_enrollMobileId.robot': Importing test library 'HttpLibrary.HTTP' failed: SyntaxError: invalid syntax (__init__.py, line 16)
+<msg timestamp="20200414 13:00:45.248" level="ERROR">Error in file 'C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources\Issuer\keyword_enrollMobileId.robot': Importing test library 'HttpLibrary.HTTP' failed: SyntaxError: invalid syntax (__init__.py, line 16)
 Traceback (most recent call last):
   None
 PYTHONPATH:
