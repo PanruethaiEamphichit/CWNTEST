@@ -21,4 +21,6 @@ Response Status getMobileId should be Success
     log to console      ${response.status_code}
 
 ###Response Body###
+    ${res_body}=        convert to string   ${response.content}
+    should contain      ${res_body}         ${mobile_no}
     log to console      ${response.content}
