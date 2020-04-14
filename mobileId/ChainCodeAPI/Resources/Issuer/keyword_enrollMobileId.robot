@@ -23,8 +23,8 @@ Response Status enrollMobileId should be Success
     log to console      ${response.status_code}
 
 ###Response Body###
-    #${res_body}=   convert to string  ${response.content}
-    #should contain ${res_body}     Operation is successful
+    ${res_body}=   convert to string  ${response.content}
+    should contain ${res_body}     Operation is successful
     log to console  ${response.content}
     #log to console  ${response.text}
     #Return From Keyword  ${response}
