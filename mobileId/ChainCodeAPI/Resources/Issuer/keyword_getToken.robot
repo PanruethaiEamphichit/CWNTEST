@@ -31,7 +31,7 @@ Send Request getToken
     ${response}=    post request        getTokenSS  ${url_getToken_issuer_MDW}  data=${body}  headers=${header}
     Set Test Variable                   ${response}
 
-Response Status should be Success
+Response Status getToken should be Success
     #should be equal as strings  ${response.status_code} 200
 ###Response Code###
     #${status_code}=  convert to string  ${response.status_code}
@@ -42,7 +42,7 @@ Response Status should be Success
     should contain      ${res_body}         access_token
     should contain      ${res_body}         "expires_in":3600
     should contain      ${res_body}         Bearer
-    ${AuthToken}=   Collections.Get From Dictionary    ${response.json()}    access_token
+    ${AuthToken}=       Collections.Get From Dictionary    ${response.json()}    access_token
     set global variable     ${AuthToken}
     log to console      ${response.status_code}
     log to console      ${response.content}

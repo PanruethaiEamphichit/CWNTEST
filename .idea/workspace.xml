@@ -20,12 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0e775fd-6fa7-4b22-b6c7-3546fd1ee185" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/OnchainFIle/0810090001_637202353151095152.onchain" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/OnchainFIle/E2E_Regist MobileID_001.onchain" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/Issuer/keyword_getConsentLog.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/Issuer/keyword_getMobileId.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/Issuer/keyword_recordConsentLog.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/CWNTEST.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CWNTEST.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/Issuer/keyword_enrollMobileId.robot" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/Issuer/keyword_enrollMobileId.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/Issuer/keyword_getToken.robot" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/Issuer/keyword_getToken.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/variables.robot" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/variables.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobileId/Tests/RegisterMobileId.robot" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/Tests/RegisterMobileId.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobileId/Tests/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/Tests/log.html" afterDir="false" />
@@ -185,11 +187,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="726" y="222" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586840343711" />
-    <state x="184" y="9" key="SettingsEditor" timestamp="1586842154442">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="22" y="81" key="SettingsEditor" timestamp="1586845276595">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586842154442" />
-    <state x="22" y="81" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586840568282" />
+    <state x="22" y="81" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586845276595" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1586428723115">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
