@@ -14,13 +14,14 @@ Send getMobileId
     ${response}=    post request        getMobileIdSS  ${url_getMobileId}  data=${body}  headers=${header}
     Set Test Variable                   ${response}
 
-Response Status getMobileId should be Success
+Response getMobileId should be Success
 ###Response Code###
     #${status_code}=  convert to string  ${response.status_code}
-    should be equal as strings  ${response.status_code}     200
-    log to console      ${response.status_code}
+    should be equal as strings              ${response.status_code}     200
+    #log to console      ${response.status_code}
 
 ###Response Body###
     ${res_body}=        convert to string   ${response.content}
     should contain      ${res_body}         ${mobile_no}
-    log to console      ${response.content}
+    should contain      ${res_body}         ${mobile_id_sn}
+    #log to console      ${response.content}

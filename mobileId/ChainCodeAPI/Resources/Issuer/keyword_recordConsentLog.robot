@@ -14,11 +14,22 @@ Send Request recordConsentLog
     ${response}=    post request        recordConsentLogSS  ${url_recordConsent}  data=${body}  headers=${header}
     Set Test Variable                   ${response}
 
-Response Status recordConsentLog should be Success
+Response recordConsentLog should be Success
 ###Response Code###
     #${status_code}=  convert to string  ${response.status_code}
-    should be equal as strings  ${response.status_code}     200
+    should be equal as strings              ${response.status_code}     200
     log to console      ${response.status_code}
 
 ###Response Body###
     log to console      ${response.content}
+
+
+Response recordConsentLog Error 412: Existing cid
+###Response Code###
+    #${status_code}=  convert to string  ${response.status_code}
+    should be equal as strings              ${response.status_code}     412
+    #log to console      ${response.status_code}
+
+###Response Body###
+    ${res_body}=        convert to string   ${response.content}
+    should contain      ${res_body}         Invalid Operation: ConsentLog must not exist in the system (cid: ${cid}, mobile no: ${mobile_no}).

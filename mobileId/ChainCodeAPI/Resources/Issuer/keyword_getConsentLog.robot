@@ -14,11 +14,16 @@ Send getConsentLog
     ${response}=    post request        getConsentLogSS  ${url_getConsent}  data=${body}  headers=${header}
     Set Test Variable                   ${response}
 
-Response Status getConsentLog should be Success
+Response getConsentLog should be Success
 ###Response Code###
     #${status_code}=  convert to string  ${response.status_code}
-    should be equal as strings  ${response.status_code}     200
+    should be equal as strings              ${response.status_code}     200
     log to console      ${response.status_code}
 
 ###Response Body###
+    ${res_body}=        convert to string   ${response.content}
+    should contain      ${res_body}         ${mobile_no}
+    should contain      ${res_body}         ${issuer}
+    should contain      ${res_body}         ${mobile_id_sn}
+    should contain      ${res_body}         ${cid}
     log to console      ${response.content}

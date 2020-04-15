@@ -9,12 +9,12 @@ Resource  ../ChainCodeAPI/Resources/Issuer/keyword_getConsentLog.robot
 *** Test Cases ***
 E2E_Regist MobileID_001: Register 1 mobileId Successfully
     Send Request getToken
-    Response Status getToken should be Success
-    Send Request enrollMobileId     E2E_Regist MobileID_001
-    Response Status enrollMobileId should be Success
+    Response getToken should be Success
+    Send Request enrollMobileId                                 E2E_Regist MobileID_001
+    Response enrollMobileId Error 412: Existing MobileId
     Send Request recordConsentLog
-    Response Status recordConsentLog should be Success
+    Response recordConsentLog Error 412: Existing cid
     Send getMobileId
-    Response Status getMobileId should be Success
+    Response getMobileId should be Success
     Send getConsentLog
-    Response Status getConsentLog should be Success
+    Response getConsentLog should be Success

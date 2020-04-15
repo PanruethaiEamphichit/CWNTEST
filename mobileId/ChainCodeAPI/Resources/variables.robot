@@ -14,8 +14,9 @@ ${password}             secret
 ###enroll MobileId###
 ${url_enrollMobileId}   /enroll-mobileid
 ${onchainJson_Path}     ../ChainCodeAPI/Resources/OnchainFIle/
+#${onchainJson_Path}     D:/Parn/Mobile Id/202003_Sprint#9 CCR001-CCR003/Data/onChain/
 ${mobile_no}            0810090001
-${mobile_id_sn}         0300810090001
+${mobile_id_sn}         030810090001
 ${issuer}               AIS
 
 ###update MobileId###
@@ -26,7 +27,7 @@ ${url_getMobileId}      /get-mobileid
 
 ###record Consent Log###
 ${url_recordConsent}    /record-consent
-${cid}                  00000000-0000-0000-0000-0300810090001
+${cid}                  00000000-0000-0000-0000-030810090001
 
 ###get ConsentLog###
 ${url_getConsent}       /get-consent-log
