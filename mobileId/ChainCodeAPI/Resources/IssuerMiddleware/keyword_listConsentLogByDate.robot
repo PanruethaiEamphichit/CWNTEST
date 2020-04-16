@@ -8,7 +8,7 @@ Library     HttpLibrary.HTTP
 Resource    ../../Resources/variables.robot
 
 *** Keywords ***
-Send listConsentLogByDate
+Send Request listConsentLogByDate
     Create Session  listConsentLogByDateSS          ${base_url_issuer_mw}
     ${body}=        create dictionary   created_start_date=     created_end_date=      used_start_date=      used_end_date=     revoked_start_date=     revoked_end_date=       records=
     ${header}=      create dictionary   network-user=${network-user}    Content-Type=application/json   Authorization=Bearer ${AuthToken}

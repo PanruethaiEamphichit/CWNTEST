@@ -19,8 +19,26 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="a0e775fd-6fa7-4b22-b6c7-3546fd1ee185" name="Default Changelist" comment="16/04/2020&#10;- Rename Issuer to IssuerMiddleware&#10;- Add Keyword&#10;  &gt; keyword_listConsentLogByDate.robot&#10;&#10;Add VerifierMiddleware&#10;- Add Keyword&#10;  &gt; keyword_getConsentLog.robot">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+    <list default="true" id="a0e775fd-6fa7-4b22-b6c7-3546fd1ee185" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/VerifierMiddleware/keyword_retrieveMobileId.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/VerifierMiddleware/keyword_updateVerifierResult.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mobileId/Tests/updateVerifierResult.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CWNTEST.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CWNTEST.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/IssuerMiddleware/keyword_getConsentLog.robot" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/IssuerMiddleware/keyword_getConsentLog.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/IssuerMiddleware/keyword_getMobileId.robot" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/IssuerMiddleware/keyword_getMobileId.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/IssuerMiddleware/keyword_listConsentLogByDate.robot" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/IssuerMiddleware/keyword_listConsentLogByDate.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/VerifierMiddleware/keyword_getConsentLog.robot" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/VerifierMiddleware/keyword_getConsentLog.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/variables.robot" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/variables.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobileId/Tests/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/Tests/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobileId/Tests/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/Tests/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobileId/Tests/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/Tests/report.html" afterDir="false" />
+>>>>>>> 2c57e95f35b9d36e97d4919bcc9b488e2a8f6d5c
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +69,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/Verifier" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
+    <property name="settings.editor.selected.configurable" value="tasks" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -186,10 +205,23 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" width="582" height="274" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1586412402876" />
-    <state x="686" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587013294003">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="391" y="100" key="#Servers" timestamp="1587040068460">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="391" y="100" key="#Servers/0.0.1366.728@0.0.1366.728" timestamp="1587040068460" />
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587040081218">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1587040081218" />
+    <state x="488" y="225" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587040146621">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="225" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1587040146621" />
     <state x="686" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1587013294003" />
+    <state x="430" y="219" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1587040002605">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="430" y="219" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1587040002605" />
     <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1586426801245">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -198,10 +230,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1586842283149" />
-    <state x="651" y="170" key="FileChooserDialogImpl" timestamp="1586943915516">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1587035908584">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586418075905" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587035908584" />
     <state x="651" y="170" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586943915516" />
     <state x="440" y="231" key="Github.CreatePullRequestDialog" timestamp="1586441099991">
       <screen x="0" y="0" width="1366" height="728" />
@@ -211,6 +243,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="544" y="266" key="Github.Dialog.Accounts.Choose/0.0.1366.728@0.0.1366.728" timestamp="1586440802307" />
+    <state width="672" height="179" key="GridCell.Tab.0.bottom" timestamp="1587040045502">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="672" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587040045502" />
+    <state width="672" height="179" key="GridCell.Tab.0.center" timestamp="1587040045501">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="672" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587040045501" />
+    <state width="672" height="179" key="GridCell.Tab.0.left" timestamp="1587040045500">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="672" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587040045500" />
+    <state width="672" height="179" key="GridCell.Tab.0.right" timestamp="1587040045501">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="672" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587040045501" />
     <state x="384" y="179" key="IDE.errors.dialog" timestamp="1586930157971">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -220,10 +268,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="726" y="222" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586840343711" />
-    <state x="22" y="81" key="SettingsEditor" timestamp="1587022052002">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="184" y="9" key="SettingsEditor" timestamp="1587040109674">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586930139665" />
+    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1587040109674" />
     <state x="22" y="81" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587022052002" />
     <state x="387" y="139" key="Vcs.Push.Dialog.v2" timestamp="1586857574131">
       <screen x="0" y="0" width="1920" height="1040" />
