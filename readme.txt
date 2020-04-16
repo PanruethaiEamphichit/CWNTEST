@@ -11,3 +11,4 @@ How to prepare .onchain Source File (For enrollMobileId)
 You can simply run the testcase typing:
 
 path: /CWNTEST/mobileId/Tests>
+robot [testcase name]
