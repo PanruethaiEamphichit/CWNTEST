@@ -1,9 +1,13 @@
+*** Settings ***
+Library     DateTime
+
 *** Variables ***
 
-#################################### Issuer ####################################
+#################################### IssuerMiddleware ####################################
 
 #${URL}                  http://172.16.24.55:3216
 ${base_url_issuer_mw}   http://172.16.24.55:3216
+${base_url_verifier_mw}     http://172.16.24.55:3216
 ${network-user}         user1
 
 ###get Token###
@@ -32,8 +36,10 @@ ${cid}                  00000000-0000-0000-0000-030810090001
 ###get ConsentLog###
 ${url_getConsent}       /get-consent-log
 
-###list Consent Log ByDate###
+###list Consent Log By Date###
 ${url_listConsent}      /list-consent
+${created_start_date}   2020-04-16T13:33:00
+${today}=    Get Current Date    result_format=%Y%m%d%H%M%S
 
 ###revoke Consent Log###
 ${url_revokeConsent}    /revoke-consent
@@ -46,7 +52,7 @@ ${url_listHealthCheck}      /list-healthcheck
 
 
 
-#################################### Verifier ####################################
+#################################### VerifierMiddleware ####################################
 
 
 ###retrieve MobileId###
