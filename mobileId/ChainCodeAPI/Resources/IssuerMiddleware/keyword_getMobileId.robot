@@ -7,7 +7,7 @@ Library     HttpLibrary.HTTP
 Resource    ../../Resources/variables.robot
 
 *** Keywords ***
-Send getMobileId
+Send Request getMobileId
     Create Session  getMobileIdSS          ${base_url_issuer_mw}
     ${body}=        create dictionary   mobile_no=${mobile_no}  mobile_id_sn=${mobile_id_sn}
     ${header}=      create dictionary   network-user=${network-user}    Content-Type=application/json   Authorization=Bearer ${AuthToken}

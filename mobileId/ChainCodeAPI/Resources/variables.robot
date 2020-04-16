@@ -7,7 +7,6 @@ Library     DateTime
 
 #${URL}                  http://172.16.24.55:3216
 ${base_url_issuer_mw}   http://172.16.24.55:3216
-${base_url_verifier_mw}     http://172.16.24.55:3216
 ${network-user}         user1
 
 ###get Token###
@@ -54,9 +53,17 @@ ${url_listHealthCheck}      /list-healthcheck
 
 #################################### VerifierMiddleware ####################################
 
+${base_url_verifier_mw}     http://172.16.24.55:3216
 
 ###retrieve MobileId###
 ${url_retrieveMobileId}     /retrieve-mobileid-and-update-consent-log
+${verifier}                 AIS
+${aal}                      2.2
+${tx_type}                  A
+${ref1}                     ref1
+${ref2}                     ref2
 
 ###update verifier result###
 ${url_updateVerifierResult}     /update-verification-result
+@{verified}             Y
+${face_score_verified}  0.8

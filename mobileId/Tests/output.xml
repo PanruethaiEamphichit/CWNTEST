@@ -1,68 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.8.2 on win32)" generated="20200416 13:41:14.660" rpa="false">
-<suite id="s1" name="RegisterMobileId" source="C:\Users\Strezzo06-PC\PycharmProjects\CWNTEST\mobileId\Tests\RegisterMobileId.robot">
-<test id="s1-t1" name="E2E_Regist MobileID_001: Register 1 mobileId Successfully">
-<kw name="Send Request getToken" library="keyword_getToken">
+<robot generator="Robot 3.1.2 (Python 3.8.0 on win32)" generated="20200416 19:41:36.768" rpa="false">
+<suite id="s1" name="UpdateVerifierResult" source="C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId\Tests\UpdateVerifierResult.robot">
+<test id="s1-t1" name="Update Verifier Result Should Be Success">
+<kw name="Send Request updateVerifierResult" library="keyword_updateVerifierResult">
 <kw name="Create Session" library="RequestsLibrary">
 <doc>Create Session: create a HTTP session to a server</doc>
 <arguments>
-<arg>getTokenSS</arg>
-<arg>${base_url_issuer_mw}</arg>
+<arg>updateVerifierResultSS</arg>
+<arg>${base_url_verifier_mw}</arg>
 </arguments>
-<msg timestamp="20200416 13:41:15.113" level="INFO">Creating Session using : alias=getTokenSS, url=http://172.16.24.55:3216, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20200416 13:41:15.112" endtime="20200416 13:41:15.113"></status>
+<msg timestamp="20200416 19:41:37.395" level="INFO">Creating Session using : alias=updateVerifierResultSS, url=http://172.16.24.55:3216, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20200416 19:41:37.393" endtime="20200416 19:41:37.398"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
 <arguments>
-<arg>username=${username}</arg>
-<arg>password=${password}</arg>
+<arg>mobile_no=${mobile_no}</arg>
+<arg>issuer=${issuer}</arg>
+<arg>mobile_id_sn=${mobile_id_sn}</arg>
+<arg>cid=${cid}</arg>
+<arg>verifier=${verifier}</arg>
+<arg>verified=${verified}</arg>
+<arg>face_score_verified=${face_score_verified}</arg>
 </arguments>
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200416 13:41:15.114" level="INFO">${body} = {'username': '001', 'password': 'secret'}</msg>
-<status status="PASS" starttime="20200416 13:41:15.113" endtime="20200416 13:41:15.114"></status>
+<msg timestamp="20200416 19:41:37.401" level="INFO">${body} = {'mobile_no': '0810090001', 'issuer': 'AIS', 'mobile_id_sn': '030810090001', 'cid': '00000000-0000-0000-0000-030810090001', 'verifier': 'AIS', 'verified': ['Y'], 'face_score_verified': '0.8'}</msg>
+<status status="PASS" starttime="20200416 19:41:37.399" endtime="20200416 19:41:37.401"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
 <arguments>
+<arg>network-user=${network-user}</arg>
 <arg>Content-Type=application/json</arg>
 </arguments>
 <assign>
 <var>${header}</var>
 </assign>
-<msg timestamp="20200416 13:41:15.115" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
-<status status="PASS" starttime="20200416 13:41:15.114" endtime="20200416 13:41:15.115"></status>
+<msg timestamp="20200416 19:41:37.403" level="INFO">${header} = {'network-user': 'user1', 'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20200416 19:41:37.401" endtime="20200416 19:41:37.403"></status>
 </kw>
 <kw name="Post Request" library="RequestsLibrary">
 <doc>Send a POST request on the session object found using the
 given `alias`</doc>
 <arguments>
-<arg>getTokenSS</arg>
-<arg>${url_getToken_issuer_MDW}</arg>
+<arg>updateVerifierResultSS</arg>
+<arg>${url_updateVerifierResult}</arg>
 <arg>data=${body}</arg>
 <arg>headers=${header}</arg>
 </arguments>
 <assign>
 <var>${response}</var>
 </assign>
-<msg timestamp="20200416 13:41:15.116" level="INFO">POST Request using : uri=/token, params=None, files=None, allow_redirects=True, timeout=None
-headers={'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
-data={"username": "001", "password": "secret"} 
+<msg timestamp="20200416 19:41:37.404" level="INFO">POST Request using : uri=/update-verification-result, params=None, files=None, allow_redirects=True, timeout=None
+headers={'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'network-user': 'user1', 'Content-Type': 'application/json'} 
+data={"mobile_no": "0810090001", "issuer": "AIS", "mobile_id_sn": "030810090001", "cid": "00000000-0000-0000-0000-030810090001", "verifier": "AIS", "verified": ["Y"], "face_score_verified": "0.8"} 
 json=None</msg>
-<msg timestamp="20200416 13:41:36.119" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x04795FE8&gt;: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond')': /token</msg>
-<msg timestamp="20200416 13:41:57.325" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x047C9130&gt;: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond')': /token</msg>
-<msg timestamp="20200416 13:42:18.731" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x04795148&gt;: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond')': /token</msg>
-<msg timestamp="20200416 13:42:39.740" level="FAIL">ConnectionError: HTTPConnectionPool(host='172.16.24.55', port=3216): Max retries exceeded with url: /token (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x047C91C0&gt;: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond'))</msg>
-<status status="FAIL" starttime="20200416 13:41:15.115" endtime="20200416 13:42:39.740"></status>
+<msg timestamp="20200416 19:41:37.471" level="INFO">${response} = &lt;Response [401]&gt;</msg>
+<status status="PASS" starttime="20200416 19:41:37.403" endtime="20200416 19:41:37.471"></status>
 </kw>
-<status status="FAIL" starttime="20200416 13:41:15.112" endtime="20200416 13:42:39.741"></status>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${response}</arg>
+</arguments>
+<msg timestamp="20200416 19:41:37.472" level="INFO">${response} = &lt;Response [401]&gt;</msg>
+<status status="PASS" starttime="20200416 19:41:37.471" endtime="20200416 19:41:37.472"></status>
 </kw>
-<status status="FAIL" starttime="20200416 13:41:15.111" endtime="20200416 13:42:39.741" critical="yes">ConnectionError: HTTPConnectionPool(host='172.16.24.55', port=3216): Max retries exceeded with url: /token (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x047C91C0&gt;: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond'))</status>
+<status status="PASS" starttime="20200416 19:41:37.393" endtime="20200416 19:41:37.472"></status>
+</kw>
+<kw name="Response recordConsentLog should be Success" library="keyword_updateVerifierResult">
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+</arguments>
+<msg timestamp="20200416 19:41:37.474" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20200416 19:41:37.474" level="FAIL">401 != 200</msg>
+<status status="FAIL" starttime="20200416 19:41:37.473" endtime="20200416 19:41:37.474"></status>
+</kw>
+<status status="FAIL" starttime="20200416 19:41:37.473" endtime="20200416 19:41:37.474"></status>
+</kw>
+<status status="FAIL" starttime="20200416 19:41:37.392" endtime="20200416 19:41:37.475" critical="yes">401 != 200</status>
 </test>
 <doc>Suite description</doc>
-<status status="FAIL" starttime="20200416 13:41:14.663" endtime="20200416 13:42:39.745"></status>
+<status status="FAIL" starttime="20200416 19:41:36.770" endtime="20200416 19:41:37.477"></status>
 </suite>
 <statistics>
 <total>
@@ -72,62 +98,23 @@ json=None</msg>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" id="s1" name="RegisterMobileId">RegisterMobileId</stat>
+<stat pass="0" fail="1" id="s1" name="UpdateVerifierResult">UpdateVerifierResult</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20200416 13:41:15.040" level="ERROR">Error in file 'C:\Users\Strezzo06-PC\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources\Issuer\keyword_getToken.robot': Importing test library 'HttpLibrary.HTTP' failed: SyntaxError: invalid syntax (__init__.py, line 16)
+<msg timestamp="20200416 19:41:37.343" level="ERROR">Error in file 'C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources\VerifierMiddleware\keyword_updateVerifierResult.robot': Importing test library 'HttpLibrary.HTTP' failed: SyntaxError: invalid syntax (__init__.py, line 16)
 Traceback (most recent call last):
   None
 PYTHONPATH:
-  C:\Users\Strezzo06-PC\AppData\Local\Programs\Python\Python38-32\Scripts\robot.exe
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32\python38.zip
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32\DLLs
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32\lib
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32\lib\site-packages</msg>
-<msg timestamp="20200416 13:41:15.057" level="ERROR">Error in file 'C:\Users\Strezzo06-PC\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources\Issuer\keyword_enrollMobileId.robot': Importing test library 'HttpLibrary.HTTP' failed: SyntaxError: invalid syntax (__init__.py, line 16)
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Users\Strezzo06-PC\AppData\Local\Programs\Python\Python38-32\Scripts\robot.exe
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32\python38.zip
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32\DLLs
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32\lib
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32\lib\site-packages</msg>
-<msg timestamp="20200416 13:41:15.077" level="ERROR">Error in file 'C:\Users\Strezzo06-PC\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources\Issuer\keyword_recordConsentLog.robot': Importing test library 'HttpLibrary.HTTP' failed: SyntaxError: invalid syntax (__init__.py, line 16)
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Users\Strezzo06-PC\AppData\Local\Programs\Python\Python38-32\Scripts\robot.exe
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32\python38.zip
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32\DLLs
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32\lib
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32\lib\site-packages</msg>
-<msg timestamp="20200416 13:41:15.088" level="ERROR">Error in file 'C:\Users\Strezzo06-PC\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources\Issuer\keyword_getMobileId.robot': Importing test library 'HttpLibrary.HTTP' failed: SyntaxError: invalid syntax (__init__.py, line 16)
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Users\Strezzo06-PC\AppData\Local\Programs\Python\Python38-32\Scripts\robot.exe
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32\python38.zip
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32\DLLs
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32\lib
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32\lib\site-packages</msg>
-<msg timestamp="20200416 13:41:15.105" level="ERROR">Error in file 'C:\Users\Strezzo06-PC\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources\Issuer\keyword_getConsentLog.robot': Importing test library 'HttpLibrary.HTTP' failed: SyntaxError: invalid syntax (__init__.py, line 16)
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Users\Strezzo06-PC\AppData\Local\Programs\Python\Python38-32\Scripts\robot.exe
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32\python38.zip
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32\DLLs
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32\lib
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32
-  c:\users\strezzo06-pc\appdata\local\programs\python\python38-32\lib\site-packages</msg>
-<msg timestamp="20200416 13:41:36.119" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x04795FE8&gt;: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond')': /token</msg>
-<msg timestamp="20200416 13:41:57.325" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x047C9130&gt;: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond')': /token</msg>
-<msg timestamp="20200416 13:42:18.731" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x04795148&gt;: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond')': /token</msg>
+  C:\Users\panruethai.e\AppData\Local\Programs\Python\Python38-32\Scripts\robot.exe
+  c:\users\panruethai.e\appdata\local\programs\python\python38-32\python38.zip
+  c:\users\panruethai.e\appdata\local\programs\python\python38-32\DLLs
+  c:\users\panruethai.e\appdata\local\programs\python\python38-32\lib
+  c:\users\panruethai.e\appdata\local\programs\python\python38-32
+  C:\Users\panruethai.e\AppData\Roaming\Python\Python38\site-packages
+  c:\users\panruethai.e\appdata\local\programs\python\python38-32\lib\site-packages
+  c:\users\panruethai.e\appdata\local\programs\python\python38-32\lib\site-packages\win32
+  c:\users\panruethai.e\appdata\local\programs\python\python38-32\lib\site-packages\win32\lib
+  c:\users\panruethai.e\appdata\local\programs\python\python38-32\lib\site-packages\Pythonwin</msg>
 </errors>
 </robot>

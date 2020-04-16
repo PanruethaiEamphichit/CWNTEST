@@ -7,7 +7,7 @@ Library     HttpLibrary.HTTP
 Resource    ../../Resources/variables.robot
 
 *** Keywords ***
-Send getConsentLog
+Send Request getConsentLog for Issuer
     Create Session  getConsentLogSS          ${base_url_issuer_mw}
     ${body}=        create dictionary   mobile_no=${mobile_no}  issuer=${issuer}   mobile_id_sn=${mobile_id_sn}   cid=${cid}
     ${header}=      create dictionary   network-user=${network-user}    Content-Type=application/json   Authorization=Bearer ${AuthToken}
