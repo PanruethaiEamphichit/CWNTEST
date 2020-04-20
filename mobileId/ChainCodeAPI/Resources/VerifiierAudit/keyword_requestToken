@@ -1,0 +1,32 @@
+*** Settings ***
+Library     Collections
+Library     String
+Library     RequestsLibrary
+Library     JSONLibrary
+Library     HttpLibrary.HTTP
+Resource    ../../Resources/variables.robot
+
+*** Keywords ***
+
+Send Request requestToken For VerifierAudit
+    Create Session  requestTokenVerifierAuditSS          ${base_url_VerifierAudit}
+    ${body}=        create dictionary   grant_type=${grant_type}  scope=${scope}
+    ${header}=      create dictionary   Authorization=${Auth_requestToken_VerifierAudit} Content-Type=application/x-www-form-urlencoded
+    ${response}=    post request        requestTokenVerifierAuditSS  ${url_requestToken_VerifierAudit}  data=${body}  headers=${header}
+    Set Test Variable                   ${response}
+
+Response requestToken For VerifierAudit should be Success
+###Response Code###
+    should be equal as strings          ${response.status_code}     200
+
+###Response Body###
+    ${res_body}=  convert to string     ${response.content}
+    should contain      ${res_body}     access_token
+    should contain      ${res_body}     "expires_in":3600
+    should contain      ${res_body}     Bearer
+    ${AuthToken}=  Collections.Get From Dictionary  ${response.json()}  access_token
+    set global variable  ${authTokenVerifierAudit}
+    #log to console      ${response.status_code}
+    #log to console      ${response.content}
+    #log to console  ${response.text}
+    #Return From Keyword  ${response}

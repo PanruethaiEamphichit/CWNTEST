@@ -14,7 +14,7 @@ E2E_Regist MobileID_001: Register 1 mobileId Error 412: Existing MobileId
     Response enrollMobileId Error 412: Existing MobileId
     Send Request recordConsentLog
     Response recordConsentLog Error 412: Existing cid
-    Send getMobileId
+    Send Request getMobileId
     Response getMobileId should be Success
-    Send getConsentLog
-    Response getConsentLog should be Success
+    Send Request getConsentLog for Issuer
+    Response getConsentLog for Issuer should be Success

@@ -28,7 +28,7 @@ Send Request getToken
     Create Session  getTokenSS          ${base_url_issuer_mw}
     ${body}=        create dictionary   username=${username}  password=${password}
     ${header}=      create dictionary   Content-Type=application/json
-    ${response}=    post request        getTokenSS  ${url_getToken_issuer_MDW}  data=${body}  headers=${header}
+    ${response}=    post request        getTokenSS  ${url_getToken_issuer_MW}  data=${body}  headers=${header}
     Set Test Variable                   ${response}
 
 Response getToken should be Success

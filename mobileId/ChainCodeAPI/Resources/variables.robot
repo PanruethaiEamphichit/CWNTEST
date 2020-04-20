@@ -10,7 +10,7 @@ ${base_url_issuer_mw}   http://172.16.24.55:3216
 ${network-user}         user1
 
 ###get Token###
-${url_getToken_issuer_MDW}  /token
+${url_getToken_issuer_MW}  /token
 ${username}             001
 ${password}             secret
 
