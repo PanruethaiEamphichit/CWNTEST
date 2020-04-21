@@ -1,9 +1,12 @@
 *** Settings ***
 Library     Collections
+Library     SeleniumLibrary
 Library     String
 Library     RequestsLibrary
 Library     JSONLibrary
 Library     HttpLibrary.HTTP
+Library     CSVLibrary
+Library     DataDriver  ${TestData_getToken_issuer_Path}${csv_getToken_issuer_Filename}${TestData_getToken_issuer_ext}  sheet_name=${TestData_getToken}
 Resource    ../../Resources/variables.robot
 
 *** Keywords ***
@@ -25,13 +28,14 @@ Resource    ../../Resources/variables.robot
 #    log to console  ${response.content}
 
 Send Request getToken
+    [Arguments]     ${username}         ${password}
     Create Session  getTokenSS          ${base_url_issuer_mw}
     ${body}=        create dictionary   username=${username}  password=${password}
     ${header}=      create dictionary   Content-Type=application/json
     ${response}=    post request        getTokenSS  ${url_getToken_issuer_MW}  data=${body}  headers=${header}
     Set Test Variable                   ${response}
 
-Response getToken should be Success
+Response getToken Success
     #should be equal as strings  ${response.status_code} 200
 ###Response Code###
     #${status_code}=  convert to string  ${response.status_code}
@@ -48,3 +52,11 @@ Response getToken should be Success
     #log to console      ${response.content}
     #log to console  ${response.text}
     #Return From Keyword  ${response}
+
+Response getToken Error 500: Wrong username and password
+###Response Code###
+    should be equal as strings          ${response.status_code}     500
+
+###Response Body###
+    ${res_body}=  convert to string     ${response.content}
+    should contain      ${res_body}     "error": "Wrong username and password"

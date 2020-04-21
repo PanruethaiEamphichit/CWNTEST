@@ -14,7 +14,7 @@ Send Request retrieveMobileId
     ${response}=    post request        retrieveMobileIdSS  ${url_retrieveMobileId}  data=${body}  headers=${header}
     Set Test Variable                   ${response}
 
-Response recordConsentLog should be Success
+Response retrieveMobileId should be Success
 ###Response Code###
     should be equal as strings              ${response.status_code}     200
     log to console      ${response.status_code}

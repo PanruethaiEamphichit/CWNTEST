@@ -11,12 +11,16 @@ ${network-user}         user1
 
 ###get Token###
 ${url_getToken_issuer_MW}  /token
+${TestData_getToken_issuer_Path}        ../TestData/
+${TestData_getToken_issuer_Filename}    TestData_getToken
+${TestData_getToken_issuer_ext}         .xlsx
+${TestData_getToken}    TestData_getToken
 ${username}             001
 ${password}             secret
 
 ###enroll MobileId###
 ${url_enrollMobileId}   /enroll-mobileid
-${onchainJson_Path}     ../ChainCodeAPI/Resources/OnchainFIle/
+${onchainJson_Path}     ../ChainCodeAPI/Resources/OnchainFile/
 #${onchainJson_Path}     D:/Parn/Mobile Id/202003_Sprint#9 CCR001-CCR003/Data/onChain/
 ${mobile_no}            0810090001
 ${mobile_id_sn}         030810090001

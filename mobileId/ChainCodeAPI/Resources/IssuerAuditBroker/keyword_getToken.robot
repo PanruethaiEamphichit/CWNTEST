@@ -24,8 +24,8 @@ Response getToken For IsserAuditBroker should be Success
     should contain      ${res_body}     access_token
     should contain      ${res_body}     "expires_in":3600
     should contain      ${res_body}     Bearer
-    ${AuthToken}=  Collections.Get From Dictionary  ${response.json()}  access_token
-    set global variable  ${authTokenIsserAuditBroker}
+    ${authTokenIssuerAuditBroker}=  Collections.Get From Dictionary  ${response.json()}  access_token
+    set global variable  ${authTokenIssuerAuditBroker}
     #log to console      ${response.status_code}
     #log to console      ${response.content}
     #log to console  ${response.text}
