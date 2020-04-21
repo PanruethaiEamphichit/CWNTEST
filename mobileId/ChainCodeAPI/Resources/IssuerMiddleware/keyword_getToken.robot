@@ -6,7 +6,6 @@ Library     RequestsLibrary
 Library     JSONLibrary
 Library     HttpLibrary.HTTP
 Library     CSVLibrary
-Library     DataDriver  ${TestData_getToken_issuer_Path}${csv_getToken_issuer_Filename}${TestData_getToken_issuer_ext}  sheet_name=${TestData_getToken}
 Resource    ../../Resources/variables.robot
 
 *** Keywords ***

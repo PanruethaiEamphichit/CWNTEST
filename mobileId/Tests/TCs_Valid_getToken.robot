@@ -1,5 +1,6 @@
 *** Settings ***
 Documentation    Suite description
+Library     DataDriver  ${TestData_getToken_issuer_Path}${csv_getToken_issuer_Filename}${TestData_getToken_issuer_ext}  sheet_name=${TestData_getToken}
 Resource  ../ChainCodeAPI/Resources/IssuerMiddleware/keyword_getToken.robot
 
 *** Keywords ***
