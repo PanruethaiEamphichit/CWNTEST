@@ -1,44 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="a0e775fd-6fa7-4b22-b6c7-3546fd1ee185" name="Default Changelist" comment="16/04/2020&#10;- Rename Issuer to IssuerMiddleware&#10;- Add Keyword&#10;  &gt; keyword_listConsentLogByDate.robot&#10;&#10;Add VerifierMiddleware&#10;- Add Keyword&#10;  &gt; keyword_getConsentLog.robot">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-=======
-    <list default="true" id="a0e775fd-6fa7-4b22-b6c7-3546fd1ee185" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/VerifierMiddleware/keyword_retrieveMobileId.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/VerifierMiddleware/keyword_updateVerifierResult.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobileId/Tests/updateVerifierResult.robot" afterDir="false" />
+    <list default="true" id="3f92020c-3405-4aff-b7e0-75b77d00b867" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/CWNTEST.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CWNTEST.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_14_2020_12_17_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_14_2020_12_17__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_14_2020_12_28_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_14_2020_12_28__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_14_2020_13_04_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_14_2020_13_04__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_14_2020_17_00_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_14_2020_17_00__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_15_2020_16_42_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_15_2020_16_42__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_16_2020_18_16_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_16_2020_18_16__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_17_2020_10_04_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_17_2020_10_04__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/IssuerMiddleware/keyword_getConsentLog.robot" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/IssuerMiddleware/keyword_getConsentLog.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/IssuerMiddleware/keyword_getMobileId.robot" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/IssuerMiddleware/keyword_getMobileId.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/IssuerMiddleware/keyword_listConsentLogByDate.robot" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/IssuerMiddleware/keyword_listConsentLogByDate.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/VerifierMiddleware/keyword_getConsentLog.robot" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/VerifierMiddleware/keyword_getConsentLog.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/variables.robot" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/variables.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobileId/Tests/TCs_Valid_getToken.robot" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/Tests/TCs_Valid_getToken.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobileId/Tests/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/Tests/log.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobileId/Tests/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/Tests/output.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobileId/Tests/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/Tests/report.html" afterDir="false" />
->>>>>>> 2c57e95f35b9d36e97d4919bcc9b488e2a8f6d5c
+      <change beforePath="$PROJECT_DIR$/venv/pyvenv.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pyvenv.cfg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,245 +31,44 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="panruethai.e@chanwanich.com" />
-        <option value="PanruethaiEamphichit" />
-      </list>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="ProjectId" id="1aGFeMjTMjY38yIwgth8GPfj65y" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1aqYnpDHGCS0NGAqryqEyrkHdai" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/Verifier" />
-    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="tasks" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources\Issuer" />
-      <recent name="C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources" />
-      <recent name="C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Strezzo06-PC\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources\Verifier" />
-      <recent name="C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources\OnchainFIle" />
-      <recent name="C:\Users\panruethai.e\PycharmProjects\CWNTEST" />
-    </key>
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="SvnConfiguration">
-    <configuration>C:\Users\panruethai.e\AppData\Roaming\Subversion</configuration>
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a0e775fd-6fa7-4b22-b6c7-3546fd1ee185" name="Default Changelist" comment="" />
-      <created>1586354117738</created>
+      <changelist id="3f92020c-3405-4aff-b7e0-75b77d00b867" name="Default Changelist" comment="" />
+      <created>1587464763225</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1586354117738</updated>
+      <updated>1587464763225</updated>
     </task>
-    <task id="LOCAL-00001" summary="Test up Script from Pycharm">
-      <created>1586354630594</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1586354630594</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Send getToken Success">
-      <created>1586426805085</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1586426805085</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Stored AuthToken from getToken V1.0">
-      <created>1586753837173</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1586753837173</updated>
-    </task>
-    <task id="LOCAL-00004" summary="enrollMobileId Get data from file V1.0">
-      <created>1586771796004</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1586771796004</updated>
-    </task>
-    <task id="LOCAL-00005" summary="enrollMobileId Get data from file via OperatingSystem Lib V1.1">
-      <created>1586841123537</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1586841123537</updated>
-    </task>
-    <task id="LOCAL-00006" summary="05/04/2020&#10;Add Keyword &#10;- keyword_recordConsentLog.robot&#10;- keyword_getMobileId.robot&#10;- keyword_getConsentLog.robot">
-      <created>1586857758109</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1586857758109</updated>
-    </task>
-    <task id="LOCAL-00007" summary="15/04/2020&#10;Add Keyword&#10;- keyword_recordConsentLog.robot&#10;- keyword_getMobileId.robot&#10;- keyword_getConsentLog.robot">
-      <created>1586857847267</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1586857847267</updated>
-    </task>
-    <task id="LOCAL-00008" summary="15/04/2020&#10;Add Keyword&#10;- keyword_recordConsentLog.robot&#10;- keyword_getMobileId.robot&#10;- keyword_getConsentLog.robot">
-      <created>1586857911538</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1586857911538</updated>
-    </task>
-    <task id="LOCAL-00009" summary="15/04/2020&#10;Add Keyword&#10;- keyword_recordConsentLog.robot&#10;- keyword_getMobileId.robot&#10;- keyword_getConsentLog.robot">
-      <created>1586858047292</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1586858047292</updated>
-    </task>
-    <task id="LOCAL-00010" summary="16/04/2020&#10;- Rename Issuer to IssuerMiddleware&#10;- Add Keyword&#10;  &gt; keyword_listConsentLogByDate.robot&#10;&#10;Add VerifierMiddleware&#10;- Add Keyword&#10;  &gt; keyword_getConsentLog.robot">
-      <created>1587035631328</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1587035631328</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="CHECK_NEW_TODO" value="false" />
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Test up Script from Pycharm" />
-    <MESSAGE value="Send getToken Success" />
-    <MESSAGE value="Stored AuthToken from getToken V1.0" />
-    <MESSAGE value="enrollMobileId Get data from file V1.0" />
-    <MESSAGE value="enrollMobileId Get data from file via OperatingSystem Lib V1.1" />
-    <MESSAGE value="05/04/2020&#10;Add Keyword &#10;- keyword_recordConsentLog.robot&#10;- keyword_getMobileId.robot&#10;- keyword_getConsentLog.robot" />
-    <MESSAGE value="15/04/2020&#10;Add Keyword &#10;- keyword_recordConsentLog.robot&#10;- keyword_getMobileId.robot&#10;- keyword_getConsentLog.robot" />
-    <MESSAGE value="15/04/2020&#10;Add Keyword&#10;- keyword_recordConsentLog.robot&#10;- keyword_getMobileId.robot&#10;- keyword_getConsentLog.robot" />
-    <MESSAGE value="16/04/2020&#10;- Rename Issuer to IssuerMiddleware&#10;- Add Keyword&#10;  &gt; keyword_listConsentLogByDate.robot&#10;&#10;Add VerifierMiddleware&#10;- Add Keyword&#10;  &gt; keyword_getConsentLog.robot" />
-    <option name="LAST_COMMIT_MESSAGE" value="16/04/2020&#10;- Rename Issuer to IssuerMiddleware&#10;- Add Keyword&#10;  &gt; keyword_listConsentLogByDate.robot&#10;&#10;Add VerifierMiddleware&#10;- Add Keyword&#10;  &gt; keyword_getConsentLog.robot" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="434" y="60" key="#Inspections" timestamp="1586755687437">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="309" y="42" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1586416177483" />
-    <state x="434" y="60" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1586755687437" />
-    <state x="275" y="22" width="582" height="274" key="#Notifications" timestamp="1586412402876">
+    <state x="462" y="119" key="FileChooserDialogImpl" timestamp="1587529572417">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="22" width="582" height="274" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1586412402876" />
-    <state x="391" y="100" key="#Servers" timestamp="1587040068460">
+    <state x="462" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587529572417" />
+    <state x="150" y="8" key="SettingsEditor" timestamp="1587535211727">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="391" y="100" key="#Servers/0.0.1366.728@0.0.1366.728" timestamp="1587040068460" />
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587040081218">
+    <state x="150" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1587535211727" />
+    <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587528889875">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1587040081218" />
-    <state x="488" y="225" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587040146621">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="488" y="225" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1587040146621" />
-    <state x="686" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1587013294003" />
-    <state x="430" y="219" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1587040002605">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="430" y="219" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1587040002605" />
-    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1586426801245">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586426801245" />
-    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1586842283149">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1586842283149" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1587035908584">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587035908584" />
-    <state x="651" y="170" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586943915516" />
-    <state x="440" y="231" key="Github.CreatePullRequestDialog" timestamp="1586441099991">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="440" y="231" key="Github.CreatePullRequestDialog/0.0.1366.728@0.0.1366.728" timestamp="1586441099991" />
-    <state x="544" y="266" key="Github.Dialog.Accounts.Choose" timestamp="1586440802307">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="544" y="266" key="Github.Dialog.Accounts.Choose/0.0.1366.728@0.0.1366.728" timestamp="1586440802307" />
-    <state width="672" height="179" key="GridCell.Tab.0.bottom" timestamp="1587040045502">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="672" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587040045502" />
-    <state width="672" height="179" key="GridCell.Tab.0.center" timestamp="1587040045501">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="672" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587040045501" />
-    <state width="672" height="179" key="GridCell.Tab.0.left" timestamp="1587040045500">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="672" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587040045500" />
-    <state width="672" height="179" key="GridCell.Tab.0.right" timestamp="1587040045501">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="672" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587040045501" />
-    <state x="384" y="179" key="IDE.errors.dialog" timestamp="1586930157971">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="384" y="179" key="IDE.errors.dialog/0.0.1366.728@0.0.1366.728" timestamp="1586930157971" />
-    <state x="540" y="255" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586753258153" />
-    <state x="726" y="222" key="RollbackChangesDialog" timestamp="1586840343711">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="726" y="222" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586840343711" />
-    <state x="184" y="9" key="SettingsEditor" timestamp="1587040109674">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1587040109674" />
-    <state x="22" y="81" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587022052002" />
-    <state x="387" y="139" key="Vcs.Push.Dialog.v2" timestamp="1586857574131">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586428723115" />
-    <state x="387" y="139" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586857574131" />
-    <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586709074405">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586709074405" />
-    <state x="667" y="83" width="585" height="873" key="find.popup" timestamp="1587022980750">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="667" y="83" width="585" height="873" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587022980750" />
+    <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1587528889875" />
   </component>
 </project>
