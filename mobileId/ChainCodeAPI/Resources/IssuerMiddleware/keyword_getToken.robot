@@ -1,20 +1,14 @@
 *** Settings ***
 Library     Collections
-Library     SeleniumLibrary
+Library     Selenium2Library
 Library     String
 Library     RequestsLibrary
 Library     JSONLibrary
 Library     HttpLibrary.HTTP
-Library     CSVLibrary
+#Library     CSVLib
 Resource    ../../Resources/variables.robot
 
 *** Keywords ***
-
-#Get Json Value and convert to Object
-#    [arguments] ${json_string}  ${path}
-#    ${value}=    Get Json Value  ${json_string}    ${path}
-#    ${value}=    Parse Json  ${value}
-#    Return From Keyword    ${value}
 
 #Response Should Contain Keys
 #    [arguments] ${object}   ${expected_keys}
@@ -43,8 +37,9 @@ Response getToken Success
 ###Response Body###
     ${res_body}=  convert to string     ${response.content}
     should contain      ${res_body}     access_token
-    should contain      ${res_body}     "expires_in":3600
     should contain      ${res_body}     Bearer
+    ${expire_in_value}=     get from dictionary     ${res_body}         expires_in
+    should be equal         ${expire_in_value}      3600
     ${AuthToken}=  Collections.Get From Dictionary  ${response.json()}  access_token
     set global variable  ${AuthToken}
     #log to console      ${response.status_code}
@@ -57,5 +52,6 @@ Response getToken Error 500: Wrong username and password
     should be equal as strings          ${response.status_code}     500
 
 ###Response Body###
-    ${res_body}=  convert to string     ${response.content}
-    should contain      ${res_body}     "error": "Wrong username and password"
+    ${res_body}=    convert to string       ${response.content}
+    ${error_msg}=   get from dictionary     ${res_body}             error
+    should be equal     ${res_body}         Wrong username and password

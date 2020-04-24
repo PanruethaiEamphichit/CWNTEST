@@ -10,7 +10,7 @@ Resource    ../../Resources/variables.robot
 
 Send Request enrollMobileId
     [Arguments]  ${TC_No}
-    Create Session  enrollMobileIdSS    ${base_url_issuer_mw}
+    Create Session  enrollMobileIdSS    ${base_url_issuer_mw}   auth=
     #${body}=       evaluate    json.load(open('mobileId/ChainCodeAPI/Resources/OnchainFile', 'r'))   json
     ${body}=        get binary file     ${onchainJson_Path}${TC_No}.onchain
     ${header}=      create dictionary   network-user=${network-user}    Content-Type=application/json   Authorization=Bearer ${AuthToken}
@@ -25,7 +25,7 @@ Response enrollMobileId should be Success
 ###Response Body###
     ${res_body}=        convert to string   ${response.content}
     should contain      ${res_body}         Operation is successful
-    log to console      ${response.content}
+    BuiltIn.log to console      ${response.content}
     #log to console  ${response.text}
     #Return From Keyword  ${response}
 

@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.8.0 on win32)" generated="20200422 13:02:05.362" rpa="false">
-<suite id="s1" name="TCs Valid getToken" source="C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId\Tests\TCs_Valid_getToken.robot">
-<test id="s1-t1" name="Chaincode API_getToken_Issuer: using ${username} and ${password}">
-<status status="FAIL" starttime="20200422 13:02:06.181" endtime="20200422 13:02:06.183" critical="yes">Test case contains no keywords.</status>
+<robot generator="Robot 3.1.2 (Python 3.8.2 on win32)" generated="20200423 17:46:26.134" rpa="false">
+<suite id="s1" name="TCs getToken using ExcelLibrary" source="C:\Users\Strezzo06-PC\PycharmProjects\CWNTEST\mobileId\Tests\TCs_getToken using ExcelLibrary.robot">
+<test id="s1-t1" name="Chaincode API_getToken_Issuer_001">
+<kw name="Get Values and Modify Spreadsheet" library="ExcelLibrary_getToken">
+<kw name="open excel document">
+<arguments>
+<arg>../TestData/TestData_getToken.xlsx</arg>
+</arguments>
+<msg timestamp="20200423 17:46:26.773" level="FAIL">No keyword with name 'open excel document' found.</msg>
+<status status="FAIL" starttime="20200423 17:46:26.773" endtime="20200423 17:46:26.773"></status>
+</kw>
+<status status="FAIL" starttime="20200423 17:46:26.767" endtime="20200423 17:46:26.774"></status>
+</kw>
+<status status="FAIL" starttime="20200423 17:46:26.766" endtime="20200423 17:46:26.774" critical="yes">No keyword with name 'open excel document' found.</status>
 </test>
-<doc>Suite description</doc>
-<status status="FAIL" starttime="20200422 13:02:05.366" endtime="20200422 13:02:06.186"></status>
+<status status="FAIL" starttime="20200423 17:46:26.134" endtime="20200423 17:46:26.776"></status>
 </suite>
 <statistics>
 <total>
@@ -15,44 +24,37 @@
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" id="s1" name="TCs Valid getToken">TCs Valid getToken</stat>
+<stat pass="0" fail="1" id="s1" name="TCs getToken using ExcelLibrary">TCs getToken using ExcelLibrary</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20200422 13:02:05.868" level="ERROR">Error in file 'C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId\Tests\TCs_Valid_getToken.robot': Variable '${TestData_getToken_issuer_Path}' not found.</msg>
-<msg timestamp="20200422 13:02:06.141" level="ERROR">Error in file 'C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources\IssuerMiddleware\keyword_getToken.robot': Importing test library 'HttpLibrary.HTTP' failed: SyntaxError: invalid syntax (__init__.py, line 16)
+<msg timestamp="20200423 17:46:26.478" level="ERROR">Error in file 'C:\Users\Strezzo06-PC\PycharmProjects\CWNTEST\mobileId\Tests\TCs_getToken using ExcelLibrary.robot': Importing test library 'ExcelLibrary' failed: ImportError: cannot import name '__version__' from 'ExcelLibrary.version' (C:\Users\Strezzo06-PC\AppData\Local\Programs\Python\Python38-32\lib\site-packages\ExcelLibrary\version.py)
 Traceback (most recent call last):
-  None
+  File "C:\Users\Strezzo06-PC\AppData\Local\Programs\Python\Python38-32\lib\site-packages\ExcelLibrary\__init__.py", line 17, in &lt;module&gt;
+    from ExcelLibrary import ExcelLibrary
+  File "C:\Users\Strezzo06-PC\AppData\Local\Programs\Python\Python38-32\lib\site-packages\ExcelLibrary\ExcelLibrary.py", line 27, in &lt;module&gt;
+    from .version import __version__
 PYTHONPATH:
-  C:\Users\panruethai.e\AppData\Local\Programs\Python\Python38-32\Scripts
-  C:\Users\panruethai.e\AppData\Local\Programs\Python\Python38-32\python38.zip
-  C:\Users\panruethai.e\AppData\Local\Programs\Python\Python38-32\DLLs
-  C:\Users\panruethai.e\AppData\Local\Programs\Python\Python38-32\lib
-  C:\Users\panruethai.e\AppData\Local\Programs\Python\Python38-32
-  C:\Users\panruethai.e\AppData\Roaming\Python\Python38\site-packages
-  C:\Users\panruethai.e\AppData\Local\Programs\Python\Python38-32\lib\site-packages
-  C:\Users\panruethai.e\AppData\Local\Programs\Python\Python38-32\lib\site-packages\robotframework_csvlib-1.0.0-py3.8.egg
-  C:\Users\panruethai.e\AppData\Local\Programs\Python\Python38-32\lib\site-packages\robotframework_csvlibrary-0.0.2-py3.8.egg
-  C:\Users\panruethai.e\AppData\Local\Programs\Python\Python38-32\lib\site-packages\win32
-  C:\Users\panruethai.e\AppData\Local\Programs\Python\Python38-32\lib\site-packages\win32\lib
-  C:\Users\panruethai.e\AppData\Local\Programs\Python\Python38-32\lib\site-packages\Pythonwin</msg>
-<msg timestamp="20200422 13:02:06.157" level="ERROR">Error in file 'C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources\IssuerMiddleware\keyword_getToken.robot': Importing test library 'CSVLibrary' failed: ModuleNotFoundError: No module named 'version'
+  C:\Users\Strezzo06-PC\AppData\Local\Programs\Python\Python38-32\Scripts
+  C:\Users\Strezzo06-PC\AppData\Local\Programs\Python\Python38-32\python38.zip
+  C:\Users\Strezzo06-PC\AppData\Local\Programs\Python\Python38-32\DLLs
+  C:\Users\Strezzo06-PC\AppData\Local\Programs\Python\Python38-32\lib
+  C:\Users\Strezzo06-PC\AppData\Local\Programs\Python\Python38-32
+  C:\Users\Strezzo06-PC\AppData\Local\Programs\Python\Python38-32\lib\site-packages
+  C:\Users\Strezzo06-PC\AppData\Local\Programs\Python\Python38-32\lib\site-packages\robotframework_csvlibrary-0.0.2-py3.8.egg</msg>
+<msg timestamp="20200423 17:46:26.489" level="ERROR">Error in file 'C:\Users\Strezzo06-PC\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Keyword_Excel\ExcelLibrary_getToken.robot': Importing test library 'ExcelLibrary' failed: ImportError: cannot import name '__version__' from 'ExcelLibrary.version' (C:\Users\Strezzo06-PC\AppData\Local\Programs\Python\Python38-32\lib\site-packages\ExcelLibrary\version.py)
 Traceback (most recent call last):
-  File "&lt;frozen zipimport&gt;", line 259, in load_module
-  File "C:\Users\panruethai.e\AppData\Local\Programs\Python\Python38-32\lib\site-packages\robotframework_csvlibrary-0.0.2-py3.8.egg\CSVLibrary\__init__.py", line 3, in &lt;module&gt;
-    from version import VERSION
+  File "C:\Users\Strezzo06-PC\AppData\Local\Programs\Python\Python38-32\lib\site-packages\ExcelLibrary\__init__.py", line 17, in &lt;module&gt;
+    from ExcelLibrary import ExcelLibrary
+  File "C:\Users\Strezzo06-PC\AppData\Local\Programs\Python\Python38-32\lib\site-packages\ExcelLibrary\ExcelLibrary.py", line 27, in &lt;module&gt;
+    from .version import __version__
 PYTHONPATH:
-  C:\Users\panruethai.e\AppData\Local\Programs\Python\Python38-32\Scripts
-  C:\Users\panruethai.e\AppData\Local\Programs\Python\Python38-32\python38.zip
-  C:\Users\panruethai.e\AppData\Local\Programs\Python\Python38-32\DLLs
-  C:\Users\panruethai.e\AppData\Local\Programs\Python\Python38-32\lib
-  C:\Users\panruethai.e\AppData\Local\Programs\Python\Python38-32
-  C:\Users\panruethai.e\AppData\Roaming\Python\Python38\site-packages
-  C:\Users\panruethai.e\AppData\Local\Programs\Python\Python38-32\lib\site-packages
-  C:\Users\panruethai.e\AppData\Local\Programs\Python\Python38-32\lib\site-packages\robotframework_csvlib-1.0.0-py3.8.egg
-  C:\Users\panruethai.e\AppData\Local\Programs\Python\Python38-32\lib\site-packages\robotframework_csvlibrary-0.0.2-py3.8.egg
-  C:\Users\panruethai.e\AppData\Local\Programs\Python\Python38-32\lib\site-packages\win32
-  C:\Users\panruethai.e\AppData\Local\Programs\Python\Python38-32\lib\site-packages\win32\lib
-  C:\Users\panruethai.e\AppData\Local\Programs\Python\Python38-32\lib\site-packages\Pythonwin</msg>
+  C:\Users\Strezzo06-PC\AppData\Local\Programs\Python\Python38-32\Scripts
+  C:\Users\Strezzo06-PC\AppData\Local\Programs\Python\Python38-32\python38.zip
+  C:\Users\Strezzo06-PC\AppData\Local\Programs\Python\Python38-32\DLLs
+  C:\Users\Strezzo06-PC\AppData\Local\Programs\Python\Python38-32\lib
+  C:\Users\Strezzo06-PC\AppData\Local\Programs\Python\Python38-32
+  C:\Users\Strezzo06-PC\AppData\Local\Programs\Python\Python38-32\lib\site-packages
+  C:\Users\Strezzo06-PC\AppData\Local\Programs\Python\Python38-32\lib\site-packages\robotframework_csvlibrary-0.0.2-py3.8.egg</msg>
 </errors>
 </robot>

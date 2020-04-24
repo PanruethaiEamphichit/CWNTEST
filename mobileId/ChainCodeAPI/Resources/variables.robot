@@ -11,12 +11,12 @@ ${network-user}         user1
 
 ###get Token###
 ${url_getToken_issuer_MW}  /token
-${TestData_getToken_issuer_Path}        ../TestData/
-${TestData_getToken_issuer_Filename}    TestData_getToken
-${TestData_getToken_issuer_ext}         .xlsx
-${TestData_getToken}    TestData_getToken
-${username}             001
-${password}             secret
+#${TestData_getToken_issuer_Path}        ../TestData/
+#${TestData_getToken_issuer_Filename}    TestData_getToken
+#${TestData_getToken_issuer_ext}         .csv
+#${TestData_getToken_Sheet}    TestData_getToken
+#${username}             001
+#${password}             secret
 
 ###enroll MobileId###
 ${url_enrollMobileId}   /enroll-mobileid
