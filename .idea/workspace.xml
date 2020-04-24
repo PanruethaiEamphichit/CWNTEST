@@ -19,61 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd655182-2b38-4d82-88a2-c12106ffe010" name="Default Changelist" comment="21/04/2020 import TestData from CSV File V1.1">
-      <change afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Keyword_Excel/ExcelLibrary_getToken.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobileId/TestData/TestData_getToken_csvLibrary.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobileId/Tests/TCs_Valid_getToken using DataDriver.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobileId/Tests/TCs_getToken using CSVLibrary.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobileId/Tests/TCs_getToken using ExcelLibrary.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ExcelLibrary.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/robotframework_excellib-2.0.0.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/robotframework_excellib-2.0.0.dist-info/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/robotframework_excellib-2.0.0.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/robotframework_excellib-2.0.0.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/robotframework_excellib-2.0.0.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/robotframework_excellib-2.0.0.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/xlrd-1.2.0.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/xlrd-1.2.0.dist-info/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/xlrd-1.2.0.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/xlrd-1.2.0.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/xlrd-1.2.0.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/xlrd-1.2.0.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/xlrd/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/xlrd/biffh.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/xlrd/book.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/xlrd/compdoc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/xlrd/formatting.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/xlrd/formula.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/xlrd/info.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/xlrd/sheet.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/xlrd/timemachine.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/xlrd/xldate.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/xlrd/xlsx.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/runxlrd.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CWNTEST.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CWNTEST.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/IssuerMiddleware/Template_getToken.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/IssuerMiddleware/keyword_enrollMobileId.robot" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/IssuerMiddleware/keyword_enrollMobileId.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/IssuerMiddleware/keyword_getToken.robot" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/IssuerMiddleware/keyword_getToken.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/variables.robot" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/ChainCodeAPI/Resources/variables.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobileId/TestData/TestData_getToken.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobileId/TestData/TestData_getToken.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/TestData/TestData_getToken.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobileId/Tests/TCs_Valid_getToken.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobileId/Tests/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/Tests/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobileId/Tests/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/Tests/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobileId/Tests/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobileId/Tests/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/HttpLibrary/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/HttpLibrary/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/HttpLibrary/livetest.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/HttpLibrary/livetest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-20.0.2.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip-20.0.2.dist-info/RECORD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/setuptools-46.1.3.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/setuptools-46.1.3.dist-info/RECORD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/easy_install-3.8.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/easy_install-3.8.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/easy_install.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/easy_install.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pip.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip3.8.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pip3.8.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pip3.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/pyvenv.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pyvenv.cfg" afterDir="false" />
-    </list>
+    <list default="true" id="dd655182-2b38-4d82-88a2-c12106ffe010" name="Default Changelist" comment="24/04/2020 import TestData from Excel File V1.0" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,6 +63,14 @@
       <option name="presentableId" value="Default" />
       <updated>1587464763225</updated>
     </task>
+    <task id="LOCAL-00001" summary="24/04/2020 import TestData from Excel File V1.0">
+      <created>1587702441986</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587702441986</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,7 +89,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="21/04/2020 import TestData from CSV File V1.0" />
     <MESSAGE value="21/04/2020 import TestData from CSV File V1.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/04/2020 import TestData from CSV File V1.1" />
+    <MESSAGE value="24/04/2020 import TestData from Excel File V1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="24/04/2020 import TestData from Excel File V1.0" />
   </component>
   <component name="WindowStateProjectService">
     <state x="706" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587634905634">
