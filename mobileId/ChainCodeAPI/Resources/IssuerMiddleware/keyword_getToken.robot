@@ -6,7 +6,7 @@ Library     RequestsLibrary
 Library     JSONLibrary
 Library     HttpLibrary.HTTP
 #Library     CSVLib
-Resource    ../../Resources/variables.robot
+Resource    ../../Resources/IssuerMiddleware/variables.robot
 
 *** Keywords ***
 
@@ -29,29 +29,34 @@ Send Request getToken
     Set Test Variable                   ${response}
 
 Response getToken Success
-    #should be equal as strings  ${response.status_code} 200
+    [Arguments]  ${status_expected}
 ###Response Code###
-    #${status_code}=  convert to string  ${response.status_code}
-    should be equal as strings          ${response.status_code}     200
+    #should be equal as strings          ${response.status_code}     200
+    ${status_code}=     convert to string  ${response.status_code}
+    Should Be Equal     ${status_code}  ${status_expected}
+    log to console      ${response.status_code}
 
 ###Response Body###
     ${res_body}=  convert to string     ${response.content}
     should contain      ${res_body}     access_token
     should contain      ${res_body}     Bearer
-    ${expire_in_value}=     get from dictionary     ${res_body}         expires_in
-    should be equal         ${expire_in_value}      3600
-    ${AuthToken}=  Collections.Get From Dictionary  ${response.json()}  access_token
+    ${expire_in_value}=     Collections.Get From Dictionary     ${response.json()}  expires_in
+    should be equal as integers         ${expire_in_value}      3600
+    ${AuthToken}=           Collections.Get From Dictionary     ${response.json()}  access_token
     set global variable  ${AuthToken}
-    #log to console      ${response.status_code}
-    #log to console      ${response.content}
+    log to console      ${response.content}
     #log to console  ${response.text}
-    #Return From Keyword  ${response}
 
 Response getToken Error 500: Wrong username and password
+    [Arguments]  ${status_expected}
 ###Response Code###
-    should be equal as strings          ${response.status_code}     500
+    #should be equal as strings             ${response.status_code}     500
+    ${status_code}=     convert to string   ${response.status_code}
+    Should Be Equal     ${status_code}      ${status_expected}
+    log to console      ${response.status_code}
 
 ###Response Body###
     ${res_body}=    convert to string       ${response.content}
-    ${error_msg}=   get from dictionary     ${res_body}             error
-    should be equal     ${res_body}         Wrong username and password
+    ${error_msg}=   Collections.Get From Dictionary     ${response.json()}     error
+    should be equal     ${error_msg}         Wrong username and password
+    log to console      ${response.content}
