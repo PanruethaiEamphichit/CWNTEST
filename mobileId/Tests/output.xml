@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.8.0 on win32)" generated="20200602 17:10:15.062" rpa="false">
+<robot generator="Robot 3.1.2 (Python 3.8.0 on win32)" generated="20200604 16:36:29.886" rpa="false">
 <suite id="s1" name="TCs getToken using ExcelLibrary" source="C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId\Tests\TCs_getToken_using_ExcelLibrary.robot">
 <kw name="Open Excel" library="ExcelLibrary_getToken" type="setup">
 <arguments>
-<arg>TestData_getToken.xlsx</arg>
-<arg>TestData_getToken</arg>
+<arg>${File_TestData}</arg>
+<arg>${File_Sheet_TestData}</arg>
 </arguments>
 <kw name="Open Excel Document" library="ExcelLibrary">
 <doc>Opens xlsx document file.</doc>
@@ -12,19 +12,19 @@
 <arg>../TestData/${Filename}</arg>
 <arg>doc_id=doc_getToken</arg>
 </arguments>
-<status status="PASS" starttime="20200602 17:10:16.544" endtime="20200602 17:10:16.555"></status>
+<status status="PASS" starttime="20200604 16:36:38.011" endtime="20200604 16:36:38.045"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
 <arguments>
 <arg>${Sheet_Name}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:16.555" level="INFO">${Sheet_Name} = TestData_getToken</msg>
-<status status="PASS" starttime="20200602 17:10:16.555" endtime="20200602 17:10:16.555"></status>
+<msg timestamp="20200604 16:36:38.046" level="INFO">${Sheet_Name} = TestData_getToken</msg>
+<status status="PASS" starttime="20200604 16:36:38.045" endtime="20200604 16:36:38.046"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:16.544" endtime="20200602 17:10:16.555"></status>
+<status status="PASS" starttime="20200604 16:36:38.010" endtime="20200604 16:36:38.046"></status>
 </kw>
-<test id="s1-t1" name="Chaincode API_getToken_Issuer_001">
+<test id="s1-t1" name="Chaincode API_getToken_Issuer_001: Check the Data Structure API">
 <kw name="Get Username From Spreadsheet" library="ExcelLibrary_getToken">
 <arguments>
 <arg>2</arg>
@@ -40,26 +40,26 @@
 <assign>
 <var>${username}</var>
 </assign>
-<msg timestamp="20200602 17:10:16.555" level="INFO">${username} = 001</msg>
-<status status="PASS" starttime="20200602 17:10:16.555" endtime="20200602 17:10:16.555"></status>
+<msg timestamp="20200604 16:36:38.050" level="INFO">${username} = 001</msg>
+<status status="PASS" starttime="20200604 16:36:38.049" endtime="20200604 16:36:38.051"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:16.555" level="INFO">${username} = 001</msg>
-<status status="PASS" starttime="20200602 17:10:16.555" endtime="20200602 17:10:16.555"></status>
+<msg timestamp="20200604 16:36:38.052" level="INFO">${username} = 001</msg>
+<status status="PASS" starttime="20200604 16:36:38.051" endtime="20200604 16:36:38.052"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:16.555" level="INFO">001</msg>
-<status status="PASS" starttime="20200602 17:10:16.555" endtime="20200602 17:10:16.555"></status>
+<msg timestamp="20200604 16:36:38.053" level="INFO">001</msg>
+<status status="PASS" starttime="20200604 16:36:38.052" endtime="20200604 16:36:38.053"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:16.555" endtime="20200602 17:10:16.555"></status>
+<status status="PASS" starttime="20200604 16:36:38.048" endtime="20200604 16:36:38.053"></status>
 </kw>
 <kw name="Get Password From Spreadsheet" library="ExcelLibrary_getToken">
 <arguments>
@@ -76,26 +76,26 @@
 <assign>
 <var>${password}</var>
 </assign>
-<msg timestamp="20200602 17:10:16.555" level="INFO">${password} = secret</msg>
-<status status="PASS" starttime="20200602 17:10:16.555" endtime="20200602 17:10:16.555"></status>
+<msg timestamp="20200604 16:36:38.055" level="INFO">${password} = secret</msg>
+<status status="PASS" starttime="20200604 16:36:38.054" endtime="20200604 16:36:38.055"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:16.555" level="INFO">${password} = secret</msg>
-<status status="PASS" starttime="20200602 17:10:16.555" endtime="20200602 17:10:16.555"></status>
+<msg timestamp="20200604 16:36:38.057" level="INFO">${password} = secret</msg>
+<status status="PASS" starttime="20200604 16:36:38.055" endtime="20200604 16:36:38.057"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:16.571" level="INFO">secret</msg>
-<status status="PASS" starttime="20200602 17:10:16.555" endtime="20200602 17:10:16.571"></status>
+<msg timestamp="20200604 16:36:38.057" level="INFO">secret</msg>
+<status status="PASS" starttime="20200604 16:36:38.057" endtime="20200604 16:36:38.057"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:16.555" endtime="20200602 17:10:16.571"></status>
+<status status="PASS" starttime="20200604 16:36:38.053" endtime="20200604 16:36:38.057"></status>
 </kw>
 <kw name="Send Request getToken" library="keyword_getToken">
 <arguments>
@@ -108,8 +108,8 @@
 <arg>getTokenSS</arg>
 <arg>${base_url_issuer_mw}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:16.571" level="INFO">Creating Session using : alias=getTokenSS, url=http://172.16.24.55:3216, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20200602 17:10:16.571" endtime="20200602 17:10:16.571"></status>
+<msg timestamp="20200604 16:36:38.059" level="INFO">Creating Session using : alias=getTokenSS, url=http://172.16.24.55:3216, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20200604 16:36:38.059" endtime="20200604 16:36:38.060"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -120,8 +120,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200602 17:10:16.571" level="INFO">${body} = {'username': '001', 'password': 'secret'}</msg>
-<status status="PASS" starttime="20200602 17:10:16.571" endtime="20200602 17:10:16.571"></status>
+<msg timestamp="20200604 16:36:38.062" level="INFO">${body} = {'username': '001', 'password': 'secret'}</msg>
+<status status="PASS" starttime="20200604 16:36:38.060" endtime="20200604 16:36:38.062"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -131,8 +131,8 @@
 <assign>
 <var>${header}</var>
 </assign>
-<msg timestamp="20200602 17:10:16.571" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
-<status status="PASS" starttime="20200602 17:10:16.571" endtime="20200602 17:10:16.571"></status>
+<msg timestamp="20200604 16:36:38.063" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20200604 16:36:38.062" endtime="20200604 16:36:38.063"></status>
 </kw>
 <kw name="Post Request" library="RequestsLibrary">
 <doc>Send a POST request on the session object found using the
@@ -146,22 +146,57 @@ given `alias`</doc>
 <assign>
 <var>${response}</var>
 </assign>
-<msg timestamp="20200602 17:10:16.571" level="INFO">POST Request using : uri=/token, params=None, files=None, allow_redirects=True, timeout=None
+<msg timestamp="20200604 16:36:38.065" level="INFO">POST Request using : uri=/token, params=None, files=None, allow_redirects=True, timeout=None
 headers={'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
 data={"username": "001", "password": "secret"} 
 json=None</msg>
-<msg timestamp="20200602 17:10:16.649" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200602 17:10:16.571" endtime="20200602 17:10:16.649"></status>
+<msg timestamp="20200604 16:36:38.152" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200604 16:36:38.064" endtime="20200604 16:36:38.152"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${response}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:16.649" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200602 17:10:16.649" endtime="20200602 17:10:16.649"></status>
+<msg timestamp="20200604 16:36:38.153" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200604 16:36:38.152" endtime="20200604 16:36:38.153"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:16.571" endtime="20200602 17:10:16.649"></status>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>POST ${url_getToken_issuer_MW} Host: ${base_url_issuer_mw}</arg>
+</arguments>
+<assign>
+<var>${URL_POST}</var>
+</assign>
+<msg timestamp="20200604 16:36:38.153" level="INFO">${URL_POST} = POST /token Host: http://172.16.24.55:3216</msg>
+<status status="PASS" starttime="20200604 16:36:38.153" endtime="20200604 16:36:38.153"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${URL_POST}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:38.154" level="INFO">${URL_POST} = POST /token Host: http://172.16.24.55:3216</msg>
+<status status="PASS" starttime="20200604 16:36:38.154" endtime="20200604 16:36:38.154"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:38.155" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20200604 16:36:38.154" endtime="20200604 16:36:38.155"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${body}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:38.156" level="INFO">${body} = {'username': '001', 'password': 'secret'}</msg>
+<status status="PASS" starttime="20200604 16:36:38.155" endtime="20200604 16:36:38.156"></status>
+</kw>
+<status status="PASS" starttime="20200604 16:36:38.058" endtime="20200604 16:36:38.156"></status>
 </kw>
 <kw name="Get Response From Spreadsheet" library="ExcelLibrary_getToken">
 <arguments>
@@ -178,26 +213,26 @@ json=None</msg>
 <assign>
 <var>${status_expected}</var>
 </assign>
-<msg timestamp="20200602 17:10:16.665" level="INFO">${status_expected} = 200</msg>
-<status status="PASS" starttime="20200602 17:10:16.665" endtime="20200602 17:10:16.665"></status>
+<msg timestamp="20200604 16:36:38.157" level="INFO">${status_expected} = 200</msg>
+<status status="PASS" starttime="20200604 16:36:38.156" endtime="20200604 16:36:38.157"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${status_expected}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:16.665" level="INFO">${status_expected} = 200</msg>
-<status status="PASS" starttime="20200602 17:10:16.665" endtime="20200602 17:10:16.665"></status>
+<msg timestamp="20200604 16:36:38.158" level="INFO">${status_expected} = 200</msg>
+<status status="PASS" starttime="20200604 16:36:38.157" endtime="20200604 16:36:38.158"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${status_expected}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:16.665" level="INFO">200</msg>
-<status status="PASS" starttime="20200602 17:10:16.665" endtime="20200602 17:10:16.665"></status>
+<msg timestamp="20200604 16:36:38.158" level="INFO">200</msg>
+<status status="PASS" starttime="20200604 16:36:38.158" endtime="20200604 16:36:38.159"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:16.665" endtime="20200602 17:10:16.665"></status>
+<status status="PASS" starttime="20200604 16:36:38.156" endtime="20200604 16:36:38.159"></status>
 </kw>
 <kw name="Response getToken Success" library="keyword_getToken">
 <arguments>
@@ -211,8 +246,8 @@ json=None</msg>
 <assign>
 <var>${status_code}</var>
 </assign>
-<msg timestamp="20200602 17:10:16.665" level="INFO">${status_code} = 200</msg>
-<status status="PASS" starttime="20200602 17:10:16.665" endtime="20200602 17:10:16.665"></status>
+<msg timestamp="20200604 16:36:38.161" level="INFO">${status_code} = 200</msg>
+<status status="PASS" starttime="20200604 16:36:38.160" endtime="20200604 16:36:38.161"></status>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
@@ -220,14 +255,22 @@ json=None</msg>
 <arg>${status_code}</arg>
 <arg>${status_expected}</arg>
 </arguments>
-<status status="PASS" starttime="20200602 17:10:16.665" endtime="20200602 17:10:16.665"></status>
+<status status="PASS" starttime="20200604 16:36:38.161" endtime="20200604 16:36:38.161"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${status_code}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:38.162" level="INFO">${status_code} = 200</msg>
+<status status="PASS" starttime="20200604 16:36:38.162" endtime="20200604 16:36:38.162"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
-<arg>${response.status_code}</arg>
+<arg>${status_code}</arg>
 </arguments>
-<status status="PASS" starttime="20200602 17:10:16.665" endtime="20200602 17:10:16.665"></status>
+<status status="PASS" starttime="20200604 16:36:38.162" endtime="20200604 16:36:38.163"></status>
 </kw>
 <kw name="Convert To String" library="BuiltIn">
 <doc>Converts the given item to a Unicode string.</doc>
@@ -237,8 +280,8 @@ json=None</msg>
 <assign>
 <var>${res_body}</var>
 </assign>
-<msg timestamp="20200602 17:10:16.665" level="INFO">${res_body} = {"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA2LTAyVDEwOjEwOjE2LjcxMiIsImV4cGlyZWRhdGUiOiIyMDIwLTA2LTAyVDExOjEwOjE2LjcxMiIsInBoYXNlIjoiOThiMjVjMDdmMTJlZWFiMm...</msg>
-<status status="PASS" starttime="20200602 17:10:16.665" endtime="20200602 17:10:16.665"></status>
+<msg timestamp="20200604 16:36:38.164" level="INFO">${res_body} = {"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA2LTA0VDA5OjM2OjM4LjIzMiIsImV4cGlyZWRhdGUiOiIyMDIwLTA2LTA0VDEwOjM2OjM4LjIzMiIsInBoYXNlIjoiNjJjNGYzYzI1ZWY5ZWQ4Nj...</msg>
+<status status="PASS" starttime="20200604 16:36:38.163" endtime="20200604 16:36:38.164"></status>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
@@ -246,7 +289,7 @@ json=None</msg>
 <arg>${res_body}</arg>
 <arg>access_token</arg>
 </arguments>
-<status status="PASS" starttime="20200602 17:10:16.665" endtime="20200602 17:10:16.665"></status>
+<status status="PASS" starttime="20200604 16:36:38.165" endtime="20200604 16:36:38.165"></status>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
@@ -254,7 +297,7 @@ json=None</msg>
 <arg>${res_body}</arg>
 <arg>Bearer</arg>
 </arguments>
-<status status="PASS" starttime="20200602 17:10:16.665" endtime="20200602 17:10:16.665"></status>
+<status status="PASS" starttime="20200604 16:36:38.166" endtime="20200604 16:36:38.166"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -263,21 +306,21 @@ json=None</msg>
 <arg>expires_in</arg>
 </arguments>
 <assign>
-<var>${expire_in_value}</var>
+<var>${expire_in_response}</var>
 </assign>
-<msg timestamp="20200602 17:10:16.665" level="INFO">${expire_in_value} = 3600</msg>
-<status status="PASS" starttime="20200602 17:10:16.665" endtime="20200602 17:10:16.665"></status>
+<msg timestamp="20200604 16:36:38.167" level="INFO">${expire_in_response} = 3600</msg>
+<status status="PASS" starttime="20200604 16:36:38.167" endtime="20200604 16:36:38.167"></status>
 </kw>
 <kw name="Should Be Equal As Integers" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to integers.</doc>
 <arguments>
+<arg>${expire_in_response}</arg>
 <arg>${expire_in_value}</arg>
-<arg>3600</arg>
 </arguments>
-<msg timestamp="20200602 17:10:16.665" level="INFO">Argument types are:
+<msg timestamp="20200604 16:36:38.168" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" starttime="20200602 17:10:16.665" endtime="20200602 17:10:16.665"></status>
+<status status="PASS" starttime="20200604 16:36:38.168" endtime="20200604 16:36:38.168"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -288,31 +331,40 @@ json=None</msg>
 <assign>
 <var>${AuthToken}</var>
 </assign>
-<msg timestamp="20200602 17:10:16.665" level="INFO">${AuthToken} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA2LTAyVDEwOjEwOjE2LjcxMiIsImV4cGlyZWRhdGUiOiIyMDIwLTA2LTAyVDExOjEwOjE2LjcxMiIsInBoYXNlIjoiOThiMjVjMDdmMTJlZWFiMmRiYjVmMzE1ZjdiMDN...</msg>
-<status status="PASS" starttime="20200602 17:10:16.665" endtime="20200602 17:10:16.665"></status>
+<msg timestamp="20200604 16:36:38.169" level="INFO">${AuthToken} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA2LTA0VDA5OjM2OjM4LjIzMiIsImV4cGlyZWRhdGUiOiIyMDIwLTA2LTA0VDEwOjM2OjM4LjIzMiIsInBoYXNlIjoiNjJjNGYzYzI1ZWY5ZWQ4NjAwYzQ5NWE1NjczOGM...</msg>
+<status status="PASS" starttime="20200604 16:36:38.168" endtime="20200604 16:36:38.169"></status>
 </kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<doc>Makes a variable available globally in all tests and suites.</doc>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${AuthToken}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:16.665" level="INFO">${AuthToken} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA2LTAyVDEwOjEwOjE2LjcxMiIsImV4cGlyZWRhdGUiOiIyMDIwLTA2LTAyVDExOjEwOjE2LjcxMiIsInBoYXNlIjoiOThiMjVjMDdmMTJlZWFiMmRiYjVmMzE1ZjdiMDN...</msg>
-<status status="PASS" starttime="20200602 17:10:16.665" endtime="20200602 17:10:16.665"></status>
+<msg timestamp="20200604 16:36:38.170" level="INFO">${AuthToken} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA2LTA0VDA5OjM2OjM4LjIzMiIsImV4cGlyZWRhdGUiOiIyMDIwLTA2LTA0VDEwOjM2OjM4LjIzMiIsInBoYXNlIjoiNjJjNGYzYzI1ZWY5ZWQ4NjAwYzQ5NWE1NjczOGM...</msg>
+<status status="PASS" starttime="20200604 16:36:38.169" endtime="20200604 16:36:38.170"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${res_body}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:38.170" level="INFO">${res_body} = {"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA2LTA0VDA5OjM2OjM4LjIzMiIsImV4cGlyZWRhdGUiOiIyMDIwLTA2LTA0VDEwOjM2OjM4LjIzMiIsInBoYXNlIjoiNjJjNGYzYzI1ZWY5ZWQ4Nj...</msg>
+<status status="PASS" starttime="20200604 16:36:38.170" endtime="20200604 16:36:38.170"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
-<arg>${response.content}</arg>
+<arg>${res_body}</arg>
 </arguments>
-<status status="PASS" starttime="20200602 17:10:16.665" endtime="20200602 17:10:16.665"></status>
+<status status="PASS" starttime="20200604 16:36:38.171" endtime="20200604 16:36:38.171"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:16.665" endtime="20200602 17:10:16.665"></status>
+<status status="PASS" starttime="20200604 16:36:38.159" endtime="20200604 16:36:38.171"></status>
 </kw>
 <kw name="Publish Test Case Result" library="ExcelLibrary_getToken" type="teardown">
 <arguments>
 <arg>13</arg>
 <arg>9</arg>
-<arg>../TestResult/SIT_CWN_NBT011_Test Case_Mobile ID_Sprint 9 CCR002.xlsx</arg>
+<arg>${File_Result}</arg>
+<arg>${File_Sheet_Result}</arg>
 </arguments>
 <kw name="Open Excel Document" library="ExcelLibrary">
 <doc>Opens xlsx document file.</doc>
@@ -320,34 +372,148 @@ json=None</msg>
 <arg>${File_Result}</arg>
 <arg>doc_id=doc_getToken_result</arg>
 </arguments>
-<status status="PASS" starttime="20200602 17:10:16.665" endtime="20200602 17:10:17.149"></status>
+<status status="PASS" starttime="20200604 16:36:38.173" endtime="20200604 16:36:38.673"></status>
 </kw>
 <kw name="Write Excel Cell" library="ExcelLibrary">
 <doc>Writes value to the cell.</doc>
 <arguments>
 <arg>row_num=${row_num}</arg>
 <arg>col_num=${col_num}</arg>
-<arg>value=${TEST STATUS}t${TEST MESSAGE}n</arg>
-<arg>sheet_name=Functional Testing</arg>
+<arg>value=${TEST STATUS}</arg>
+<arg>sheet_name=${Sheet_Name_Result}</arg>
 </arguments>
-<status status="PASS" starttime="20200602 17:10:17.149" endtime="20200602 17:10:17.149"></status>
+<status status="PASS" starttime="20200604 16:36:38.674" endtime="20200604 16:36:38.675"></status>
+</kw>
+<kw name="count row">
+<arguments>
+<arg>${Sheet_Name_Result}</arg>
+</arguments>
+<assign>
+<var>${iTotalRows}=</var>
+</assign>
+<msg timestamp="20200604 16:36:38.684" level="FAIL">No keyword with name 'count row' found.</msg>
+<status status="FAIL" starttime="20200604 16:36:38.684" endtime="20200604 16:36:38.684"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Allrow=${iTotalRows}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:38.687" level="FAIL">Variable '${iTotalRows}' not found.</msg>
+<status status="FAIL" starttime="20200604 16:36:38.684" endtime="20200604 16:36:38.687"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${col_num}-${3}</arg>
+</arguments>
+<assign>
+<var>${request_col_num}</var>
+</assign>
+<msg timestamp="20200604 16:36:38.687" level="INFO">${request_col_num} = 6</msg>
+<status status="PASS" starttime="20200604 16:36:38.687" endtime="20200604 16:36:38.688"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${URL_POST} \n ${header} \n ${body}</arg>
+</arguments>
+<assign>
+<var>${request_result}</var>
+</assign>
+<msg timestamp="20200604 16:36:38.688" level="INFO">${request_result} = POST /token Host: http://172.16.24.55:3216 
+{'Content-Type': 'application/json'} 
+{'username': '001', 'password': 'secret'}</msg>
+<status status="PASS" starttime="20200604 16:36:38.688" endtime="20200604 16:36:38.688"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${TEST STATUS}'=='PASS'</arg>
+<arg>Write Excel Cell</arg>
+<arg>${row_num}</arg>
+<arg>${request_col_num}</arg>
+<arg>${request_result}</arg>
+</arguments>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>${row_num}</arg>
+<arg>${request_col_num}</arg>
+<arg>${request_result}</arg>
+</arguments>
+<status status="PASS" starttime="20200604 16:36:38.689" endtime="20200604 16:36:38.690"></status>
+</kw>
+<status status="PASS" starttime="20200604 16:36:38.689" endtime="20200604 16:36:38.690"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${col_num}-${1}</arg>
+</arguments>
+<assign>
+<var>${actual_col_num}</var>
+</assign>
+<msg timestamp="20200604 16:36:38.691" level="INFO">${actual_col_num} = 8</msg>
+<status status="PASS" starttime="20200604 16:36:38.690" endtime="20200604 16:36:38.691"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Status code: ${status_code} \n message: ${res_body}</arg>
+</arguments>
+<assign>
+<var>${actual_result}</var>
+</assign>
+<msg timestamp="20200604 16:36:38.691" level="INFO">${actual_result} = Status code: 200 
+message: {"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA2LTA0VDA5OjM2OjM4LjIzMiIsImV4cGlyZWRhdGUiOiIyMDIwLTA2LTA0VDEwOjM2OjM4LjIzMiIsInBoYXN...</msg>
+<status status="PASS" starttime="20200604 16:36:38.691" endtime="20200604 16:36:38.692"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${TEST STATUS}'=='PASS'</arg>
+<arg>Write Excel Cell</arg>
+<arg>${row_num}</arg>
+<arg>${actual_col_num}</arg>
+<arg>${actual_result}</arg>
+</arguments>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>${row_num}</arg>
+<arg>${actual_col_num}</arg>
+<arg>${actual_result}</arg>
+</arguments>
+<status status="PASS" starttime="20200604 16:36:38.692" endtime="20200604 16:36:38.693"></status>
+</kw>
+<status status="PASS" starttime="20200604 16:36:38.692" endtime="20200604 16:36:38.693"></status>
 </kw>
 <kw name="Save Excel Document" library="ExcelLibrary">
 <doc>Saves the current document to disk.</doc>
 <arguments>
 <arg>${File_Result}</arg>
 </arguments>
-<status status="PASS" starttime="20200602 17:10:17.149" endtime="20200602 17:10:17.290"></status>
+<status status="PASS" starttime="20200604 16:36:38.693" endtime="20200604 16:36:38.945"></status>
 </kw>
 <kw name="Close Current Excel Document" library="ExcelLibrary">
 <doc>Closes current document.</doc>
-<status status="PASS" starttime="20200602 17:10:17.290" endtime="20200602 17:10:17.290"></status>
+<status status="PASS" starttime="20200604 16:36:38.945" endtime="20200604 16:36:38.945"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:16.665" endtime="20200602 17:10:17.290"></status>
+<status status="FAIL" starttime="20200604 16:36:38.172" endtime="20200604 16:36:38.946">Several failures occurred:
+
+1) No keyword with name 'count row' found.
+
+2) Variable '${iTotalRows}' not found.</status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:16.555" endtime="20200602 17:10:17.290" critical="yes"></status>
+<status status="FAIL" starttime="20200604 16:36:38.046" endtime="20200604 16:36:38.946" critical="yes">Teardown failed:
+Several failures occurred:
+
+1) No keyword with name 'count row' found.
+
+2) Variable '${iTotalRows}' not found.</status>
 </test>
-<test id="s1-t2" name="Chaincode API_getToken_Issuer_002">
+<test id="s1-t2" name="Chaincode API_getToken_Issuer_002: Wrong Username">
 <kw name="Get Username From Spreadsheet" library="ExcelLibrary_getToken">
 <arguments>
 <arg>3</arg>
@@ -363,26 +529,26 @@ json=None</msg>
 <assign>
 <var>${username}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.305" level="INFO">${username} = 002</msg>
-<status status="PASS" starttime="20200602 17:10:17.305" endtime="20200602 17:10:17.305"></status>
+<msg timestamp="20200604 16:36:38.950" level="INFO">${username} = 002</msg>
+<status status="PASS" starttime="20200604 16:36:38.950" endtime="20200604 16:36:38.950"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.305" level="INFO">${username} = 002</msg>
-<status status="PASS" starttime="20200602 17:10:17.305" endtime="20200602 17:10:17.305"></status>
+<msg timestamp="20200604 16:36:38.951" level="INFO">${username} = 002</msg>
+<status status="PASS" starttime="20200604 16:36:38.951" endtime="20200604 16:36:38.951"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.305" level="INFO">002</msg>
-<status status="PASS" starttime="20200602 17:10:17.305" endtime="20200602 17:10:17.305"></status>
+<msg timestamp="20200604 16:36:38.952" level="INFO">002</msg>
+<status status="PASS" starttime="20200604 16:36:38.951" endtime="20200604 16:36:38.952"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:17.305" endtime="20200602 17:10:17.305"></status>
+<status status="PASS" starttime="20200604 16:36:38.949" endtime="20200604 16:36:38.952"></status>
 </kw>
 <kw name="Get Password From Spreadsheet" library="ExcelLibrary_getToken">
 <arguments>
@@ -399,26 +565,26 @@ json=None</msg>
 <assign>
 <var>${password}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.305" level="INFO">${password} = secret</msg>
-<status status="PASS" starttime="20200602 17:10:17.305" endtime="20200602 17:10:17.305"></status>
+<msg timestamp="20200604 16:36:38.954" level="INFO">${password} = secret</msg>
+<status status="PASS" starttime="20200604 16:36:38.953" endtime="20200604 16:36:38.954"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.305" level="INFO">${password} = secret</msg>
-<status status="PASS" starttime="20200602 17:10:17.305" endtime="20200602 17:10:17.305"></status>
+<msg timestamp="20200604 16:36:38.955" level="INFO">${password} = secret</msg>
+<status status="PASS" starttime="20200604 16:36:38.954" endtime="20200604 16:36:38.955"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.305" level="INFO">secret</msg>
-<status status="PASS" starttime="20200602 17:10:17.305" endtime="20200602 17:10:17.305"></status>
+<msg timestamp="20200604 16:36:38.955" level="INFO">secret</msg>
+<status status="PASS" starttime="20200604 16:36:38.955" endtime="20200604 16:36:38.955"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:17.305" endtime="20200602 17:10:17.305"></status>
+<status status="PASS" starttime="20200604 16:36:38.953" endtime="20200604 16:36:38.956"></status>
 </kw>
 <kw name="Send Request getToken" library="keyword_getToken">
 <arguments>
@@ -431,8 +597,8 @@ json=None</msg>
 <arg>getTokenSS</arg>
 <arg>${base_url_issuer_mw}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.305" level="INFO">Creating Session using : alias=getTokenSS, url=http://172.16.24.55:3216, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20200602 17:10:17.305" endtime="20200602 17:10:17.318"></status>
+<msg timestamp="20200604 16:36:38.957" level="INFO">Creating Session using : alias=getTokenSS, url=http://172.16.24.55:3216, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20200604 16:36:38.957" endtime="20200604 16:36:38.958"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -443,8 +609,8 @@ json=None</msg>
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.319" level="INFO">${body} = {'username': '002', 'password': 'secret'}</msg>
-<status status="PASS" starttime="20200602 17:10:17.318" endtime="20200602 17:10:17.319"></status>
+<msg timestamp="20200604 16:36:38.958" level="INFO">${body} = {'username': '002', 'password': 'secret'}</msg>
+<status status="PASS" starttime="20200604 16:36:38.958" endtime="20200604 16:36:38.959"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -454,8 +620,8 @@ json=None</msg>
 <assign>
 <var>${header}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.321" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
-<status status="PASS" starttime="20200602 17:10:17.320" endtime="20200602 17:10:17.321"></status>
+<msg timestamp="20200604 16:36:38.959" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20200604 16:36:38.959" endtime="20200604 16:36:38.959"></status>
 </kw>
 <kw name="Post Request" library="RequestsLibrary">
 <doc>Send a POST request on the session object found using the
@@ -469,22 +635,57 @@ given `alias`</doc>
 <assign>
 <var>${response}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.322" level="INFO">POST Request using : uri=/token, params=None, files=None, allow_redirects=True, timeout=None
+<msg timestamp="20200604 16:36:38.960" level="INFO">POST Request using : uri=/token, params=None, files=None, allow_redirects=True, timeout=None
 headers={'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
 data={"username": "002", "password": "secret"} 
 json=None</msg>
-<msg timestamp="20200602 17:10:17.377" level="INFO">${response} = &lt;Response [500]&gt;</msg>
-<status status="PASS" starttime="20200602 17:10:17.321" endtime="20200602 17:10:17.377"></status>
+<msg timestamp="20200604 16:36:39.008" level="INFO">${response} = &lt;Response [500]&gt;</msg>
+<status status="PASS" starttime="20200604 16:36:38.959" endtime="20200604 16:36:39.008"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${response}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.377" level="INFO">${response} = &lt;Response [500]&gt;</msg>
-<status status="PASS" starttime="20200602 17:10:17.377" endtime="20200602 17:10:17.377"></status>
+<msg timestamp="20200604 16:36:39.009" level="INFO">${response} = &lt;Response [500]&gt;</msg>
+<status status="PASS" starttime="20200604 16:36:39.008" endtime="20200604 16:36:39.009"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:17.305" endtime="20200602 17:10:17.377"></status>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>POST ${url_getToken_issuer_MW} Host: ${base_url_issuer_mw}</arg>
+</arguments>
+<assign>
+<var>${URL_POST}</var>
+</assign>
+<msg timestamp="20200604 16:36:39.010" level="INFO">${URL_POST} = POST /token Host: http://172.16.24.55:3216</msg>
+<status status="PASS" starttime="20200604 16:36:39.009" endtime="20200604 16:36:39.010"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${URL_POST}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:39.010" level="INFO">${URL_POST} = POST /token Host: http://172.16.24.55:3216</msg>
+<status status="PASS" starttime="20200604 16:36:39.010" endtime="20200604 16:36:39.010"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:39.011" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20200604 16:36:39.011" endtime="20200604 16:36:39.011"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${body}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:39.012" level="INFO">${body} = {'username': '002', 'password': 'secret'}</msg>
+<status status="PASS" starttime="20200604 16:36:39.011" endtime="20200604 16:36:39.012"></status>
+</kw>
+<status status="PASS" starttime="20200604 16:36:38.956" endtime="20200604 16:36:39.012"></status>
 </kw>
 <kw name="Get Response From Spreadsheet" library="ExcelLibrary_getToken">
 <arguments>
@@ -501,26 +702,26 @@ json=None</msg>
 <assign>
 <var>${status_expected}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.377" level="INFO">${status_expected} = 500</msg>
-<status status="PASS" starttime="20200602 17:10:17.377" endtime="20200602 17:10:17.377"></status>
+<msg timestamp="20200604 16:36:39.014" level="INFO">${status_expected} = 500</msg>
+<status status="PASS" starttime="20200604 16:36:39.013" endtime="20200604 16:36:39.014"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${status_expected}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.377" level="INFO">${status_expected} = 500</msg>
-<status status="PASS" starttime="20200602 17:10:17.377" endtime="20200602 17:10:17.377"></status>
+<msg timestamp="20200604 16:36:39.015" level="INFO">${status_expected} = 500</msg>
+<status status="PASS" starttime="20200604 16:36:39.014" endtime="20200604 16:36:39.015"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${status_expected}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.377" level="INFO">500</msg>
-<status status="PASS" starttime="20200602 17:10:17.377" endtime="20200602 17:10:17.377"></status>
+<msg timestamp="20200604 16:36:39.016" level="INFO">500</msg>
+<status status="PASS" starttime="20200604 16:36:39.015" endtime="20200604 16:36:39.016"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:17.377" endtime="20200602 17:10:17.377"></status>
+<status status="PASS" starttime="20200604 16:36:39.013" endtime="20200604 16:36:39.016"></status>
 </kw>
 <kw name="Response getToken Error 500: Wrong username and password" library="keyword_getToken">
 <arguments>
@@ -534,8 +735,8 @@ json=None</msg>
 <assign>
 <var>${status_code}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.377" level="INFO">${status_code} = 500</msg>
-<status status="PASS" starttime="20200602 17:10:17.377" endtime="20200602 17:10:17.377"></status>
+<msg timestamp="20200604 16:36:39.018" level="INFO">${status_code} = 500</msg>
+<status status="PASS" starttime="20200604 16:36:39.017" endtime="20200604 16:36:39.018"></status>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
@@ -543,14 +744,22 @@ json=None</msg>
 <arg>${status_code}</arg>
 <arg>${status_expected}</arg>
 </arguments>
-<status status="PASS" starttime="20200602 17:10:17.377" endtime="20200602 17:10:17.377"></status>
+<status status="PASS" starttime="20200604 16:36:39.018" endtime="20200604 16:36:39.019"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${status_code}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:39.019" level="INFO">${status_code} = 500</msg>
+<status status="PASS" starttime="20200604 16:36:39.019" endtime="20200604 16:36:39.020"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${response.status_code}</arg>
 </arguments>
-<status status="PASS" starttime="20200602 17:10:17.377" endtime="20200602 17:10:17.377"></status>
+<status status="PASS" starttime="20200604 16:36:39.020" endtime="20200604 16:36:39.021"></status>
 </kw>
 <kw name="Convert To String" library="BuiltIn">
 <doc>Converts the given item to a Unicode string.</doc>
@@ -560,8 +769,8 @@ json=None</msg>
 <assign>
 <var>${res_body}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.377" level="INFO">${res_body} = {"error":"Wrong username and password"}</msg>
-<status status="PASS" starttime="20200602 17:10:17.377" endtime="20200602 17:10:17.377"></status>
+<msg timestamp="20200604 16:36:39.021" level="INFO">${res_body} = {"error":"Wrong username and password"}</msg>
+<status status="PASS" starttime="20200604 16:36:39.021" endtime="20200604 16:36:39.021"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -572,8 +781,8 @@ json=None</msg>
 <assign>
 <var>${error_msg}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.377" level="INFO">${error_msg} = Wrong username and password</msg>
-<status status="PASS" starttime="20200602 17:10:17.377" endtime="20200602 17:10:17.377"></status>
+<msg timestamp="20200604 16:36:39.022" level="INFO">${error_msg} = Wrong username and password</msg>
+<status status="PASS" starttime="20200604 16:36:39.022" endtime="20200604 16:36:39.023"></status>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
@@ -581,20 +790,180 @@ json=None</msg>
 <arg>${error_msg}</arg>
 <arg>Wrong username and password</arg>
 </arguments>
-<status status="PASS" starttime="20200602 17:10:17.377" endtime="20200602 17:10:17.377"></status>
+<status status="PASS" starttime="20200604 16:36:39.023" endtime="20200604 16:36:39.023"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${res_body}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:39.024" level="INFO">${res_body} = {"error":"Wrong username and password"}</msg>
+<status status="PASS" starttime="20200604 16:36:39.023" endtime="20200604 16:36:39.024"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
-<arg>${response.content}</arg>
+<arg>${res_body}</arg>
 </arguments>
-<status status="PASS" starttime="20200602 17:10:17.377" endtime="20200602 17:10:17.377"></status>
+<status status="PASS" starttime="20200604 16:36:39.024" endtime="20200604 16:36:39.025"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:17.377" endtime="20200602 17:10:17.377"></status>
+<status status="PASS" starttime="20200604 16:36:39.017" endtime="20200604 16:36:39.025"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:17.290" endtime="20200602 17:10:17.377" critical="yes"></status>
+<kw name="Publish Test Case Result" library="ExcelLibrary_getToken" type="teardown">
+<arguments>
+<arg>14</arg>
+<arg>9</arg>
+<arg>${File_Result}</arg>
+<arg>${File_Sheet_Result}</arg>
+</arguments>
+<kw name="Open Excel Document" library="ExcelLibrary">
+<doc>Opens xlsx document file.</doc>
+<arguments>
+<arg>${File_Result}</arg>
+<arg>doc_id=doc_getToken_result</arg>
+</arguments>
+<status status="PASS" starttime="20200604 16:36:39.027" endtime="20200604 16:36:39.657"></status>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>row_num=${row_num}</arg>
+<arg>col_num=${col_num}</arg>
+<arg>value=${TEST STATUS}</arg>
+<arg>sheet_name=${Sheet_Name_Result}</arg>
+</arguments>
+<status status="PASS" starttime="20200604 16:36:39.657" endtime="20200604 16:36:39.657"></status>
+</kw>
+<kw name="count row">
+<arguments>
+<arg>${Sheet_Name_Result}</arg>
+</arguments>
+<assign>
+<var>${iTotalRows}=</var>
+</assign>
+<msg timestamp="20200604 16:36:39.672" level="FAIL">No keyword with name 'count row' found.</msg>
+<status status="FAIL" starttime="20200604 16:36:39.672" endtime="20200604 16:36:39.672"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Allrow=${iTotalRows}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:39.672" level="FAIL">Variable '${iTotalRows}' not found.</msg>
+<status status="FAIL" starttime="20200604 16:36:39.672" endtime="20200604 16:36:39.672"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${col_num}-${3}</arg>
+</arguments>
+<assign>
+<var>${request_col_num}</var>
+</assign>
+<msg timestamp="20200604 16:36:39.672" level="INFO">${request_col_num} = 6</msg>
+<status status="PASS" starttime="20200604 16:36:39.672" endtime="20200604 16:36:39.672"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${URL_POST} \n ${header} \n ${body}</arg>
+</arguments>
+<assign>
+<var>${request_result}</var>
+</assign>
+<msg timestamp="20200604 16:36:39.672" level="INFO">${request_result} = POST /token Host: http://172.16.24.55:3216 
+{'Content-Type': 'application/json'} 
+{'username': '002', 'password': 'secret'}</msg>
+<status status="PASS" starttime="20200604 16:36:39.672" endtime="20200604 16:36:39.672"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${TEST STATUS}'=='PASS'</arg>
+<arg>Write Excel Cell</arg>
+<arg>${row_num}</arg>
+<arg>${request_col_num}</arg>
+<arg>${request_result}</arg>
+</arguments>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>${row_num}</arg>
+<arg>${request_col_num}</arg>
+<arg>${request_result}</arg>
+</arguments>
+<status status="PASS" starttime="20200604 16:36:39.672" endtime="20200604 16:36:39.672"></status>
+</kw>
+<status status="PASS" starttime="20200604 16:36:39.672" endtime="20200604 16:36:39.672"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${col_num}-${1}</arg>
+</arguments>
+<assign>
+<var>${actual_col_num}</var>
+</assign>
+<msg timestamp="20200604 16:36:39.672" level="INFO">${actual_col_num} = 8</msg>
+<status status="PASS" starttime="20200604 16:36:39.672" endtime="20200604 16:36:39.672"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Status code: ${status_code} \n message: ${res_body}</arg>
+</arguments>
+<assign>
+<var>${actual_result}</var>
+</assign>
+<msg timestamp="20200604 16:36:39.672" level="INFO">${actual_result} = Status code: 500 
+message: {"error":"Wrong username and password"}</msg>
+<status status="PASS" starttime="20200604 16:36:39.672" endtime="20200604 16:36:39.672"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${TEST STATUS}'=='PASS'</arg>
+<arg>Write Excel Cell</arg>
+<arg>${row_num}</arg>
+<arg>${actual_col_num}</arg>
+<arg>${actual_result}</arg>
+</arguments>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>${row_num}</arg>
+<arg>${actual_col_num}</arg>
+<arg>${actual_result}</arg>
+</arguments>
+<status status="PASS" starttime="20200604 16:36:39.672" endtime="20200604 16:36:39.672"></status>
+</kw>
+<status status="PASS" starttime="20200604 16:36:39.672" endtime="20200604 16:36:39.672"></status>
+</kw>
+<kw name="Save Excel Document" library="ExcelLibrary">
+<doc>Saves the current document to disk.</doc>
+<arguments>
+<arg>${File_Result}</arg>
+</arguments>
+<status status="PASS" starttime="20200604 16:36:39.672" endtime="20200604 16:36:39.844"></status>
+</kw>
+<kw name="Close Current Excel Document" library="ExcelLibrary">
+<doc>Closes current document.</doc>
+<status status="PASS" starttime="20200604 16:36:39.844" endtime="20200604 16:36:39.844"></status>
+</kw>
+<status status="FAIL" starttime="20200604 16:36:39.026" endtime="20200604 16:36:39.844">Several failures occurred:
+
+1) No keyword with name 'count row' found.
+
+2) Variable '${iTotalRows}' not found.</status>
+</kw>
+<status status="FAIL" starttime="20200604 16:36:38.948" endtime="20200604 16:36:39.844" critical="yes">Teardown failed:
+Several failures occurred:
+
+1) No keyword with name 'count row' found.
+
+2) Variable '${iTotalRows}' not found.</status>
 </test>
-<test id="s1-t3" name="Chaincode API_getToken_Issuer_003">
+<test id="s1-t3" name="Chaincode API_getToken_Issuer_003: Wrong Password">
 <kw name="Get Username From Spreadsheet" library="ExcelLibrary_getToken">
 <arguments>
 <arg>4</arg>
@@ -610,26 +979,26 @@ json=None</msg>
 <assign>
 <var>${username}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.393" level="INFO">${username} = 001</msg>
-<status status="PASS" starttime="20200602 17:10:17.393" endtime="20200602 17:10:17.393"></status>
+<msg timestamp="20200604 16:36:39.844" level="INFO">${username} = 001</msg>
+<status status="PASS" starttime="20200604 16:36:39.844" endtime="20200604 16:36:39.844"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.393" level="INFO">${username} = 001</msg>
-<status status="PASS" starttime="20200602 17:10:17.393" endtime="20200602 17:10:17.393"></status>
+<msg timestamp="20200604 16:36:39.844" level="INFO">${username} = 001</msg>
+<status status="PASS" starttime="20200604 16:36:39.844" endtime="20200604 16:36:39.844"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.393" level="INFO">001</msg>
-<status status="PASS" starttime="20200602 17:10:17.393" endtime="20200602 17:10:17.393"></status>
+<msg timestamp="20200604 16:36:39.844" level="INFO">001</msg>
+<status status="PASS" starttime="20200604 16:36:39.844" endtime="20200604 16:36:39.844"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:17.393" endtime="20200602 17:10:17.393"></status>
+<status status="PASS" starttime="20200604 16:36:39.844" endtime="20200604 16:36:39.844"></status>
 </kw>
 <kw name="Get Password From Spreadsheet" library="ExcelLibrary_getToken">
 <arguments>
@@ -646,26 +1015,26 @@ json=None</msg>
 <assign>
 <var>${password}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.393" level="INFO">${password} = secrett</msg>
-<status status="PASS" starttime="20200602 17:10:17.393" endtime="20200602 17:10:17.393"></status>
+<msg timestamp="20200604 16:36:39.844" level="INFO">${password} = secrett</msg>
+<status status="PASS" starttime="20200604 16:36:39.844" endtime="20200604 16:36:39.844"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.393" level="INFO">${password} = secrett</msg>
-<status status="PASS" starttime="20200602 17:10:17.393" endtime="20200602 17:10:17.393"></status>
+<msg timestamp="20200604 16:36:39.844" level="INFO">${password} = secrett</msg>
+<status status="PASS" starttime="20200604 16:36:39.844" endtime="20200604 16:36:39.844"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.393" level="INFO">secrett</msg>
-<status status="PASS" starttime="20200602 17:10:17.393" endtime="20200602 17:10:17.393"></status>
+<msg timestamp="20200604 16:36:39.844" level="INFO">secrett</msg>
+<status status="PASS" starttime="20200604 16:36:39.844" endtime="20200604 16:36:39.844"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:17.393" endtime="20200602 17:10:17.393"></status>
+<status status="PASS" starttime="20200604 16:36:39.844" endtime="20200604 16:36:39.844"></status>
 </kw>
 <kw name="Send Request getToken" library="keyword_getToken">
 <arguments>
@@ -678,8 +1047,8 @@ json=None</msg>
 <arg>getTokenSS</arg>
 <arg>${base_url_issuer_mw}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.393" level="INFO">Creating Session using : alias=getTokenSS, url=http://172.16.24.55:3216, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20200602 17:10:17.393" endtime="20200602 17:10:17.393"></status>
+<msg timestamp="20200604 16:36:39.844" level="INFO">Creating Session using : alias=getTokenSS, url=http://172.16.24.55:3216, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20200604 16:36:39.844" endtime="20200604 16:36:39.844"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -690,8 +1059,8 @@ json=None</msg>
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.393" level="INFO">${body} = {'username': '001', 'password': 'secrett'}</msg>
-<status status="PASS" starttime="20200602 17:10:17.393" endtime="20200602 17:10:17.393"></status>
+<msg timestamp="20200604 16:36:39.860" level="INFO">${body} = {'username': '001', 'password': 'secrett'}</msg>
+<status status="PASS" starttime="20200604 16:36:39.844" endtime="20200604 16:36:39.860"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -701,8 +1070,8 @@ json=None</msg>
 <assign>
 <var>${header}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.393" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
-<status status="PASS" starttime="20200602 17:10:17.393" endtime="20200602 17:10:17.393"></status>
+<msg timestamp="20200604 16:36:39.860" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20200604 16:36:39.860" endtime="20200604 16:36:39.860"></status>
 </kw>
 <kw name="Post Request" library="RequestsLibrary">
 <doc>Send a POST request on the session object found using the
@@ -716,22 +1085,57 @@ given `alias`</doc>
 <assign>
 <var>${response}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.393" level="INFO">POST Request using : uri=/token, params=None, files=None, allow_redirects=True, timeout=None
+<msg timestamp="20200604 16:36:39.860" level="INFO">POST Request using : uri=/token, params=None, files=None, allow_redirects=True, timeout=None
 headers={'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
 data={"username": "001", "password": "secrett"} 
 json=None</msg>
-<msg timestamp="20200602 17:10:17.455" level="INFO">${response} = &lt;Response [500]&gt;</msg>
-<status status="PASS" starttime="20200602 17:10:17.393" endtime="20200602 17:10:17.455"></status>
+<msg timestamp="20200604 16:36:39.922" level="INFO">${response} = &lt;Response [500]&gt;</msg>
+<status status="PASS" starttime="20200604 16:36:39.860" endtime="20200604 16:36:39.922"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${response}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.455" level="INFO">${response} = &lt;Response [500]&gt;</msg>
-<status status="PASS" starttime="20200602 17:10:17.455" endtime="20200602 17:10:17.455"></status>
+<msg timestamp="20200604 16:36:39.922" level="INFO">${response} = &lt;Response [500]&gt;</msg>
+<status status="PASS" starttime="20200604 16:36:39.922" endtime="20200604 16:36:39.922"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:17.393" endtime="20200602 17:10:17.471"></status>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>POST ${url_getToken_issuer_MW} Host: ${base_url_issuer_mw}</arg>
+</arguments>
+<assign>
+<var>${URL_POST}</var>
+</assign>
+<msg timestamp="20200604 16:36:39.922" level="INFO">${URL_POST} = POST /token Host: http://172.16.24.55:3216</msg>
+<status status="PASS" starttime="20200604 16:36:39.922" endtime="20200604 16:36:39.922"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${URL_POST}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:39.922" level="INFO">${URL_POST} = POST /token Host: http://172.16.24.55:3216</msg>
+<status status="PASS" starttime="20200604 16:36:39.922" endtime="20200604 16:36:39.922"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:39.922" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20200604 16:36:39.922" endtime="20200604 16:36:39.922"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${body}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:39.922" level="INFO">${body} = {'username': '001', 'password': 'secrett'}</msg>
+<status status="PASS" starttime="20200604 16:36:39.922" endtime="20200604 16:36:39.922"></status>
+</kw>
+<status status="PASS" starttime="20200604 16:36:39.844" endtime="20200604 16:36:39.922"></status>
 </kw>
 <kw name="Get Response From Spreadsheet" library="ExcelLibrary_getToken">
 <arguments>
@@ -748,26 +1152,26 @@ json=None</msg>
 <assign>
 <var>${status_expected}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.471" level="INFO">${status_expected} = 500</msg>
-<status status="PASS" starttime="20200602 17:10:17.471" endtime="20200602 17:10:17.471"></status>
+<msg timestamp="20200604 16:36:39.922" level="INFO">${status_expected} = 500</msg>
+<status status="PASS" starttime="20200604 16:36:39.922" endtime="20200604 16:36:39.922"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${status_expected}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.471" level="INFO">${status_expected} = 500</msg>
-<status status="PASS" starttime="20200602 17:10:17.471" endtime="20200602 17:10:17.471"></status>
+<msg timestamp="20200604 16:36:39.922" level="INFO">${status_expected} = 500</msg>
+<status status="PASS" starttime="20200604 16:36:39.922" endtime="20200604 16:36:39.922"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${status_expected}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.471" level="INFO">500</msg>
-<status status="PASS" starttime="20200602 17:10:17.471" endtime="20200602 17:10:17.471"></status>
+<msg timestamp="20200604 16:36:39.922" level="INFO">500</msg>
+<status status="PASS" starttime="20200604 16:36:39.922" endtime="20200604 16:36:39.922"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:17.471" endtime="20200602 17:10:17.471"></status>
+<status status="PASS" starttime="20200604 16:36:39.922" endtime="20200604 16:36:39.922"></status>
 </kw>
 <kw name="Response getToken Error 500: Wrong username and password" library="keyword_getToken">
 <arguments>
@@ -781,8 +1185,8 @@ json=None</msg>
 <assign>
 <var>${status_code}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.471" level="INFO">${status_code} = 500</msg>
-<status status="PASS" starttime="20200602 17:10:17.471" endtime="20200602 17:10:17.471"></status>
+<msg timestamp="20200604 16:36:39.938" level="INFO">${status_code} = 500</msg>
+<status status="PASS" starttime="20200604 16:36:39.938" endtime="20200604 16:36:39.938"></status>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
@@ -790,14 +1194,22 @@ json=None</msg>
 <arg>${status_code}</arg>
 <arg>${status_expected}</arg>
 </arguments>
-<status status="PASS" starttime="20200602 17:10:17.471" endtime="20200602 17:10:17.471"></status>
+<status status="PASS" starttime="20200604 16:36:39.938" endtime="20200604 16:36:39.938"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${status_code}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:39.938" level="INFO">${status_code} = 500</msg>
+<status status="PASS" starttime="20200604 16:36:39.938" endtime="20200604 16:36:39.938"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${response.status_code}</arg>
 </arguments>
-<status status="PASS" starttime="20200602 17:10:17.471" endtime="20200602 17:10:17.471"></status>
+<status status="PASS" starttime="20200604 16:36:39.938" endtime="20200604 16:36:39.938"></status>
 </kw>
 <kw name="Convert To String" library="BuiltIn">
 <doc>Converts the given item to a Unicode string.</doc>
@@ -807,8 +1219,8 @@ json=None</msg>
 <assign>
 <var>${res_body}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.471" level="INFO">${res_body} = {"error":"Wrong username and password"}</msg>
-<status status="PASS" starttime="20200602 17:10:17.471" endtime="20200602 17:10:17.471"></status>
+<msg timestamp="20200604 16:36:39.938" level="INFO">${res_body} = {"error":"Wrong username and password"}</msg>
+<status status="PASS" starttime="20200604 16:36:39.938" endtime="20200604 16:36:39.938"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -819,8 +1231,8 @@ json=None</msg>
 <assign>
 <var>${error_msg}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.471" level="INFO">${error_msg} = Wrong username and password</msg>
-<status status="PASS" starttime="20200602 17:10:17.471" endtime="20200602 17:10:17.471"></status>
+<msg timestamp="20200604 16:36:39.938" level="INFO">${error_msg} = Wrong username and password</msg>
+<status status="PASS" starttime="20200604 16:36:39.938" endtime="20200604 16:36:39.938"></status>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
@@ -828,20 +1240,180 @@ json=None</msg>
 <arg>${error_msg}</arg>
 <arg>Wrong username and password</arg>
 </arguments>
-<status status="PASS" starttime="20200602 17:10:17.471" endtime="20200602 17:10:17.471"></status>
+<status status="PASS" starttime="20200604 16:36:39.938" endtime="20200604 16:36:39.938"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${res_body}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:39.938" level="INFO">${res_body} = {"error":"Wrong username and password"}</msg>
+<status status="PASS" starttime="20200604 16:36:39.938" endtime="20200604 16:36:39.938"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
-<arg>${response.content}</arg>
+<arg>${res_body}</arg>
 </arguments>
-<status status="PASS" starttime="20200602 17:10:17.471" endtime="20200602 17:10:17.471"></status>
+<status status="PASS" starttime="20200604 16:36:39.938" endtime="20200604 16:36:39.938"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:17.471" endtime="20200602 17:10:17.471"></status>
+<status status="PASS" starttime="20200604 16:36:39.922" endtime="20200604 16:36:39.938"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:17.393" endtime="20200602 17:10:17.471" critical="yes"></status>
+<kw name="Publish Test Case Result" library="ExcelLibrary_getToken" type="teardown">
+<arguments>
+<arg>15</arg>
+<arg>9</arg>
+<arg>${File_Result}</arg>
+<arg>${File_Sheet_Result}</arg>
+</arguments>
+<kw name="Open Excel Document" library="ExcelLibrary">
+<doc>Opens xlsx document file.</doc>
+<arguments>
+<arg>${File_Result}</arg>
+<arg>doc_id=doc_getToken_result</arg>
+</arguments>
+<status status="PASS" starttime="20200604 16:36:39.938" endtime="20200604 16:36:40.566"></status>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>row_num=${row_num}</arg>
+<arg>col_num=${col_num}</arg>
+<arg>value=${TEST STATUS}</arg>
+<arg>sheet_name=${Sheet_Name_Result}</arg>
+</arguments>
+<status status="PASS" starttime="20200604 16:36:40.566" endtime="20200604 16:36:40.567"></status>
+</kw>
+<kw name="count row">
+<arguments>
+<arg>${Sheet_Name_Result}</arg>
+</arguments>
+<assign>
+<var>${iTotalRows}=</var>
+</assign>
+<msg timestamp="20200604 16:36:40.584" level="FAIL">No keyword with name 'count row' found.</msg>
+<status status="FAIL" starttime="20200604 16:36:40.583" endtime="20200604 16:36:40.584"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Allrow=${iTotalRows}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:40.587" level="FAIL">Variable '${iTotalRows}' not found.</msg>
+<status status="FAIL" starttime="20200604 16:36:40.584" endtime="20200604 16:36:40.588"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${col_num}-${3}</arg>
+</arguments>
+<assign>
+<var>${request_col_num}</var>
+</assign>
+<msg timestamp="20200604 16:36:40.589" level="INFO">${request_col_num} = 6</msg>
+<status status="PASS" starttime="20200604 16:36:40.588" endtime="20200604 16:36:40.589"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${URL_POST} \n ${header} \n ${body}</arg>
+</arguments>
+<assign>
+<var>${request_result}</var>
+</assign>
+<msg timestamp="20200604 16:36:40.590" level="INFO">${request_result} = POST /token Host: http://172.16.24.55:3216 
+{'Content-Type': 'application/json'} 
+{'username': '001', 'password': 'secrett'}</msg>
+<status status="PASS" starttime="20200604 16:36:40.589" endtime="20200604 16:36:40.590"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${TEST STATUS}'=='PASS'</arg>
+<arg>Write Excel Cell</arg>
+<arg>${row_num}</arg>
+<arg>${request_col_num}</arg>
+<arg>${request_result}</arg>
+</arguments>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>${row_num}</arg>
+<arg>${request_col_num}</arg>
+<arg>${request_result}</arg>
+</arguments>
+<status status="PASS" starttime="20200604 16:36:40.591" endtime="20200604 16:36:40.592"></status>
+</kw>
+<status status="PASS" starttime="20200604 16:36:40.590" endtime="20200604 16:36:40.592"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${col_num}-${1}</arg>
+</arguments>
+<assign>
+<var>${actual_col_num}</var>
+</assign>
+<msg timestamp="20200604 16:36:40.593" level="INFO">${actual_col_num} = 8</msg>
+<status status="PASS" starttime="20200604 16:36:40.592" endtime="20200604 16:36:40.593"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Status code: ${status_code} \n message: ${res_body}</arg>
+</arguments>
+<assign>
+<var>${actual_result}</var>
+</assign>
+<msg timestamp="20200604 16:36:40.594" level="INFO">${actual_result} = Status code: 500 
+message: {"error":"Wrong username and password"}</msg>
+<status status="PASS" starttime="20200604 16:36:40.593" endtime="20200604 16:36:40.594"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${TEST STATUS}'=='PASS'</arg>
+<arg>Write Excel Cell</arg>
+<arg>${row_num}</arg>
+<arg>${actual_col_num}</arg>
+<arg>${actual_result}</arg>
+</arguments>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>${row_num}</arg>
+<arg>${actual_col_num}</arg>
+<arg>${actual_result}</arg>
+</arguments>
+<status status="PASS" starttime="20200604 16:36:40.595" endtime="20200604 16:36:40.596"></status>
+</kw>
+<status status="PASS" starttime="20200604 16:36:40.594" endtime="20200604 16:36:40.596"></status>
+</kw>
+<kw name="Save Excel Document" library="ExcelLibrary">
+<doc>Saves the current document to disk.</doc>
+<arguments>
+<arg>${File_Result}</arg>
+</arguments>
+<status status="PASS" starttime="20200604 16:36:40.597" endtime="20200604 16:36:40.741"></status>
+</kw>
+<kw name="Close Current Excel Document" library="ExcelLibrary">
+<doc>Closes current document.</doc>
+<status status="PASS" starttime="20200604 16:36:40.742" endtime="20200604 16:36:40.742"></status>
+</kw>
+<status status="FAIL" starttime="20200604 16:36:39.938" endtime="20200604 16:36:40.742">Several failures occurred:
+
+1) No keyword with name 'count row' found.
+
+2) Variable '${iTotalRows}' not found.</status>
+</kw>
+<status status="FAIL" starttime="20200604 16:36:39.844" endtime="20200604 16:36:40.743" critical="yes">Teardown failed:
+Several failures occurred:
+
+1) No keyword with name 'count row' found.
+
+2) Variable '${iTotalRows}' not found.</status>
 </test>
-<test id="s1-t4" name="Chaincode API_getToken_Issuer_004">
+<test id="s1-t4" name="Chaincode API_getToken_Issuer_004: Username and Password ถูกต้อง">
 <kw name="Get Username From Spreadsheet" library="ExcelLibrary_getToken">
 <arguments>
 <arg>5</arg>
@@ -857,26 +1429,26 @@ json=None</msg>
 <assign>
 <var>${username}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.487" level="INFO">${username} = 00333356868iulgiljkjjykykukuk4k3</msg>
-<status status="PASS" starttime="20200602 17:10:17.487" endtime="20200602 17:10:17.487"></status>
+<msg timestamp="20200604 16:36:40.797" level="INFO">${username} = 00333356868iulgiljkjjykykukuk4k3</msg>
+<status status="PASS" starttime="20200604 16:36:40.796" endtime="20200604 16:36:40.797"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.487" level="INFO">${username} = 00333356868iulgiljkjjykykukuk4k3</msg>
-<status status="PASS" starttime="20200602 17:10:17.487" endtime="20200602 17:10:17.487"></status>
+<msg timestamp="20200604 16:36:40.797" level="INFO">${username} = 00333356868iulgiljkjjykykukuk4k3</msg>
+<status status="PASS" starttime="20200604 16:36:40.797" endtime="20200604 16:36:40.797"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.487" level="INFO">00333356868iulgiljkjjykykukuk4k3</msg>
-<status status="PASS" starttime="20200602 17:10:17.487" endtime="20200602 17:10:17.487"></status>
+<msg timestamp="20200604 16:36:40.798" level="INFO">00333356868iulgiljkjjykykukuk4k3</msg>
+<status status="PASS" starttime="20200604 16:36:40.798" endtime="20200604 16:36:40.798"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:17.471" endtime="20200602 17:10:17.487"></status>
+<status status="PASS" starttime="20200604 16:36:40.795" endtime="20200604 16:36:40.798"></status>
 </kw>
 <kw name="Get Password From Spreadsheet" library="ExcelLibrary_getToken">
 <arguments>
@@ -893,26 +1465,26 @@ json=None</msg>
 <assign>
 <var>${password}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.487" level="INFO">${password} = secrett</msg>
-<status status="PASS" starttime="20200602 17:10:17.487" endtime="20200602 17:10:17.487"></status>
+<msg timestamp="20200604 16:36:40.800" level="INFO">${password} = secrett</msg>
+<status status="PASS" starttime="20200604 16:36:40.799" endtime="20200604 16:36:40.800"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.487" level="INFO">${password} = secrett</msg>
-<status status="PASS" starttime="20200602 17:10:17.487" endtime="20200602 17:10:17.487"></status>
+<msg timestamp="20200604 16:36:40.801" level="INFO">${password} = secrett</msg>
+<status status="PASS" starttime="20200604 16:36:40.800" endtime="20200604 16:36:40.801"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.487" level="INFO">secrett</msg>
-<status status="PASS" starttime="20200602 17:10:17.487" endtime="20200602 17:10:17.487"></status>
+<msg timestamp="20200604 16:36:40.801" level="INFO">secrett</msg>
+<status status="PASS" starttime="20200604 16:36:40.801" endtime="20200604 16:36:40.801"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:17.487" endtime="20200602 17:10:17.487"></status>
+<status status="PASS" starttime="20200604 16:36:40.799" endtime="20200604 16:36:40.802"></status>
 </kw>
 <kw name="Send Request getToken" library="keyword_getToken">
 <arguments>
@@ -925,8 +1497,8 @@ json=None</msg>
 <arg>getTokenSS</arg>
 <arg>${base_url_issuer_mw}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.487" level="INFO">Creating Session using : alias=getTokenSS, url=http://172.16.24.55:3216, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20200602 17:10:17.487" endtime="20200602 17:10:17.487"></status>
+<msg timestamp="20200604 16:36:40.803" level="INFO">Creating Session using : alias=getTokenSS, url=http://172.16.24.55:3216, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20200604 16:36:40.803" endtime="20200604 16:36:40.804"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -937,8 +1509,8 @@ json=None</msg>
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.487" level="INFO">${body} = {'username': '00333356868iulgiljkjjykykukuk4k3', 'password': 'secrett'}</msg>
-<status status="PASS" starttime="20200602 17:10:17.487" endtime="20200602 17:10:17.487"></status>
+<msg timestamp="20200604 16:36:40.804" level="INFO">${body} = {'username': '00333356868iulgiljkjjykykukuk4k3', 'password': 'secrett'}</msg>
+<status status="PASS" starttime="20200604 16:36:40.804" endtime="20200604 16:36:40.804"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -948,8 +1520,8 @@ json=None</msg>
 <assign>
 <var>${header}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.487" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
-<status status="PASS" starttime="20200602 17:10:17.487" endtime="20200602 17:10:17.487"></status>
+<msg timestamp="20200604 16:36:40.805" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20200604 16:36:40.805" endtime="20200604 16:36:40.805"></status>
 </kw>
 <kw name="Post Request" library="RequestsLibrary">
 <doc>Send a POST request on the session object found using the
@@ -963,22 +1535,57 @@ given `alias`</doc>
 <assign>
 <var>${response}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.487" level="INFO">POST Request using : uri=/token, params=None, files=None, allow_redirects=True, timeout=None
+<msg timestamp="20200604 16:36:40.806" level="INFO">POST Request using : uri=/token, params=None, files=None, allow_redirects=True, timeout=None
 headers={'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
 data={"username": "00333356868iulgiljkjjykykukuk4k3", "password": "secrett"} 
 json=None</msg>
-<msg timestamp="20200602 17:10:17.561" level="INFO">${response} = &lt;Response [500]&gt;</msg>
-<status status="PASS" starttime="20200602 17:10:17.487" endtime="20200602 17:10:17.561"></status>
+<msg timestamp="20200604 16:36:40.865" level="INFO">${response} = &lt;Response [500]&gt;</msg>
+<status status="PASS" starttime="20200604 16:36:40.805" endtime="20200604 16:36:40.865"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${response}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.561" level="INFO">${response} = &lt;Response [500]&gt;</msg>
-<status status="PASS" starttime="20200602 17:10:17.561" endtime="20200602 17:10:17.561"></status>
+<msg timestamp="20200604 16:36:40.866" level="INFO">${response} = &lt;Response [500]&gt;</msg>
+<status status="PASS" starttime="20200604 16:36:40.865" endtime="20200604 16:36:40.866"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:17.487" endtime="20200602 17:10:17.561"></status>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>POST ${url_getToken_issuer_MW} Host: ${base_url_issuer_mw}</arg>
+</arguments>
+<assign>
+<var>${URL_POST}</var>
+</assign>
+<msg timestamp="20200604 16:36:40.867" level="INFO">${URL_POST} = POST /token Host: http://172.16.24.55:3216</msg>
+<status status="PASS" starttime="20200604 16:36:40.866" endtime="20200604 16:36:40.867"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${URL_POST}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:40.867" level="INFO">${URL_POST} = POST /token Host: http://172.16.24.55:3216</msg>
+<status status="PASS" starttime="20200604 16:36:40.867" endtime="20200604 16:36:40.867"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:40.868" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20200604 16:36:40.868" endtime="20200604 16:36:40.868"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${body}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:40.869" level="INFO">${body} = {'username': '00333356868iulgiljkjjykykukuk4k3', 'password': 'secrett'}</msg>
+<status status="PASS" starttime="20200604 16:36:40.868" endtime="20200604 16:36:40.869"></status>
+</kw>
+<status status="PASS" starttime="20200604 16:36:40.802" endtime="20200604 16:36:40.869"></status>
 </kw>
 <kw name="Get Response From Spreadsheet" library="ExcelLibrary_getToken">
 <arguments>
@@ -995,26 +1602,26 @@ json=None</msg>
 <assign>
 <var>${status_expected}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.561" level="INFO">${status_expected} = 500</msg>
-<status status="PASS" starttime="20200602 17:10:17.561" endtime="20200602 17:10:17.561"></status>
+<msg timestamp="20200604 16:36:40.871" level="INFO">${status_expected} = 500</msg>
+<status status="PASS" starttime="20200604 16:36:40.870" endtime="20200604 16:36:40.871"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${status_expected}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.561" level="INFO">${status_expected} = 500</msg>
-<status status="PASS" starttime="20200602 17:10:17.561" endtime="20200602 17:10:17.561"></status>
+<msg timestamp="20200604 16:36:40.872" level="INFO">${status_expected} = 500</msg>
+<status status="PASS" starttime="20200604 16:36:40.871" endtime="20200604 16:36:40.872"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${status_expected}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.561" level="INFO">500</msg>
-<status status="PASS" starttime="20200602 17:10:17.561" endtime="20200602 17:10:17.561"></status>
+<msg timestamp="20200604 16:36:40.872" level="INFO">500</msg>
+<status status="PASS" starttime="20200604 16:36:40.872" endtime="20200604 16:36:40.872"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:17.561" endtime="20200602 17:10:17.561"></status>
+<status status="PASS" starttime="20200604 16:36:40.870" endtime="20200604 16:36:40.873"></status>
 </kw>
 <kw name="Response getToken Error 500: Wrong username and password" library="keyword_getToken">
 <arguments>
@@ -1028,8 +1635,8 @@ json=None</msg>
 <assign>
 <var>${status_code}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.561" level="INFO">${status_code} = 500</msg>
-<status status="PASS" starttime="20200602 17:10:17.561" endtime="20200602 17:10:17.561"></status>
+<msg timestamp="20200604 16:36:40.874" level="INFO">${status_code} = 500</msg>
+<status status="PASS" starttime="20200604 16:36:40.874" endtime="20200604 16:36:40.875"></status>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
@@ -1037,14 +1644,22 @@ json=None</msg>
 <arg>${status_code}</arg>
 <arg>${status_expected}</arg>
 </arguments>
-<status status="PASS" starttime="20200602 17:10:17.577" endtime="20200602 17:10:17.577"></status>
+<status status="PASS" starttime="20200604 16:36:40.875" endtime="20200604 16:36:40.876"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${status_code}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:40.876" level="INFO">${status_code} = 500</msg>
+<status status="PASS" starttime="20200604 16:36:40.876" endtime="20200604 16:36:40.876"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${response.status_code}</arg>
 </arguments>
-<status status="PASS" starttime="20200602 17:10:17.577" endtime="20200602 17:10:17.577"></status>
+<status status="PASS" starttime="20200604 16:36:40.877" endtime="20200604 16:36:40.877"></status>
 </kw>
 <kw name="Convert To String" library="BuiltIn">
 <doc>Converts the given item to a Unicode string.</doc>
@@ -1054,8 +1669,8 @@ json=None</msg>
 <assign>
 <var>${res_body}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.577" level="INFO">${res_body} = {"error":"Wrong username and password"}</msg>
-<status status="PASS" starttime="20200602 17:10:17.577" endtime="20200602 17:10:17.577"></status>
+<msg timestamp="20200604 16:36:40.878" level="INFO">${res_body} = {"error":"Wrong username and password"}</msg>
+<status status="PASS" starttime="20200604 16:36:40.878" endtime="20200604 16:36:40.878"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -1066,8 +1681,8 @@ json=None</msg>
 <assign>
 <var>${error_msg}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.577" level="INFO">${error_msg} = Wrong username and password</msg>
-<status status="PASS" starttime="20200602 17:10:17.577" endtime="20200602 17:10:17.577"></status>
+<msg timestamp="20200604 16:36:40.879" level="INFO">${error_msg} = Wrong username and password</msg>
+<status status="PASS" starttime="20200604 16:36:40.879" endtime="20200604 16:36:40.879"></status>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
@@ -1075,20 +1690,180 @@ json=None</msg>
 <arg>${error_msg}</arg>
 <arg>Wrong username and password</arg>
 </arguments>
-<status status="PASS" starttime="20200602 17:10:17.577" endtime="20200602 17:10:17.577"></status>
+<status status="PASS" starttime="20200604 16:36:40.880" endtime="20200604 16:36:40.880"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${res_body}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:40.881" level="INFO">${res_body} = {"error":"Wrong username and password"}</msg>
+<status status="PASS" starttime="20200604 16:36:40.880" endtime="20200604 16:36:40.881"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
-<arg>${response.content}</arg>
+<arg>${res_body}</arg>
 </arguments>
-<status status="PASS" starttime="20200602 17:10:17.577" endtime="20200602 17:10:17.577"></status>
+<status status="PASS" starttime="20200604 16:36:40.881" endtime="20200604 16:36:40.881"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:17.561" endtime="20200602 17:10:17.577"></status>
+<status status="PASS" starttime="20200604 16:36:40.873" endtime="20200604 16:36:40.882"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:17.471" endtime="20200602 17:10:17.577" critical="yes"></status>
+<kw name="Publish Test Case Result" library="ExcelLibrary_getToken" type="teardown">
+<arguments>
+<arg>16</arg>
+<arg>9</arg>
+<arg>${File_Result}</arg>
+<arg>${File_Sheet_Result}</arg>
+</arguments>
+<kw name="Open Excel Document" library="ExcelLibrary">
+<doc>Opens xlsx document file.</doc>
+<arguments>
+<arg>${File_Result}</arg>
+<arg>doc_id=doc_getToken_result</arg>
+</arguments>
+<status status="PASS" starttime="20200604 16:36:40.883" endtime="20200604 16:36:41.429"></status>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>row_num=${row_num}</arg>
+<arg>col_num=${col_num}</arg>
+<arg>value=${TEST STATUS}</arg>
+<arg>sheet_name=${Sheet_Name_Result}</arg>
+</arguments>
+<status status="PASS" starttime="20200604 16:36:41.429" endtime="20200604 16:36:41.429"></status>
+</kw>
+<kw name="count row">
+<arguments>
+<arg>${Sheet_Name_Result}</arg>
+</arguments>
+<assign>
+<var>${iTotalRows}=</var>
+</assign>
+<msg timestamp="20200604 16:36:41.444" level="FAIL">No keyword with name 'count row' found.</msg>
+<status status="FAIL" starttime="20200604 16:36:41.444" endtime="20200604 16:36:41.444"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Allrow=${iTotalRows}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:41.444" level="FAIL">Variable '${iTotalRows}' not found.</msg>
+<status status="FAIL" starttime="20200604 16:36:41.444" endtime="20200604 16:36:41.444"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${col_num}-${3}</arg>
+</arguments>
+<assign>
+<var>${request_col_num}</var>
+</assign>
+<msg timestamp="20200604 16:36:41.444" level="INFO">${request_col_num} = 6</msg>
+<status status="PASS" starttime="20200604 16:36:41.444" endtime="20200604 16:36:41.444"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${URL_POST} \n ${header} \n ${body}</arg>
+</arguments>
+<assign>
+<var>${request_result}</var>
+</assign>
+<msg timestamp="20200604 16:36:41.460" level="INFO">${request_result} = POST /token Host: http://172.16.24.55:3216 
+{'Content-Type': 'application/json'} 
+{'username': '00333356868iulgiljkjjykykukuk4k3', 'password': 'secrett'}</msg>
+<status status="PASS" starttime="20200604 16:36:41.460" endtime="20200604 16:36:41.460"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${TEST STATUS}'=='PASS'</arg>
+<arg>Write Excel Cell</arg>
+<arg>${row_num}</arg>
+<arg>${request_col_num}</arg>
+<arg>${request_result}</arg>
+</arguments>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>${row_num}</arg>
+<arg>${request_col_num}</arg>
+<arg>${request_result}</arg>
+</arguments>
+<status status="PASS" starttime="20200604 16:36:41.460" endtime="20200604 16:36:41.460"></status>
+</kw>
+<status status="PASS" starttime="20200604 16:36:41.460" endtime="20200604 16:36:41.460"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${col_num}-${1}</arg>
+</arguments>
+<assign>
+<var>${actual_col_num}</var>
+</assign>
+<msg timestamp="20200604 16:36:41.460" level="INFO">${actual_col_num} = 8</msg>
+<status status="PASS" starttime="20200604 16:36:41.460" endtime="20200604 16:36:41.460"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Status code: ${status_code} \n message: ${res_body}</arg>
+</arguments>
+<assign>
+<var>${actual_result}</var>
+</assign>
+<msg timestamp="20200604 16:36:41.460" level="INFO">${actual_result} = Status code: 500 
+message: {"error":"Wrong username and password"}</msg>
+<status status="PASS" starttime="20200604 16:36:41.460" endtime="20200604 16:36:41.460"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${TEST STATUS}'=='PASS'</arg>
+<arg>Write Excel Cell</arg>
+<arg>${row_num}</arg>
+<arg>${actual_col_num}</arg>
+<arg>${actual_result}</arg>
+</arguments>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>${row_num}</arg>
+<arg>${actual_col_num}</arg>
+<arg>${actual_result}</arg>
+</arguments>
+<status status="PASS" starttime="20200604 16:36:41.460" endtime="20200604 16:36:41.460"></status>
+</kw>
+<status status="PASS" starttime="20200604 16:36:41.460" endtime="20200604 16:36:41.460"></status>
+</kw>
+<kw name="Save Excel Document" library="ExcelLibrary">
+<doc>Saves the current document to disk.</doc>
+<arguments>
+<arg>${File_Result}</arg>
+</arguments>
+<status status="PASS" starttime="20200604 16:36:41.460" endtime="20200604 16:36:41.647"></status>
+</kw>
+<kw name="Close Current Excel Document" library="ExcelLibrary">
+<doc>Closes current document.</doc>
+<status status="PASS" starttime="20200604 16:36:41.647" endtime="20200604 16:36:41.647"></status>
+</kw>
+<status status="FAIL" starttime="20200604 16:36:40.882" endtime="20200604 16:36:41.647">Several failures occurred:
+
+1) No keyword with name 'count row' found.
+
+2) Variable '${iTotalRows}' not found.</status>
+</kw>
+<status status="FAIL" starttime="20200604 16:36:40.793" endtime="20200604 16:36:41.647" critical="yes">Teardown failed:
+Several failures occurred:
+
+1) No keyword with name 'count row' found.
+
+2) Variable '${iTotalRows}' not found.</status>
 </test>
-<test id="s1-t5" name="Chaincode API_getToken_Issuer_005">
+<test id="s1-t5" name="Chaincode API_getToken_Issuer_005: Username and Password ถูกต้อง">
 <kw name="Get Username From Spreadsheet" library="ExcelLibrary_getToken">
 <arguments>
 <arg>6</arg>
@@ -1104,26 +1879,26 @@ json=None</msg>
 <assign>
 <var>${username}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.577" level="INFO">${username} = 001</msg>
-<status status="PASS" starttime="20200602 17:10:17.577" endtime="20200602 17:10:17.577"></status>
+<msg timestamp="20200604 16:36:41.647" level="INFO">${username} = 001</msg>
+<status status="PASS" starttime="20200604 16:36:41.647" endtime="20200604 16:36:41.647"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.577" level="INFO">${username} = 001</msg>
-<status status="PASS" starttime="20200602 17:10:17.577" endtime="20200602 17:10:17.577"></status>
+<msg timestamp="20200604 16:36:41.647" level="INFO">${username} = 001</msg>
+<status status="PASS" starttime="20200604 16:36:41.647" endtime="20200604 16:36:41.647"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.577" level="INFO">001</msg>
-<status status="PASS" starttime="20200602 17:10:17.577" endtime="20200602 17:10:17.577"></status>
+<msg timestamp="20200604 16:36:41.647" level="INFO">001</msg>
+<status status="PASS" starttime="20200604 16:36:41.647" endtime="20200604 16:36:41.647"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:17.577" endtime="20200602 17:10:17.577"></status>
+<status status="PASS" starttime="20200604 16:36:41.647" endtime="20200604 16:36:41.647"></status>
 </kw>
 <kw name="Get Password From Spreadsheet" library="ExcelLibrary_getToken">
 <arguments>
@@ -1140,26 +1915,26 @@ json=None</msg>
 <assign>
 <var>${password}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.577" level="INFO">${password} = secret</msg>
-<status status="PASS" starttime="20200602 17:10:17.577" endtime="20200602 17:10:17.577"></status>
+<msg timestamp="20200604 16:36:41.647" level="INFO">${password} = secret</msg>
+<status status="PASS" starttime="20200604 16:36:41.647" endtime="20200604 16:36:41.647"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.577" level="INFO">${password} = secret</msg>
-<status status="PASS" starttime="20200602 17:10:17.577" endtime="20200602 17:10:17.577"></status>
+<msg timestamp="20200604 16:36:41.647" level="INFO">${password} = secret</msg>
+<status status="PASS" starttime="20200604 16:36:41.647" endtime="20200604 16:36:41.647"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.577" level="INFO">secret</msg>
-<status status="PASS" starttime="20200602 17:10:17.577" endtime="20200602 17:10:17.577"></status>
+<msg timestamp="20200604 16:36:41.663" level="INFO">secret</msg>
+<status status="PASS" starttime="20200604 16:36:41.663" endtime="20200604 16:36:41.663"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:17.577" endtime="20200602 17:10:17.577"></status>
+<status status="PASS" starttime="20200604 16:36:41.647" endtime="20200604 16:36:41.663"></status>
 </kw>
 <kw name="Send Request getToken" library="keyword_getToken">
 <arguments>
@@ -1172,8 +1947,8 @@ json=None</msg>
 <arg>getTokenSS</arg>
 <arg>${base_url_issuer_mw}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.592" level="INFO">Creating Session using : alias=getTokenSS, url=http://172.16.24.55:3216, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20200602 17:10:17.592" endtime="20200602 17:10:17.592"></status>
+<msg timestamp="20200604 16:36:41.663" level="INFO">Creating Session using : alias=getTokenSS, url=http://172.16.24.55:3216, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20200604 16:36:41.663" endtime="20200604 16:36:41.663"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -1184,8 +1959,8 @@ json=None</msg>
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.592" level="INFO">${body} = {'username': '001', 'password': 'secret'}</msg>
-<status status="PASS" starttime="20200602 17:10:17.592" endtime="20200602 17:10:17.592"></status>
+<msg timestamp="20200604 16:36:41.663" level="INFO">${body} = {'username': '001', 'password': 'secret'}</msg>
+<status status="PASS" starttime="20200604 16:36:41.663" endtime="20200604 16:36:41.663"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -1195,8 +1970,8 @@ json=None</msg>
 <assign>
 <var>${header}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.592" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
-<status status="PASS" starttime="20200602 17:10:17.592" endtime="20200602 17:10:17.592"></status>
+<msg timestamp="20200604 16:36:41.663" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20200604 16:36:41.663" endtime="20200604 16:36:41.663"></status>
 </kw>
 <kw name="Post Request" library="RequestsLibrary">
 <doc>Send a POST request on the session object found using the
@@ -1210,22 +1985,57 @@ given `alias`</doc>
 <assign>
 <var>${response}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.592" level="INFO">POST Request using : uri=/token, params=None, files=None, allow_redirects=True, timeout=None
+<msg timestamp="20200604 16:36:41.663" level="INFO">POST Request using : uri=/token, params=None, files=None, allow_redirects=True, timeout=None
 headers={'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
 data={"username": "001", "password": "secret"} 
 json=None</msg>
-<msg timestamp="20200602 17:10:17.671" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200602 17:10:17.592" endtime="20200602 17:10:17.671"></status>
+<msg timestamp="20200604 16:36:41.710" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200604 16:36:41.663" endtime="20200604 16:36:41.710"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${response}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.671" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200602 17:10:17.671" endtime="20200602 17:10:17.671"></status>
+<msg timestamp="20200604 16:36:41.710" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200604 16:36:41.710" endtime="20200604 16:36:41.710"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:17.577" endtime="20200602 17:10:17.671"></status>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>POST ${url_getToken_issuer_MW} Host: ${base_url_issuer_mw}</arg>
+</arguments>
+<assign>
+<var>${URL_POST}</var>
+</assign>
+<msg timestamp="20200604 16:36:41.710" level="INFO">${URL_POST} = POST /token Host: http://172.16.24.55:3216</msg>
+<status status="PASS" starttime="20200604 16:36:41.710" endtime="20200604 16:36:41.710"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${URL_POST}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:41.726" level="INFO">${URL_POST} = POST /token Host: http://172.16.24.55:3216</msg>
+<status status="PASS" starttime="20200604 16:36:41.726" endtime="20200604 16:36:41.726"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:41.726" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20200604 16:36:41.726" endtime="20200604 16:36:41.726"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${body}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:41.726" level="INFO">${body} = {'username': '001', 'password': 'secret'}</msg>
+<status status="PASS" starttime="20200604 16:36:41.726" endtime="20200604 16:36:41.726"></status>
+</kw>
+<status status="PASS" starttime="20200604 16:36:41.663" endtime="20200604 16:36:41.726"></status>
 </kw>
 <kw name="Get Response From Spreadsheet" library="ExcelLibrary_getToken">
 <arguments>
@@ -1242,26 +2052,26 @@ json=None</msg>
 <assign>
 <var>${status_expected}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.671" level="INFO">${status_expected} = 200</msg>
-<status status="PASS" starttime="20200602 17:10:17.671" endtime="20200602 17:10:17.671"></status>
+<msg timestamp="20200604 16:36:41.726" level="INFO">${status_expected} = 200</msg>
+<status status="PASS" starttime="20200604 16:36:41.726" endtime="20200604 16:36:41.726"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${status_expected}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.671" level="INFO">${status_expected} = 200</msg>
-<status status="PASS" starttime="20200602 17:10:17.671" endtime="20200602 17:10:17.671"></status>
+<msg timestamp="20200604 16:36:41.726" level="INFO">${status_expected} = 200</msg>
+<status status="PASS" starttime="20200604 16:36:41.726" endtime="20200604 16:36:41.726"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${status_expected}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.671" level="INFO">200</msg>
-<status status="PASS" starttime="20200602 17:10:17.671" endtime="20200602 17:10:17.671"></status>
+<msg timestamp="20200604 16:36:41.726" level="INFO">200</msg>
+<status status="PASS" starttime="20200604 16:36:41.726" endtime="20200604 16:36:41.726"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:17.671" endtime="20200602 17:10:17.671"></status>
+<status status="PASS" starttime="20200604 16:36:41.726" endtime="20200604 16:36:41.726"></status>
 </kw>
 <kw name="Response getToken Success" library="keyword_getToken">
 <arguments>
@@ -1275,8 +2085,8 @@ json=None</msg>
 <assign>
 <var>${status_code}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.671" level="INFO">${status_code} = 200</msg>
-<status status="PASS" starttime="20200602 17:10:17.671" endtime="20200602 17:10:17.671"></status>
+<msg timestamp="20200604 16:36:41.726" level="INFO">${status_code} = 200</msg>
+<status status="PASS" starttime="20200604 16:36:41.726" endtime="20200604 16:36:41.726"></status>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
@@ -1284,14 +2094,22 @@ json=None</msg>
 <arg>${status_code}</arg>
 <arg>${status_expected}</arg>
 </arguments>
-<status status="PASS" starttime="20200602 17:10:17.671" endtime="20200602 17:10:17.671"></status>
+<status status="PASS" starttime="20200604 16:36:41.726" endtime="20200604 16:36:41.741"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${status_code}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:41.741" level="INFO">${status_code} = 200</msg>
+<status status="PASS" starttime="20200604 16:36:41.741" endtime="20200604 16:36:41.741"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
-<arg>${response.status_code}</arg>
+<arg>${status_code}</arg>
 </arguments>
-<status status="PASS" starttime="20200602 17:10:17.671" endtime="20200602 17:10:17.671"></status>
+<status status="PASS" starttime="20200604 16:36:41.741" endtime="20200604 16:36:41.741"></status>
 </kw>
 <kw name="Convert To String" library="BuiltIn">
 <doc>Converts the given item to a Unicode string.</doc>
@@ -1301,8 +2119,8 @@ json=None</msg>
 <assign>
 <var>${res_body}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.671" level="INFO">${res_body} = {"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA2LTAyVDEwOjEwOjE3LjcyNiIsImV4cGlyZWRhdGUiOiIyMDIwLTA2LTAyVDExOjEwOjE3LjcyNiIsInBoYXNlIjoiMjNhZTM4MjY3YzRkNWNmZT...</msg>
-<status status="PASS" starttime="20200602 17:10:17.671" endtime="20200602 17:10:17.671"></status>
+<msg timestamp="20200604 16:36:41.741" level="INFO">${res_body} = {"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA2LTA0VDA5OjM2OjQxLjgxMCIsImV4cGlyZWRhdGUiOiIyMDIwLTA2LTA0VDEwOjM2OjQxLjgxMCIsInBoYXNlIjoiNjYzMDQwZGU3N2FmYzMyMW...</msg>
+<status status="PASS" starttime="20200604 16:36:41.741" endtime="20200604 16:36:41.741"></status>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
@@ -1310,7 +2128,7 @@ json=None</msg>
 <arg>${res_body}</arg>
 <arg>access_token</arg>
 </arguments>
-<status status="PASS" starttime="20200602 17:10:17.671" endtime="20200602 17:10:17.671"></status>
+<status status="PASS" starttime="20200604 16:36:41.741" endtime="20200604 16:36:41.741"></status>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
@@ -1318,7 +2136,7 @@ json=None</msg>
 <arg>${res_body}</arg>
 <arg>Bearer</arg>
 </arguments>
-<status status="PASS" starttime="20200602 17:10:17.671" endtime="20200602 17:10:17.671"></status>
+<status status="PASS" starttime="20200604 16:36:41.741" endtime="20200604 16:36:41.741"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -1327,21 +2145,21 @@ json=None</msg>
 <arg>expires_in</arg>
 </arguments>
 <assign>
-<var>${expire_in_value}</var>
+<var>${expire_in_response}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.686" level="INFO">${expire_in_value} = 3600</msg>
-<status status="PASS" starttime="20200602 17:10:17.671" endtime="20200602 17:10:17.686"></status>
+<msg timestamp="20200604 16:36:41.741" level="INFO">${expire_in_response} = 3600</msg>
+<status status="PASS" starttime="20200604 16:36:41.741" endtime="20200604 16:36:41.741"></status>
 </kw>
 <kw name="Should Be Equal As Integers" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to integers.</doc>
 <arguments>
+<arg>${expire_in_response}</arg>
 <arg>${expire_in_value}</arg>
-<arg>3600</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.686" level="INFO">Argument types are:
+<msg timestamp="20200604 16:36:41.741" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" starttime="20200602 17:10:17.686" endtime="20200602 17:10:17.686"></status>
+<status status="PASS" starttime="20200604 16:36:41.741" endtime="20200604 16:36:41.741"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -1352,50 +2170,210 @@ json=None</msg>
 <assign>
 <var>${AuthToken}</var>
 </assign>
-<msg timestamp="20200602 17:10:17.686" level="INFO">${AuthToken} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA2LTAyVDEwOjEwOjE3LjcyNiIsImV4cGlyZWRhdGUiOiIyMDIwLTA2LTAyVDExOjEwOjE3LjcyNiIsInBoYXNlIjoiMjNhZTM4MjY3YzRkNWNmZTUwZGE0YjhhYWE3NTh...</msg>
-<status status="PASS" starttime="20200602 17:10:17.686" endtime="20200602 17:10:17.686"></status>
+<msg timestamp="20200604 16:36:41.741" level="INFO">${AuthToken} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA2LTA0VDA5OjM2OjQxLjgxMCIsImV4cGlyZWRhdGUiOiIyMDIwLTA2LTA0VDEwOjM2OjQxLjgxMCIsInBoYXNlIjoiNjYzMDQwZGU3N2FmYzMyMWY2NTNmYWEyOTA0MmM...</msg>
+<status status="PASS" starttime="20200604 16:36:41.741" endtime="20200604 16:36:41.741"></status>
 </kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<doc>Makes a variable available globally in all tests and suites.</doc>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${AuthToken}</arg>
 </arguments>
-<msg timestamp="20200602 17:10:17.686" level="INFO">${AuthToken} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA2LTAyVDEwOjEwOjE3LjcyNiIsImV4cGlyZWRhdGUiOiIyMDIwLTA2LTAyVDExOjEwOjE3LjcyNiIsInBoYXNlIjoiMjNhZTM4MjY3YzRkNWNmZTUwZGE0YjhhYWE3NTh...</msg>
-<status status="PASS" starttime="20200602 17:10:17.686" endtime="20200602 17:10:17.686"></status>
+<msg timestamp="20200604 16:36:41.741" level="INFO">${AuthToken} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA2LTA0VDA5OjM2OjQxLjgxMCIsImV4cGlyZWRhdGUiOiIyMDIwLTA2LTA0VDEwOjM2OjQxLjgxMCIsInBoYXNlIjoiNjYzMDQwZGU3N2FmYzMyMWY2NTNmYWEyOTA0MmM...</msg>
+<status status="PASS" starttime="20200604 16:36:41.741" endtime="20200604 16:36:41.741"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${res_body}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:41.741" level="INFO">${res_body} = {"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA2LTA0VDA5OjM2OjQxLjgxMCIsImV4cGlyZWRhdGUiOiIyMDIwLTA2LTA0VDEwOjM2OjQxLjgxMCIsInBoYXNlIjoiNjYzMDQwZGU3N2FmYzMyMW...</msg>
+<status status="PASS" starttime="20200604 16:36:41.741" endtime="20200604 16:36:41.741"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
-<arg>${response.content}</arg>
+<arg>${res_body}</arg>
 </arguments>
-<status status="PASS" starttime="20200602 17:10:17.686" endtime="20200602 17:10:17.686"></status>
+<status status="PASS" starttime="20200604 16:36:41.741" endtime="20200604 16:36:41.741"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:17.671" endtime="20200602 17:10:17.686"></status>
+<status status="PASS" starttime="20200604 16:36:41.726" endtime="20200604 16:36:41.741"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:17.577" endtime="20200602 17:10:17.686" critical="yes"></status>
+<kw name="Publish Test Case Result" library="ExcelLibrary_getToken" type="teardown">
+<arguments>
+<arg>17</arg>
+<arg>9</arg>
+<arg>${File_Result}</arg>
+<arg>${File_Sheet_Result}</arg>
+</arguments>
+<kw name="Open Excel Document" library="ExcelLibrary">
+<doc>Opens xlsx document file.</doc>
+<arguments>
+<arg>${File_Result}</arg>
+<arg>doc_id=doc_getToken_result</arg>
+</arguments>
+<status status="PASS" starttime="20200604 16:36:41.741" endtime="20200604 16:36:42.319"></status>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>row_num=${row_num}</arg>
+<arg>col_num=${col_num}</arg>
+<arg>value=${TEST STATUS}</arg>
+<arg>sheet_name=${Sheet_Name_Result}</arg>
+</arguments>
+<status status="PASS" starttime="20200604 16:36:42.319" endtime="20200604 16:36:42.319"></status>
+</kw>
+<kw name="count row">
+<arguments>
+<arg>${Sheet_Name_Result}</arg>
+</arguments>
+<assign>
+<var>${iTotalRows}=</var>
+</assign>
+<msg timestamp="20200604 16:36:42.335" level="FAIL">No keyword with name 'count row' found.</msg>
+<status status="FAIL" starttime="20200604 16:36:42.335" endtime="20200604 16:36:42.335"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Allrow=${iTotalRows}</arg>
+</arguments>
+<msg timestamp="20200604 16:36:42.335" level="FAIL">Variable '${iTotalRows}' not found.</msg>
+<status status="FAIL" starttime="20200604 16:36:42.335" endtime="20200604 16:36:42.335"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${col_num}-${3}</arg>
+</arguments>
+<assign>
+<var>${request_col_num}</var>
+</assign>
+<msg timestamp="20200604 16:36:42.335" level="INFO">${request_col_num} = 6</msg>
+<status status="PASS" starttime="20200604 16:36:42.335" endtime="20200604 16:36:42.335"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${URL_POST} \n ${header} \n ${body}</arg>
+</arguments>
+<assign>
+<var>${request_result}</var>
+</assign>
+<msg timestamp="20200604 16:36:42.335" level="INFO">${request_result} = POST /token Host: http://172.16.24.55:3216 
+{'Content-Type': 'application/json'} 
+{'username': '001', 'password': 'secret'}</msg>
+<status status="PASS" starttime="20200604 16:36:42.335" endtime="20200604 16:36:42.335"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${TEST STATUS}'=='PASS'</arg>
+<arg>Write Excel Cell</arg>
+<arg>${row_num}</arg>
+<arg>${request_col_num}</arg>
+<arg>${request_result}</arg>
+</arguments>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>${row_num}</arg>
+<arg>${request_col_num}</arg>
+<arg>${request_result}</arg>
+</arguments>
+<status status="PASS" starttime="20200604 16:36:42.335" endtime="20200604 16:36:42.335"></status>
+</kw>
+<status status="PASS" starttime="20200604 16:36:42.335" endtime="20200604 16:36:42.335"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${col_num}-${1}</arg>
+</arguments>
+<assign>
+<var>${actual_col_num}</var>
+</assign>
+<msg timestamp="20200604 16:36:42.351" level="INFO">${actual_col_num} = 8</msg>
+<status status="PASS" starttime="20200604 16:36:42.335" endtime="20200604 16:36:42.351"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Status code: ${status_code} \n message: ${res_body}</arg>
+</arguments>
+<assign>
+<var>${actual_result}</var>
+</assign>
+<msg timestamp="20200604 16:36:42.351" level="INFO">${actual_result} = Status code: 200 
+message: {"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEiLCJpYXQiOiIyMDIwLTA2LTA0VDA5OjM2OjQxLjgxMCIsImV4cGlyZWRhdGUiOiIyMDIwLTA2LTA0VDEwOjM2OjQxLjgxMCIsInBoYXN...</msg>
+<status status="PASS" starttime="20200604 16:36:42.351" endtime="20200604 16:36:42.351"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${TEST STATUS}'=='PASS'</arg>
+<arg>Write Excel Cell</arg>
+<arg>${row_num}</arg>
+<arg>${actual_col_num}</arg>
+<arg>${actual_result}</arg>
+</arguments>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>${row_num}</arg>
+<arg>${actual_col_num}</arg>
+<arg>${actual_result}</arg>
+</arguments>
+<status status="PASS" starttime="20200604 16:36:42.351" endtime="20200604 16:36:42.351"></status>
+</kw>
+<status status="PASS" starttime="20200604 16:36:42.351" endtime="20200604 16:36:42.351"></status>
+</kw>
+<kw name="Save Excel Document" library="ExcelLibrary">
+<doc>Saves the current document to disk.</doc>
+<arguments>
+<arg>${File_Result}</arg>
+</arguments>
+<status status="PASS" starttime="20200604 16:36:42.351" endtime="20200604 16:36:42.476"></status>
+</kw>
+<kw name="Close Current Excel Document" library="ExcelLibrary">
+<doc>Closes current document.</doc>
+<status status="PASS" starttime="20200604 16:36:42.476" endtime="20200604 16:36:42.476"></status>
+</kw>
+<status status="FAIL" starttime="20200604 16:36:41.741" endtime="20200604 16:36:42.491">Several failures occurred:
+
+1) No keyword with name 'count row' found.
+
+2) Variable '${iTotalRows}' not found.</status>
+</kw>
+<status status="FAIL" starttime="20200604 16:36:41.647" endtime="20200604 16:36:42.491" critical="yes">Teardown failed:
+Several failures occurred:
+
+1) No keyword with name 'count row' found.
+
+2) Variable '${iTotalRows}' not found.</status>
 </test>
 <kw name="Close Excel" library="ExcelLibrary_getToken" type="teardown">
 <kw name="Close All Excel Documents" library="ExcelLibrary">
 <doc>Closes all opened documents.</doc>
-<status status="PASS" starttime="20200602 17:10:17.686" endtime="20200602 17:10:17.686"></status>
+<status status="PASS" starttime="20200604 16:36:42.491" endtime="20200604 16:36:42.491"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:17.686" endtime="20200602 17:10:17.686"></status>
+<status status="PASS" starttime="20200604 16:36:42.491" endtime="20200604 16:36:42.491"></status>
 </kw>
-<status status="PASS" starttime="20200602 17:10:15.078" endtime="20200602 17:10:17.686"></status>
+<status status="FAIL" starttime="20200604 16:36:29.889" endtime="20200604 16:36:42.491"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="5" fail="0">Critical Tests</stat>
-<stat pass="5" fail="0">All Tests</stat>
+<stat pass="0" fail="5">Critical Tests</stat>
+<stat pass="0" fail="5">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="5" fail="0" id="s1" name="TCs getToken using ExcelLibrary">TCs getToken using ExcelLibrary</stat>
+<stat pass="0" fail="5" id="s1" name="TCs getToken using ExcelLibrary">TCs getToken using ExcelLibrary</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20200602 17:10:16.530" level="ERROR">Error in file 'C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources\IssuerMiddleware\keyword_getToken.robot': Importing test library 'HttpLibrary.HTTP' failed: SyntaxError: invalid syntax (__init__.py, line 16)
+<msg timestamp="20200604 16:36:37.960" level="ERROR">Error in file 'C:\Users\panruethai.e\PycharmProjects\CWNTEST\mobileId\ChainCodeAPI\Resources\IssuerMiddleware\keyword_getToken.robot': Importing test library 'HttpLibrary.HTTP' failed: SyntaxError: invalid syntax (__init__.py, line 16)
 Traceback (most recent call last):
   None
 PYTHONPATH:

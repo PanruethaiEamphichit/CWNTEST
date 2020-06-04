@@ -7,7 +7,6 @@ Library     OperatingSystem
 Resource    ../../Resources/variables.robot
 
 *** Keywords ***
-
 Send Request enrollMobileId
     [Arguments]  ${TC_No}
     Create Session  enrollMobileIdSS    ${base_url_issuer_mw}   auth=

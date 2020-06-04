@@ -8,15 +8,8 @@ Library     DateTime
 #${URL}                  http://172.16.24.55:3216
 ${base_url_issuer_mw}   http://172.16.24.55:3216
 ${network-user}         user1
+${File_TestData}        ../TestData/TestData.xlsx
 
-###get Token###
-${url_getToken_issuer_MW}  /token
-#${TestData_getToken_issuer_Path}        ../TestData/
-#${TestData_getToken_issuer_Filename}    TestData_getToken
-#${TestData_getToken_issuer_ext}         .csv
-#${TestData_getToken_Sheet}    TestData_getToken
-#${username}             001
-#${password}             secret
 
 ###enroll MobileId###
 ${url_enrollMobileId}   /enroll-mobileid

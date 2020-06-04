@@ -17,6 +17,11 @@ ${url_getToken_issuer_MW}  /token
 #${TestData_getToken_Sheet}    TestData_getToken
 #${username}             001
 #${password}             secret
+${expire_in_value}      3600
+${File_Result}          ../TestResult/SIT_CWN_NBT011_Test Case_Mobile ID_Sprint 9 CCR002.xlsx
+${File_Sheet_Result}    Functional Testing
+${File_Sheet_TestData}  TestData_getToken
+
 
 ###enroll MobileId###
 ${url_enrollMobileId}   /enroll-mobileid
